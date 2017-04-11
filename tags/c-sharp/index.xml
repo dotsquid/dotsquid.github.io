@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>C# on dotsquid</title>
-    <link>https://dotsquid.github.io/tags/c</link>
-    <description>Recent content in C# on dotsquid</description>
+    <title>C Sharp on dotsquid</title>
+    <link>https://dotsquid.github.io/tags/c-sharp/index.xml</link>
+    <description>Recent content in C Sharp on dotsquid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Proudly made in [Ukraine](https://en.wikipedia.org/wiki/Ukraine). Powered by [Hugo](//gohugo.io).</copyright>
-    <atom:link href="https://dotsquid.github.io/tags/c" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dotsquid.github.io/tags/c-sharp/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Enum flags in Unity3d Inspector</title>
