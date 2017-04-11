@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://dotsquid.github.io/2017/04/08/nested-canvas-bug</loc>
+    <lastmod>2017-04-08T00:30:38+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.github.io/2017/04/05/enum-flags-in-unity3d-inspector</loc>
+    <lastmod>2017-04-05T21:12:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.github.io/2017/03/25/git-init</loc>
+    <lastmod>2017-03-25T17:24:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.github.io/tags/c/</loc>
+    <lastmod>2017-04-05T21:12:16+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.github.io/categories/general/</loc>
+    <lastmod>2017-03-25T17:24:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.github.io/page/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.github.io/post/</loc>
+    <lastmod>2017-04-08T00:30:38+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.github.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.github.io/tags/ui/</loc>
+    <lastmod>2017-04-08T00:30:38+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.github.io/tags/unity3d/</loc>
+    <lastmod>2017-04-08T00:30:38+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.github.io/categories/unity3d/</loc>
+    <lastmod>2017-04-08T00:30:38+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.github.io/about</loc>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.github.io/contact</loc>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.github.io/</loc>
+    <lastmod>2017-04-08T00:30:38+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
