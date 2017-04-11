@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C# on dotsquid</title>
-    <link>http://dotsquid.github.io/tags/c</link>
+    <link>https://dotsquid.github.io/tags/c</link>
     <description>Recent content in C# on dotsquid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Proudly made in [Ukraine](https://en.wikipedia.org/wiki/Ukraine). Powered by [Hugo](//gohugo.io).</copyright>
-    <atom:link href="http://dotsquid.github.io/tags/c" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dotsquid.github.io/tags/c" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Enum flags in Unity3d Inspector</title>
-      <link>http://dotsquid.github.io/2017/04/05/enum-flags-in-unity3d-inspector</link>
+      <link>https://dotsquid.github.io/2017/04/05/enum-flags-in-unity3d-inspector</link>
       <pubDate>Wed, 05 Apr 2017 21:12:16 +0200</pubDate>
       
-      <guid>http://dotsquid.github.io/2017/04/05/enum-flags-in-unity3d-inspector</guid>
+      <guid>https://dotsquid.github.io/2017/04/05/enum-flags-in-unity3d-inspector</guid>
       <description>&lt;p&gt;It&amp;rsquo;s quite strange but Unity can&amp;rsquo;t show your enum as bitmask / flags out of the box.&lt;br /&gt;
 Fortunately this can be fixed fast and easy.&lt;br /&gt;
 &lt;/p&gt;
