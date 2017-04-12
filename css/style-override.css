@@ -413,7 +413,7 @@ input.search-form-input:-webkit-autofill {
   border-radius: 0px;
   border: none !important;
   background: transparent;
-  color: #999;
+  color: #888;
   text-shadow: none;
   text-decoration: none;
   -webkit-transition: 0.25s ease;
@@ -424,14 +424,14 @@ input.search-form-input:-webkit-autofill {
 .article-more-link a::before {
   content: '';
   z-index: -1;
-  background: #f5f8f9;
+  background: #fafdfe;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  border-radius: 4px;
-  border: 1px solid #eaecef;
+  border-radius: 2px;
+  border: 1px solid #eceff3;
   transform: skewX(-15deg);
   -webkit-transition: 0.25s ease;
      -moz-transition: 0.25s ease;

@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ui on dotsquid</title>
-    <link>https://dotsquid.github.io/tags/ui/index.xml</link>
+    <link>http://dotsquid.com/tags/ui/index.xml</link>
     <description>Recent content in Ui on dotsquid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Proudly made in [Ukraine](https://en.wikipedia.org/wiki/Ukraine). Powered by [Hugo](//gohugo.io).</copyright>
-    <atom:link href="https://dotsquid.github.io/tags/ui/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dotsquid.com/tags/ui/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Nested canvas bug</title>
-      <link>https://dotsquid.github.io/2017/04/08/nested-canvas-bug</link>
+      <link>http://dotsquid.com/2017/04/08/nested-canvas-bug</link>
       <pubDate>Sat, 08 Apr 2017 00:30:38 +0300</pubDate>
       
-      <guid>https://dotsquid.github.io/2017/04/08/nested-canvas-bug</guid>
+      <guid>http://dotsquid.com/2017/04/08/nested-canvas-bug</guid>
       <description>&lt;p&gt;Weird bug related to &lt;code&gt;UI.Canvas&lt;/code&gt; was accidentally found by me while I was developing new menu for our upcoming game &lt;a href=&#34;https://twitter.com/SummerCatchers&#34;&gt;SummerCatchers&lt;/a&gt;. Btw, follow us ;)&lt;br /&gt;
 As far as you may know &lt;code&gt;Canvas&lt;/code&gt; can have other &lt;code&gt;Canvases&lt;/code&gt; as children objects. This is very useful in optimization purpose because &lt;code&gt;sub-canvas&lt;/code&gt; isolates its UI elements from other canvases (parent and siblings) thus modifying one of its children won&amp;rsquo;t cause rebuilding of batched mesh for other canvases.&lt;br /&gt;
 The bug is as follows.&lt;br /&gt;
@@ -26,7 +26,7 @@ As far as I understand there is no way to workaround this bug. &lt;em&gt;However
 
 &lt;figure &gt;
     
-        &lt;img src=&#34;https://dotsquid.github.io/images/nested-canvas-bug-demo.gif&#34; /&gt;
+        &lt;img src=&#34;http://dotsquid.com/images/nested-canvas-bug-demo.gif&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -41,10 +41,10 @@ What causes this bug is wrapped in obscurity because &lt;code&gt;Canvas&lt;/code
     
     <item>
       <title>Enum flags in Unity3d Inspector</title>
-      <link>https://dotsquid.github.io/2017/04/05/enum-flags-in-unity3d-inspector</link>
+      <link>http://dotsquid.com/2017/04/05/enum-flags-in-unity3d-inspector</link>
       <pubDate>Wed, 05 Apr 2017 21:12:16 +0200</pubDate>
       
-      <guid>https://dotsquid.github.io/2017/04/05/enum-flags-in-unity3d-inspector</guid>
+      <guid>http://dotsquid.com/2017/04/05/enum-flags-in-unity3d-inspector</guid>
       <description>&lt;p&gt;It&amp;rsquo;s quite strange but Unity can&amp;rsquo;t show your enum as bitmask / flags out of the box.&lt;br /&gt;
 Fortunately this can be fixed fast and easy.&lt;br /&gt;
 &lt;/p&gt;

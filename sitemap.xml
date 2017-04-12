@@ -2,81 +2,81 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://dotsquid.github.io/2017/04/08/nested-canvas-bug</loc>
+    <loc>http://dotsquid.com/2017/04/08/nested-canvas-bug</loc>
     <lastmod>2017-04-08T00:30:38+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dotsquid.github.io/2017/04/05/enum-flags-in-unity3d-inspector</loc>
+    <loc>http://dotsquid.com/2017/04/05/enum-flags-in-unity3d-inspector</loc>
     <lastmod>2017-04-05T21:12:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dotsquid.github.io/2017/03/25/git-init</loc>
+    <loc>http://dotsquid.com/2017/03/25/git-init</loc>
     <lastmod>2017-03-25T17:24:46+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dotsquid.github.io/tags/c-sharp/</loc>
+    <loc>http://dotsquid.com/tags/c-sharp/</loc>
     <lastmod>2017-04-05T21:12:16+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dotsquid.github.io/categories/</loc>
+    <loc>http://dotsquid.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dotsquid.github.io/categories/general/</loc>
+    <loc>http://dotsquid.com/categories/general/</loc>
     <lastmod>2017-03-25T17:24:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dotsquid.github.io/page/</loc>
+    <loc>http://dotsquid.com/page/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dotsquid.github.io/post/</loc>
+    <loc>http://dotsquid.com/post/</loc>
     <lastmod>2017-04-08T00:30:38+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dotsquid.github.io/tags/</loc>
+    <loc>http://dotsquid.com/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dotsquid.github.io/tags/ui/</loc>
+    <loc>http://dotsquid.com/tags/ui/</loc>
     <lastmod>2017-04-08T00:30:38+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dotsquid.github.io/tags/unity3d/</loc>
+    <loc>http://dotsquid.com/tags/unity3d/</loc>
     <lastmod>2017-04-08T00:30:38+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dotsquid.github.io/categories/unity3d/</loc>
+    <loc>http://dotsquid.com/categories/unity3d/</loc>
     <lastmod>2017-04-08T00:30:38+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dotsquid.github.io/about</loc>
+    <loc>http://dotsquid.com/about</loc>
   </url>
   
   <url>
-    <loc>https://dotsquid.github.io/contact</loc>
+    <loc>http://dotsquid.com/contact</loc>
   </url>
   
   <url>
-    <loc>https://dotsquid.github.io/</loc>
+    <loc>http://dotsquid.com/</loc>
     <lastmod>2017-04-08T00:30:38+03:00</lastmod>
     <priority>0</priority>
   </url>
