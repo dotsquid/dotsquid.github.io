@@ -44,7 +44,7 @@
 <meta property="og:url" content="http://dotsquid.com/" />
 
 
-<meta property="og:updated_time" content="2017-04-08T00:30:38&#43;03:00"/>
+<meta property="og:updated_time" content="2017-04-17T23:44:46&#43;02:00"/>
 
 
 
@@ -226,11 +226,177 @@
         <div class="article-inner">
             
     <div class="article-banner">
+        <a href="http://dotsquid.com/2017/04/17/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d" itemprop="url">
+            <img src="http://dotsquid.com/titles/stable-enum.png">
+        </a>
+    </div>
+
+
+<header class="article-header">
+    <a href="http://dotsquid.com/2017/04/17/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d">
+        <h1 class="article-title" itemprop="name">
+            StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d
+        </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-04-17 23:44:46 &#43;0200 &#43;0200" itemprop="datePublished">2017 Apr 17</time>
+            
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                    <a class="article-category-link" href="http://dotsquid.com/categories/unity3d">Unity3d</a>
+                    
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/unity3d">unity3d</a>
+                    
+                        
+                        /
+                    
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/ui">ui</a>
+                    
+                        
+                        /
+                    
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/c-sharp">c-sharp</a>
+                    
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    It&rsquo;s a well-known problem with serialization of enums in Unity3d:</p>
+
+<ol>
+<li>Use enum as a serialized field in your <code>MonoBehaviour</code> or <code>ScriptableObject</code> (or anything serializable).</li>
+<li>Fine-tune everything and code your game further casually.</li>
+<li>Add some new enumerators in the middle of your enum.</li>
+<li>BAM!! You are screwed.</li>
+</ol>
+
+<p>What happened? Nothing fancy: new enumerators of your enum just shifted down the old ones occupying their values, because Unity serializes enums as ints.<br />
+Solution is easy: serialize enums as strings. And <a href="https://github.com/dotsquid/StableEnum"><strong>StableEnum</strong></a> will help you with this.<br />
+
+                </p>
+                
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://dotsquid.com/2017/04/17/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d" data-id="b0dca6979b4c5b83393b14d0bf5d2da7" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://dotsquid.com/2017/04/17/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+    <div class="article-banner">
         <a href="http://dotsquid.com/2017/04/08/nested-canvas-bug" itemprop="url">
             <img src="http://dotsquid.com/titles/nested-canvas-bug.png">
         </a>
     </div>
-    
+
 
 <header class="article-header">
     <a href="http://dotsquid.com/2017/04/08/nested-canvas-bug">
@@ -286,10 +452,10 @@
 
             <div class="article-entry" itemprop="articleBody">
                 <p>
-                    <p>Weird bug related to <code>UI.Canvas</code> was accidentally found by me while I was developing new menu for our upcoming game <a href="https://twitter.com/SummerCatchers">SummerCatchers</a>. Btw, follow us ;)<br />
+                    Weird bug related to <code>UI.Canvas</code> was accidentally found by me while I was developing new menu for our upcoming game <a href="https://twitter.com/SummerCatchers">SummerCatchers</a>. Btw, follow us ;)<br />
 As far as you may know <code>Canvas</code> can have other <code>Canvases</code> as children objects. This is very useful in optimization purpose because <code>sub-canvas</code> isolates its UI elements from other canvases (parent and siblings) thus modifying one of its children won&rsquo;t cause rebuilding of batched mesh for other canvases.<br />
 The bug is as follows.<br />
-</p>
+
                 </p>
                 
                 <p class="article-more-link">
@@ -387,7 +553,7 @@ The bug is as follows.<br />
             <img src="http://dotsquid.com/titles/enum-flag-attribute.gif">
         </a>
     </div>
-    
+
 
 <header class="article-header">
     <a href="http://dotsquid.com/2017/04/05/enum-flags-in-unity3d-inspector">
@@ -450,9 +616,9 @@ The bug is as follows.<br />
 
             <div class="article-entry" itemprop="articleBody">
                 <p>
-                    <p>It&rsquo;s quite strange but Unity can&rsquo;t show your enum as bitmask / flags out of the box.<br />
+                    It&rsquo;s quite strange but Unity can&rsquo;t show your enum as bitmask / flags out of the box.<br />
 Fortunately this can be fixed fast and easy.<br />
-</p>
+
                 </p>
                 
                 <p class="article-more-link">
@@ -550,7 +716,7 @@ Fortunately this can be fixed fast and easy.<br />
             <img src="http://dotsquid.com/titles/git-init.gif">
         </a>
     </div>
-    
+
 
 <header class="article-header">
     <a href="http://dotsquid.com/2017/03/25/git-init">

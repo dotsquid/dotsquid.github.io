@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>git init &middot; dotsquid</title>
+    <title>StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d &middot; dotsquid</title>
     <meta name="generator" content="Hugo 0.18.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +10,7 @@
       <meta name="description" content="">
     
     
-    <link rel="canonical" href="http://dotsquid.com/2017/03/25/git-init"/>
+    <link rel="canonical" href="http://dotsquid.com/2017/04/17/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d"/>
 
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://dotsquid.com/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://dotsquid.com/apple-touch-icon-114x114.png" />
@@ -35,13 +35,24 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="git init" />
-<meta property="og:description" content="This is it. I joined the dark side and now I have a blog." />
+    <meta property="og:title" content="StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d" />
+<meta property="og:description" content="It&rsquo;s a well-known problem with serialization of enums in Unity3d:
+
+
+Use enum as a serialized field in your MonoBehaviour or ScriptableObject (or anything serializable).
+Fine-tune everything and code your game further casually.
+Add some new enumerators in the middle of your enum.
+BAM!! You are screwed.
+
+
+What happened? Nothing fancy: new enumerators of your enum just shifted down the old ones occupying their values, because Unity serializes enums as ints.
+Solution is easy: serialize enums as strings. And StableEnum will help you with this.
+" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dotsquid.com/2017/03/25/git-init" />
+<meta property="og:url" content="http://dotsquid.com/2017/04/17/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d" />
 
 
-<meta property="og:updated_time" content="2017-03-25T17:24:46&#43;02:00"/>
+<meta property="og:updated_time" content="2017-04-17T23:44:46&#43;02:00"/>
 
 
 
@@ -54,12 +65,23 @@
 
     
     
-<meta itemprop="name" content="git init">
-<meta itemprop="description" content="This is it. I joined the dark side and now I have a blog.">
+<meta itemprop="name" content="StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d">
+<meta itemprop="description" content="It&rsquo;s a well-known problem with serialization of enums in Unity3d:
 
 
-<meta itemprop="dateModified" content="2017-03-25T17:24:46&#43;02:00" />
-<meta itemprop="wordCount" content="14">
+Use enum as a serialized field in your MonoBehaviour or ScriptableObject (or anything serializable).
+Fine-tune everything and code your game further casually.
+Add some new enumerators in the middle of your enum.
+BAM!! You are screwed.
+
+
+What happened? Nothing fancy: new enumerators of your enum just shifted down the old ones occupying their values, because Unity serializes enums as ints.
+Solution is easy: serialize enums as strings. And StableEnum will help you with this.
+">
+
+
+<meta itemprop="dateModified" content="2017-04-17T23:44:46&#43;02:00" />
+<meta itemprop="wordCount" content="84">
 
 
 
@@ -71,8 +93,19 @@
 
 
 
-<meta name="twitter:title" content="git init"/>
-<meta name="twitter:description" content="This is it. I joined the dark side and now I have a blog."/>
+<meta name="twitter:title" content="StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d"/>
+<meta name="twitter:description" content="It&rsquo;s a well-known problem with serialization of enums in Unity3d:
+
+
+Use enum as a serialized field in your MonoBehaviour or ScriptableObject (or anything serializable).
+Fine-tune everything and code your game further casually.
+Add some new enumerators in the middle of your enum.
+BAM!! You are screwed.
+
+
+What happened? Nothing fancy: new enumerators of your enum just shifted down the old ones occupying their values, because Unity serializes enums as ints.
+Solution is easy: serialize enums as strings. And StableEnum will help you with this.
+"/>
 <meta name="twitter:site" content="@dotsquid"/>
 
 
@@ -239,16 +272,16 @@
         <div class="article-inner">
             
     <div class="article-banner">
-        <a href="http://dotsquid.com/2017/03/25/git-init" itemprop="url">
-            <img src="http://dotsquid.com/titles/git-init.gif">
+        <a href="http://dotsquid.com/2017/04/17/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d" itemprop="url">
+            <img src="http://dotsquid.com/titles/stable-enum.png">
         </a>
     </div>
 
 
 <header class="article-header">
-    <a href="http://dotsquid.com/2017/03/25/git-init">
+    <a href="http://dotsquid.com/2017/04/17/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d">
         <h1 class="article-title" itemprop="name">
-            git init
+            StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d
         </h1>
     </a>
     <div class="article-meta">
@@ -256,7 +289,7 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2017-03-25 17:24:46 &#43;0200 EET" itemprop="datePublished">2017 Mar 25</time>
+            <time datetime="2017-04-17 23:44:46 &#43;0200 &#43;0200" itemprop="datePublished">2017 Apr 17</time>
             
         </div>
         
@@ -267,7 +300,7 @@
                 <i class="fa fa-folder"></i>
                 
                 
-                    <a class="article-category-link" href="http://dotsquid.com/categories/general">General</a>
+                    <a class="article-category-link" href="http://dotsquid.com/categories/unity3d">Unity3d</a>
                     
                 
             </div>
@@ -277,21 +310,54 @@
         
             
             
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/unity3d">unity3d</a>
+                    
+                        
+                        /
+                    
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/ui">ui</a>
+                    
+                        
+                        /
+                    
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/c-sharp">c-sharp</a>
+                    
+                
+            </div>
+            
         
     </div>
 </header>
 
             <div class="article-entry" itemprop="articleBody">
-                <p>This is it. I joined the dark side and now I have a blog.</p>
+                <p>It&rsquo;s a well-known problem with serialization of enums in Unity3d:</p>
 
+<ol>
+<li>Use enum as a serialized field in your <code>MonoBehaviour</code> or <code>ScriptableObject</code> (or anything serializable).</li>
+<li>Fine-tune everything and code your game further casually.</li>
+<li>Add some new enumerators in the middle of your enum.</li>
+<li>BAM!! You are screwed.</li>
+</ol>
+
+<p>What happened? Nothing fancy: new enumerators of your enum just shifted down the old ones occupying their values, because Unity serializes enums as ints.<br />
+Solution is easy: serialize enums as strings. And <a href="https://github.com/dotsquid/StableEnum"><strong>StableEnum</strong></a> will help you with this.<br />
+</p>
             </div>
             <footer class="article-footer">
-    <a data-url="http://dotsquid.com/2017/03/25/git-init" data-id="a36f997d2d5da048d9ab10d2181c2246" class="article-share-link">
+    <a data-url="http://dotsquid.com/2017/04/17/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d" data-id="b0dca6979b4c5b83393b14d0bf5d2da7" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
-    <a href="http://dotsquid.com/2017/03/25/git-init#disqus_thread" class="article-comment-link">
+    <a href="http://dotsquid.com/2017/04/17/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -367,14 +433,14 @@
         
 <nav id="article-nav">
     
-
-    
-    <a href="http://dotsquid.com/2017/04/05/enum-flags-in-unity3d-inspector" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="http://dotsquid.com/2017/04/08/nested-canvas-bug" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
-          Newer
+          Older
       </strong>
-      <div class="article-nav-title">Enum flags in Unity3d Inspector</div>
+      <div class="article-nav-title">Nested canvas bug</div>
     </a>
+    
+
     
 </nav>
 
@@ -387,9 +453,9 @@
             <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'dotsquid-com';
-    var disqus_identifier = 'http:\/\/dotsquid.com\/2017\/03\/25\/git-init';
-    var disqus_title = 'git init';
-    var disqus_url = 'http:\/\/dotsquid.com\/2017\/03\/25\/git-init';
+    var disqus_identifier = 'http:\/\/dotsquid.com\/2017\/04\/17\/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d';
+    var disqus_title = 'StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d';
+    var disqus_url = 'http:\/\/dotsquid.com\/2017\/04\/17\/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

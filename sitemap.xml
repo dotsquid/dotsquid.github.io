@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://dotsquid.com/2017/04/17/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d</loc>
+    <lastmod>2017-04-17T23:44:46+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://dotsquid.com/2017/04/08/nested-canvas-bug</loc>
     <lastmod>2017-04-08T00:30:38+03:00</lastmod>
   </url>
@@ -18,7 +23,7 @@
   
   <url>
     <loc>http://dotsquid.com/tags/c-sharp/</loc>
-    <lastmod>2017-04-05T21:12:16+02:00</lastmod>
+    <lastmod>2017-04-17T23:44:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -40,7 +45,7 @@
   
   <url>
     <loc>http://dotsquid.com/post/</loc>
-    <lastmod>2017-04-08T00:30:38+03:00</lastmod>
+    <lastmod>2017-04-17T23:44:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -51,19 +56,19 @@
   
   <url>
     <loc>http://dotsquid.com/tags/ui/</loc>
-    <lastmod>2017-04-08T00:30:38+03:00</lastmod>
+    <lastmod>2017-04-17T23:44:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://dotsquid.com/tags/unity3d/</loc>
-    <lastmod>2017-04-08T00:30:38+03:00</lastmod>
+    <lastmod>2017-04-17T23:44:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://dotsquid.com/categories/unity3d/</loc>
-    <lastmod>2017-04-08T00:30:38+03:00</lastmod>
+    <lastmod>2017-04-17T23:44:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -77,7 +82,7 @@
   
   <url>
     <loc>http://dotsquid.com/</loc>
-    <lastmod>2017-04-08T00:30:38+03:00</lastmod>
+    <lastmod>2017-04-17T23:44:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
