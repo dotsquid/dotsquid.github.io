@@ -10,6 +10,28 @@
     <atom:link href="http://dotsquid.com/tags/c-sharp/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Why I don&#39;t like Dictionary.TryGetValue and how I made it better (I hope)</title>
+      <link>http://dotsquid.com/2017/05/31/why-i-dont-like-dictionary.trygetvalue-and-how-i-made-it-better-i-hope</link>
+      <pubDate>Wed, 31 May 2017 21:22:23 +0200</pubDate>
+      
+      <guid>http://dotsquid.com/2017/05/31/why-i-dont-like-dictionary.trygetvalue-and-how-i-made-it-better-i-hope</guid>
+      <description>&lt;p&gt;The most annoying thing of &lt;code&gt;Dictionary.TryGetValue&lt;/code&gt; is that it returns a default value of &lt;code&gt;value&lt;/code&gt; parameter if &lt;code&gt;key&lt;/code&gt; is not found. E.g. if &lt;code&gt;value&lt;/code&gt; is of &lt;code&gt;float&lt;/code&gt; type it will be &lt;code&gt;0.0f&lt;/code&gt;.&lt;br /&gt;
+Because of that you have to check the returned &lt;code&gt;bool&lt;/code&gt; and if it&amp;rsquo;s &lt;code&gt;false&lt;/code&gt; you have to assign the value you need. It looks as follows&lt;/p&gt;
+
+&lt;script src=&#34;//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=Dislike.cs&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;As you can see now we have to deal with redundant &lt;code&gt;if&lt;/code&gt; statement which makes code not so clean and neat as it could be.&lt;br /&gt;
+How about this one?&lt;/p&gt;
+
+&lt;script src=&#34;//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=Like.cs&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Fortunately it&amp;rsquo;s quite easy to make it real with an extension class like as follows&lt;/p&gt;
+
+&lt;p&gt;&lt;script src=&#34;//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=DictionaryUtility.cs&#34;&gt;&lt;/script&gt;&lt;br /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d</title>
       <link>http://dotsquid.com/2017/04/17/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d</link>
       <pubDate>Mon, 17 Apr 2017 23:44:46 +0200</pubDate>

@@ -44,7 +44,7 @@
 <meta property="og:url" content="http://dotsquid.com/" />
 
 
-<meta property="og:updated_time" content="2017-04-17T23:44:46&#43;02:00"/>
+<meta property="og:updated_time" content="2017-05-31T21:22:23&#43;02:00"/>
 
 
 
@@ -221,6 +221,174 @@
     
     <section id="main">
     
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+    <div class="article-banner">
+        <a href="http://dotsquid.com/2017/05/31/why-i-dont-like-dictionary.trygetvalue-and-how-i-made-it-better-i-hope" itemprop="url">
+            <img src="http://dotsquid.com/titles/dictionary-trygetvalue.png">
+        </a>
+    </div>
+
+
+<header class="article-header">
+    <a href="http://dotsquid.com/2017/05/31/why-i-dont-like-dictionary.trygetvalue-and-how-i-made-it-better-i-hope">
+        <h1 class="article-title" itemprop="name">
+            Why I don&#39;t like Dictionary.TryGetValue and how I made it better (I hope)
+        </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-05-31 21:22:23 &#43;0200 &#43;0200" itemprop="datePublished">2017 May 31</time>
+            
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                    <a class="article-category-link" href="http://dotsquid.com/categories/unity3d">Unity3d</a>
+                    
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/unity3d">unity3d</a>
+                    
+                        
+                        /
+                    
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/ui">ui</a>
+                    
+                        
+                        /
+                    
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/c-sharp">c-sharp</a>
+                    
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    The most annoying thing of <code>Dictionary.TryGetValue</code> is that it returns a default value of <code>value</code> parameter if <code>key</code> is not found. E.g. if <code>value</code> is of <code>float</code> type it will be <code>0.0f</code>.<br />
+Because of that you have to check the returned <code>bool</code> and if it&rsquo;s <code>false</code> you have to assign the value you need. It looks as follows</p>
+
+<script src="//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=Dislike.cs"></script>
+
+<p>As you can see now we have to deal with redundant <code>if</code> statement which makes code not so clean and neat as it could be.<br />
+How about this one?</p>
+
+<script src="//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=Like.cs"></script>
+
+<p>Fortunately it&rsquo;s quite easy to make it real with an extension class like as follows</p>
+
+<p><script src="//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=DictionaryUtility.cs"></script><br />
+
+                </p>
+                
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://dotsquid.com/2017/05/31/why-i-dont-like-dictionary.trygetvalue-and-how-i-made-it-better-i-hope" data-id="040899de8780a497b92d9570b9f45a69" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://dotsquid.com/2017/05/31/why-i-dont-like-dictionary.trygetvalue-and-how-i-made-it-better-i-hope#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
     
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
