@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://dotsquid.com/2017/05/31/why-i-dont-like-dictionary.trygetvalue-and-how-i-made-it-better-i-hope</loc>
+    <loc>http://dotsquid.com/2017/05/31/dictionary-trygetvalue</loc>
     <lastmod>2017-05-31T21:22:23+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/2017/04/17/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d</loc>
+    <loc>http://dotsquid.com/2017/04/17/stable-enum</loc>
     <lastmod>2017-04-17T23:44:46+02:00</lastmod>
   </url>
   
@@ -17,7 +17,7 @@
   </url>
   
   <url>
-    <loc>http://dotsquid.com/2017/04/05/enum-flags-in-unity3d-inspector</loc>
+    <loc>http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer</loc>
     <lastmod>2017-04-05T21:12:16+02:00</lastmod>
   </url>
   

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d &middot; dotsquid</title>
+    <title>Enum flags in Unity3d Inspector &middot; dotsquid</title>
     <meta name="generator" content="Hugo 0.18.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +10,7 @@
       <meta name="description" content="">
     
     
-    <link rel="canonical" href="http://dotsquid.com/2017/04/17/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d"/>
+    <link rel="canonical" href="http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer"/>
 
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://dotsquid.com/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://dotsquid.com/apple-touch-icon-114x114.png" />
@@ -35,24 +35,15 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d" />
-<meta property="og:description" content="It&rsquo;s a well-known problem with serialization of enums in Unity3d:
-
-
-Use enum as a serialized field in your MonoBehaviour or ScriptableObject (or anything serializable).
-Fine-tune everything and code your game further casually.
-Add some new enumerators in the middle of your enum.
-BAM!! You are screwed.
-
-
-What happened? Nothing fancy: new enumerators of your enum just shifted down the old ones occupying their values, because Unity serializes enums as ints.
-Solution is easy: serialize enums as strings. And StableEnum will help you with this.
+    <meta property="og:title" content="Enum flags in Unity3d Inspector" />
+<meta property="og:description" content="It&rsquo;s quite strange but Unity can&rsquo;t show your enum as bitmask / flags out of the box.
+Fortunately this can be fixed fast and easy.
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dotsquid.com/2017/04/17/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d" />
+<meta property="og:url" content="http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer" />
 
 
-<meta property="og:updated_time" content="2017-04-17T23:44:46&#43;02:00"/>
+<meta property="og:updated_time" content="2017-04-05T21:12:16&#43;02:00"/>
 
 
 
@@ -65,23 +56,14 @@ Solution is easy: serialize enums as strings. And StableEnum will help you with 
 
     
     
-<meta itemprop="name" content="StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d">
-<meta itemprop="description" content="It&rsquo;s a well-known problem with serialization of enums in Unity3d:
-
-
-Use enum as a serialized field in your MonoBehaviour or ScriptableObject (or anything serializable).
-Fine-tune everything and code your game further casually.
-Add some new enumerators in the middle of your enum.
-BAM!! You are screwed.
-
-
-What happened? Nothing fancy: new enumerators of your enum just shifted down the old ones occupying their values, because Unity serializes enums as ints.
-Solution is easy: serialize enums as strings. And StableEnum will help you with this.
+<meta itemprop="name" content="Enum flags in Unity3d Inspector">
+<meta itemprop="description" content="It&rsquo;s quite strange but Unity can&rsquo;t show your enum as bitmask / flags out of the box.
+Fortunately this can be fixed fast and easy.
 ">
 
 
-<meta itemprop="dateModified" content="2017-04-17T23:44:46&#43;02:00" />
-<meta itemprop="wordCount" content="84">
+<meta itemprop="dateModified" content="2017-04-05T21:12:16&#43;02:00" />
+<meta itemprop="wordCount" content="137">
 
 
 
@@ -93,18 +75,9 @@ Solution is easy: serialize enums as strings. And StableEnum will help you with 
 
 
 
-<meta name="twitter:title" content="StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d"/>
-<meta name="twitter:description" content="It&rsquo;s a well-known problem with serialization of enums in Unity3d:
-
-
-Use enum as a serialized field in your MonoBehaviour or ScriptableObject (or anything serializable).
-Fine-tune everything and code your game further casually.
-Add some new enumerators in the middle of your enum.
-BAM!! You are screwed.
-
-
-What happened? Nothing fancy: new enumerators of your enum just shifted down the old ones occupying their values, because Unity serializes enums as ints.
-Solution is easy: serialize enums as strings. And StableEnum will help you with this.
+<meta name="twitter:title" content="Enum flags in Unity3d Inspector"/>
+<meta name="twitter:description" content="It&rsquo;s quite strange but Unity can&rsquo;t show your enum as bitmask / flags out of the box.
+Fortunately this can be fixed fast and easy.
 "/>
 <meta name="twitter:site" content="@dotsquid"/>
 
@@ -272,16 +245,16 @@ Solution is easy: serialize enums as strings. And StableEnum will help you with 
         <div class="article-inner">
             
     <div class="article-banner">
-        <a href="http://dotsquid.com/2017/04/17/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d" itemprop="url">
-            <img src="http://dotsquid.com/titles/stable-enum.png">
+        <a href="http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer" itemprop="url">
+            <img src="http://dotsquid.com/titles/enum-flag-attribute.gif">
         </a>
     </div>
 
 
 <header class="article-header">
-    <a href="http://dotsquid.com/2017/04/17/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d">
+    <a href="http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer">
         <h1 class="article-title" itemprop="name">
-            StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d
+            Enum flags in Unity3d Inspector
         </h1>
     </a>
     <div class="article-meta">
@@ -289,7 +262,7 @@ Solution is easy: serialize enums as strings. And StableEnum will help you with 
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2017-04-17 23:44:46 &#43;0200 &#43;0200" itemprop="datePublished">2017 Apr 17</time>
+            <time datetime="2017-04-05 21:12:16 &#43;0200 &#43;0200" itemprop="datePublished">2017 Apr 05</time>
             
         </div>
         
@@ -338,26 +311,37 @@ Solution is easy: serialize enums as strings. And StableEnum will help you with 
 </header>
 
             <div class="article-entry" itemprop="articleBody">
-                <p>It&rsquo;s a well-known problem with serialization of enums in Unity3d:</p>
-
-<ol>
-<li>Use enum as a serialized field in your <code>MonoBehaviour</code> or <code>ScriptableObject</code> (or anything serializable).</li>
-<li>Fine-tune everything and code your game further casually.</li>
-<li>Add some new enumerators in the middle of your enum.</li>
-<li>BAM!! You are screwed.</li>
-</ol>
-
-<p>What happened? Nothing fancy: new enumerators of your enum just shifted down the old ones occupying their values, because Unity serializes enums as ints.<br />
-Solution is easy: serialize enums as strings. And <a href="https://github.com/dotsquid/StableEnum"><strong>StableEnum</strong></a> will help you with this.<br />
+                <p>It&rsquo;s quite strange but Unity can&rsquo;t show your enum as bitmask / flags out of the box.<br />
+Fortunately this can be fixed fast and easy.<br />
 </p>
+
+<h5 id="step1-attribute">Step1. Attribute</h5>
+
+<p>First of all we need an attribute which should inform Unity that we want it to show our enum as flags and not as usual one-option list of enums. That&rsquo;s pretty simple and straightforward.</p>
+
+<script src="//gist.github.com/dotsquid/9289e275e1a4f5b973416bef00419123.js?file=EnumFlagAttribute.cs"></script>
+
+<h5 id="step2-propertydrawer">Step2. PropertyDrawer</h5>
+
+<p>Next part is a custom <code>PropertyDrawer</code>. Its purpose is to draw a property with which <code>EnumFlagAttribute</code> was associated.</p>
+
+<script src="//gist.github.com/dotsquid/9289e275e1a4f5b973416bef00419123.js?file=EnumFlagDrawer.cs"></script>
+
+<p>Nothing special as well. Maybe except the 11-th line where we receive the value of enum from <code>SerializedProperty</code>. Unity&rsquo;s documentation lacks detailed information about <code>PropertyDrawer.fieldInfo</code> but that&rsquo;s one of the ways how to use it.</p>
+
+<h5 id="step3-usage">Step3. Usage</h5>
+
+<p>Usage is easy peasy. Just associate <code>EnumFlag</code> attribute with an enum field and enjoy your bitmask in the Inspector.</p>
+
+<script src="//gist.github.com/dotsquid/9289e275e1a4f5b973416bef00419123.js?file=Usage.cs"></script>
             </div>
             <footer class="article-footer">
-    <a data-url="http://dotsquid.com/2017/04/17/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d" data-id="b0dca6979b4c5b83393b14d0bf5d2da7" class="article-share-link">
+    <a data-url="http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer" data-id="53ec1c968ef64d35d0b54c0879604d3d" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
-    <a href="http://dotsquid.com/2017/04/17/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d#disqus_thread" class="article-comment-link">
+    <a href="http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -433,20 +417,20 @@ Solution is easy: serialize enums as strings. And <a href="https://github.com/do
         
 <nav id="article-nav">
     
-    <a href="http://dotsquid.com/2017/04/08/nested-canvas-bug" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="http://dotsquid.com/2017/03/25/git-init" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           Older
       </strong>
-      <div class="article-nav-title">Nested canvas bug</div>
+      <div class="article-nav-title">git init</div>
     </a>
     
 
     
-    <a href="http://dotsquid.com/2017/05/31/why-i-dont-like-dictionary.trygetvalue-and-how-i-made-it-better-i-hope" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="http://dotsquid.com/2017/04/08/nested-canvas-bug" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           Newer
       </strong>
-      <div class="article-nav-title">Why I don&#39;t like Dictionary.TryGetValue and how I made it better (I hope)</div>
+      <div class="article-nav-title">Nested canvas bug</div>
     </a>
     
 </nav>
@@ -460,9 +444,9 @@ Solution is easy: serialize enums as strings. And <a href="https://github.com/do
             <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'dotsquid-com';
-    var disqus_identifier = 'http:\/\/dotsquid.com\/2017\/04\/17\/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d';
-    var disqus_title = 'StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d';
-    var disqus_url = 'http:\/\/dotsquid.com\/2017\/04\/17\/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d';
+    var disqus_identifier = 'http:\/\/dotsquid.com\/2017\/04\/05\/enum-flag-attribute-plus-property-drawer';
+    var disqus_title = 'Enum flags in Unity3d Inspector';
+    var disqus_url = 'http:\/\/dotsquid.com\/2017\/04\/05\/enum-flag-attribute-plus-property-drawer';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

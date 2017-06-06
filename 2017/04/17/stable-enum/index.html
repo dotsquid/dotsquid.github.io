@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>Why I don&#39;t like Dictionary.TryGetValue and how I made it better (I hope) &middot; dotsquid</title>
+    <title>StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d &middot; dotsquid</title>
     <meta name="generator" content="Hugo 0.18.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +10,7 @@
       <meta name="description" content="">
     
     
-    <link rel="canonical" href="http://dotsquid.com/2017/05/31/why-i-dont-like-dictionary.trygetvalue-and-how-i-made-it-better-i-hope"/>
+    <link rel="canonical" href="http://dotsquid.com/2017/04/17/stable-enum"/>
 
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://dotsquid.com/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://dotsquid.com/apple-touch-icon-114x114.png" />
@@ -35,26 +35,24 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Why I don&#39;t like Dictionary.TryGetValue and how I made it better (I hope)" />
-<meta property="og:description" content="The most annoying thing of Dictionary.TryGetValue is that it returns a default value of value parameter if key is not found. E.g. if value is of float type it will be 0.0f.
-Because of that you have to check the returned bool and if it&rsquo;s false you have to assign the value you need. It looks as follows
+    <meta property="og:title" content="StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d" />
+<meta property="og:description" content="It&rsquo;s a well-known problem with serialization of enums in Unity3d:
 
 
-
-As you can see now we have to deal with redundant if statement which makes code not so clean and neat as it could be.
-How about this one?
-
-
-
-Fortunately it&rsquo;s quite easy to make it real with an extension class like as follows
+Use enum as a serialized field in your MonoBehaviour or ScriptableObject (or anything serializable).
+Fine-tune everything and code your game further casually.
+Add some new enumerators in the middle of your enum.
+BAM!! You are screwed.
 
 
+What happened? Nothing fancy: new enumerators of your enum just shifted down the old ones occupying their values, because Unity serializes enums as ints.
+Solution is easy: serialize enums as strings. And StableEnum will help you with this.
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dotsquid.com/2017/05/31/why-i-dont-like-dictionary.trygetvalue-and-how-i-made-it-better-i-hope" />
+<meta property="og:url" content="http://dotsquid.com/2017/04/17/stable-enum" />
 
 
-<meta property="og:updated_time" content="2017-05-31T21:22:23&#43;02:00"/>
+<meta property="og:updated_time" content="2017-04-17T23:44:46&#43;02:00"/>
 
 
 
@@ -67,25 +65,23 @@ Fortunately it&rsquo;s quite easy to make it real with an extension class like a
 
     
     
-<meta itemprop="name" content="Why I don&#39;t like Dictionary.TryGetValue and how I made it better (I hope)">
-<meta itemprop="description" content="The most annoying thing of Dictionary.TryGetValue is that it returns a default value of value parameter if key is not found. E.g. if value is of float type it will be 0.0f.
-Because of that you have to check the returned bool and if it&rsquo;s false you have to assign the value you need. It looks as follows
+<meta itemprop="name" content="StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d">
+<meta itemprop="description" content="It&rsquo;s a well-known problem with serialization of enums in Unity3d:
 
 
-
-As you can see now we have to deal with redundant if statement which makes code not so clean and neat as it could be.
-How about this one?
-
-
-
-Fortunately it&rsquo;s quite easy to make it real with an extension class like as follows
+Use enum as a serialized field in your MonoBehaviour or ScriptableObject (or anything serializable).
+Fine-tune everything and code your game further casually.
+Add some new enumerators in the middle of your enum.
+BAM!! You are screwed.
 
 
+What happened? Nothing fancy: new enumerators of your enum just shifted down the old ones occupying their values, because Unity serializes enums as ints.
+Solution is easy: serialize enums as strings. And StableEnum will help you with this.
 ">
 
 
-<meta itemprop="dateModified" content="2017-05-31T21:22:23&#43;02:00" />
-<meta itemprop="wordCount" content="102">
+<meta itemprop="dateModified" content="2017-04-17T23:44:46&#43;02:00" />
+<meta itemprop="wordCount" content="84">
 
 
 
@@ -97,20 +93,18 @@ Fortunately it&rsquo;s quite easy to make it real with an extension class like a
 
 
 
-<meta name="twitter:title" content="Why I don&#39;t like Dictionary.TryGetValue and how I made it better (I hope)"/>
-<meta name="twitter:description" content="The most annoying thing of Dictionary.TryGetValue is that it returns a default value of value parameter if key is not found. E.g. if value is of float type it will be 0.0f.
-Because of that you have to check the returned bool and if it&rsquo;s false you have to assign the value you need. It looks as follows
+<meta name="twitter:title" content="StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d"/>
+<meta name="twitter:description" content="It&rsquo;s a well-known problem with serialization of enums in Unity3d:
 
 
-
-As you can see now we have to deal with redundant if statement which makes code not so clean and neat as it could be.
-How about this one?
-
-
-
-Fortunately it&rsquo;s quite easy to make it real with an extension class like as follows
+Use enum as a serialized field in your MonoBehaviour or ScriptableObject (or anything serializable).
+Fine-tune everything and code your game further casually.
+Add some new enumerators in the middle of your enum.
+BAM!! You are screwed.
 
 
+What happened? Nothing fancy: new enumerators of your enum just shifted down the old ones occupying their values, because Unity serializes enums as ints.
+Solution is easy: serialize enums as strings. And StableEnum will help you with this.
 "/>
 <meta name="twitter:site" content="@dotsquid"/>
 
@@ -278,16 +272,16 @@ Fortunately it&rsquo;s quite easy to make it real with an extension class like a
         <div class="article-inner">
             
     <div class="article-banner">
-        <a href="http://dotsquid.com/2017/05/31/why-i-dont-like-dictionary.trygetvalue-and-how-i-made-it-better-i-hope" itemprop="url">
-            <img src="http://dotsquid.com/titles/dictionary-trygetvalue.png">
+        <a href="http://dotsquid.com/2017/04/17/stable-enum" itemprop="url">
+            <img src="http://dotsquid.com/titles/stable-enum.png">
         </a>
     </div>
 
 
 <header class="article-header">
-    <a href="http://dotsquid.com/2017/05/31/why-i-dont-like-dictionary.trygetvalue-and-how-i-made-it-better-i-hope">
+    <a href="http://dotsquid.com/2017/04/17/stable-enum">
         <h1 class="article-title" itemprop="name">
-            Why I don&#39;t like Dictionary.TryGetValue and how I made it better (I hope)
+            StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d
         </h1>
     </a>
     <div class="article-meta">
@@ -295,7 +289,7 @@ Fortunately it&rsquo;s quite easy to make it real with an extension class like a
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2017-05-31 21:22:23 &#43;0200 &#43;0200" itemprop="datePublished">2017 May 31</time>
+            <time datetime="2017-04-17 23:44:46 &#43;0200 &#43;0200" itemprop="datePublished">2017 Apr 17</time>
             
         </div>
         
@@ -344,28 +338,26 @@ Fortunately it&rsquo;s quite easy to make it real with an extension class like a
 </header>
 
             <div class="article-entry" itemprop="articleBody">
-                <p>The most annoying thing of <code>Dictionary.TryGetValue</code> is that it returns a default value of <code>value</code> parameter if <code>key</code> is not found. E.g. if <code>value</code> is of <code>float</code> type it will be <code>0.0f</code>.<br />
-Because of that you have to check the returned <code>bool</code> and if it&rsquo;s <code>false</code> you have to assign the value you need. It looks as follows</p>
+                <p>It&rsquo;s a well-known problem with serialization of enums in Unity3d:</p>
 
-<script src="//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=Dislike.cs"></script>
+<ol>
+<li>Use enum as a serialized field in your <code>MonoBehaviour</code> or <code>ScriptableObject</code> (or anything serializable).</li>
+<li>Fine-tune everything and code your game further casually.</li>
+<li>Add some new enumerators in the middle of your enum.</li>
+<li>BAM!! You are screwed.</li>
+</ol>
 
-<p>As you can see now we have to deal with redundant <code>if</code> statement which makes code not so clean and neat as it could be.<br />
-How about this one?</p>
-
-<script src="//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=Like.cs"></script>
-
-<p>Fortunately it&rsquo;s quite easy to make it real with an extension class like as follows</p>
-
-<p><script src="//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=DictionaryUtility.cs"></script><br />
+<p>What happened? Nothing fancy: new enumerators of your enum just shifted down the old ones occupying their values, because Unity serializes enums as ints.<br />
+Solution is easy: serialize enums as strings. And <a href="https://github.com/dotsquid/StableEnum"><strong>StableEnum</strong></a> will help you with this.<br />
 </p>
             </div>
             <footer class="article-footer">
-    <a data-url="http://dotsquid.com/2017/05/31/why-i-dont-like-dictionary.trygetvalue-and-how-i-made-it-better-i-hope" data-id="040899de8780a497b92d9570b9f45a69" class="article-share-link">
+    <a data-url="http://dotsquid.com/2017/04/17/stable-enum" data-id="b0dca6979b4c5b83393b14d0bf5d2da7" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
-    <a href="http://dotsquid.com/2017/05/31/why-i-dont-like-dictionary.trygetvalue-and-how-i-made-it-better-i-hope#disqus_thread" class="article-comment-link">
+    <a href="http://dotsquid.com/2017/04/17/stable-enum#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -441,14 +433,21 @@ How about this one?</p>
         
 <nav id="article-nav">
     
-    <a href="http://dotsquid.com/2017/04/17/stableenum-or-how-i-learned-to-stop-worrying-and-love-the-enums-in-unity3d" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="http://dotsquid.com/2017/04/08/nested-canvas-bug" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           Older
       </strong>
-      <div class="article-nav-title">StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d</div>
+      <div class="article-nav-title">Nested canvas bug</div>
     </a>
     
 
+    
+    <a href="http://dotsquid.com/2017/05/31/dictionary-trygetvalue" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">Why I don&#39;t like Dictionary.TryGetValue and how I made it better (I hope)</div>
+    </a>
     
 </nav>
 
@@ -461,9 +460,9 @@ How about this one?</p>
             <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'dotsquid-com';
-    var disqus_identifier = 'http:\/\/dotsquid.com\/2017\/05\/31\/why-i-dont-like-dictionary.trygetvalue-and-how-i-made-it-better-i-hope';
-    var disqus_title = 'Why I don\x27t like Dictionary.TryGetValue and how I made it better (I hope)';
-    var disqus_url = 'http:\/\/dotsquid.com\/2017\/05\/31\/why-i-dont-like-dictionary.trygetvalue-and-how-i-made-it-better-i-hope';
+    var disqus_identifier = 'http:\/\/dotsquid.com\/2017\/04\/17\/stable-enum';
+    var disqus_title = 'StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d';
+    var disqus_url = 'http:\/\/dotsquid.com\/2017\/04\/17\/stable-enum';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

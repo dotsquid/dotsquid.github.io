@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>Enum flags in Unity3d Inspector &middot; dotsquid</title>
+    <title>Why I don&#39;t like Dictionary.TryGetValue and how I made it better (I hope) &middot; dotsquid</title>
     <meta name="generator" content="Hugo 0.18.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +10,7 @@
       <meta name="description" content="">
     
     
-    <link rel="canonical" href="http://dotsquid.com/2017/04/05/enum-flags-in-unity3d-inspector"/>
+    <link rel="canonical" href="http://dotsquid.com/2017/05/31/dictionary-trygetvalue"/>
 
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://dotsquid.com/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://dotsquid.com/apple-touch-icon-114x114.png" />
@@ -35,15 +35,26 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Enum flags in Unity3d Inspector" />
-<meta property="og:description" content="It&rsquo;s quite strange but Unity can&rsquo;t show your enum as bitmask / flags out of the box.
-Fortunately this can be fixed fast and easy.
+    <meta property="og:title" content="Why I don&#39;t like Dictionary.TryGetValue and how I made it better (I hope)" />
+<meta property="og:description" content="The most annoying thing of Dictionary.TryGetValue is that it returns a default value of value parameter if key is not found. E.g. if value is of float type it will be 0.0f.
+Because of that you have to check the returned bool and if it&rsquo;s false you have to assign the value you need. It looks as follows
+
+
+
+As you can see now we have to deal with redundant if statement which makes code not so clean and neat as it could be.
+How about this one?
+
+
+
+Fortunately it&rsquo;s quite easy to make it real with an extension class like as follows
+
+
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dotsquid.com/2017/04/05/enum-flags-in-unity3d-inspector" />
+<meta property="og:url" content="http://dotsquid.com/2017/05/31/dictionary-trygetvalue" />
 
 
-<meta property="og:updated_time" content="2017-04-05T21:12:16&#43;02:00"/>
+<meta property="og:updated_time" content="2017-05-31T21:22:23&#43;02:00"/>
 
 
 
@@ -56,14 +67,25 @@ Fortunately this can be fixed fast and easy.
 
     
     
-<meta itemprop="name" content="Enum flags in Unity3d Inspector">
-<meta itemprop="description" content="It&rsquo;s quite strange but Unity can&rsquo;t show your enum as bitmask / flags out of the box.
-Fortunately this can be fixed fast and easy.
+<meta itemprop="name" content="Why I don&#39;t like Dictionary.TryGetValue and how I made it better (I hope)">
+<meta itemprop="description" content="The most annoying thing of Dictionary.TryGetValue is that it returns a default value of value parameter if key is not found. E.g. if value is of float type it will be 0.0f.
+Because of that you have to check the returned bool and if it&rsquo;s false you have to assign the value you need. It looks as follows
+
+
+
+As you can see now we have to deal with redundant if statement which makes code not so clean and neat as it could be.
+How about this one?
+
+
+
+Fortunately it&rsquo;s quite easy to make it real with an extension class like as follows
+
+
 ">
 
 
-<meta itemprop="dateModified" content="2017-04-05T21:12:16&#43;02:00" />
-<meta itemprop="wordCount" content="137">
+<meta itemprop="dateModified" content="2017-05-31T21:22:23&#43;02:00" />
+<meta itemprop="wordCount" content="102">
 
 
 
@@ -75,9 +97,20 @@ Fortunately this can be fixed fast and easy.
 
 
 
-<meta name="twitter:title" content="Enum flags in Unity3d Inspector"/>
-<meta name="twitter:description" content="It&rsquo;s quite strange but Unity can&rsquo;t show your enum as bitmask / flags out of the box.
-Fortunately this can be fixed fast and easy.
+<meta name="twitter:title" content="Why I don&#39;t like Dictionary.TryGetValue and how I made it better (I hope)"/>
+<meta name="twitter:description" content="The most annoying thing of Dictionary.TryGetValue is that it returns a default value of value parameter if key is not found. E.g. if value is of float type it will be 0.0f.
+Because of that you have to check the returned bool and if it&rsquo;s false you have to assign the value you need. It looks as follows
+
+
+
+As you can see now we have to deal with redundant if statement which makes code not so clean and neat as it could be.
+How about this one?
+
+
+
+Fortunately it&rsquo;s quite easy to make it real with an extension class like as follows
+
+
 "/>
 <meta name="twitter:site" content="@dotsquid"/>
 
@@ -245,16 +278,16 @@ Fortunately this can be fixed fast and easy.
         <div class="article-inner">
             
     <div class="article-banner">
-        <a href="http://dotsquid.com/2017/04/05/enum-flags-in-unity3d-inspector" itemprop="url">
-            <img src="http://dotsquid.com/titles/enum-flag-attribute.gif">
+        <a href="http://dotsquid.com/2017/05/31/dictionary-trygetvalue" itemprop="url">
+            <img src="http://dotsquid.com/titles/dictionary-trygetvalue.png">
         </a>
     </div>
 
 
 <header class="article-header">
-    <a href="http://dotsquid.com/2017/04/05/enum-flags-in-unity3d-inspector">
+    <a href="http://dotsquid.com/2017/05/31/dictionary-trygetvalue">
         <h1 class="article-title" itemprop="name">
-            Enum flags in Unity3d Inspector
+            Why I don&#39;t like Dictionary.TryGetValue and how I made it better (I hope)
         </h1>
     </a>
     <div class="article-meta">
@@ -262,7 +295,7 @@ Fortunately this can be fixed fast and easy.
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2017-04-05 21:12:16 &#43;0200 &#43;0200" itemprop="datePublished">2017 Apr 05</time>
+            <time datetime="2017-05-31 21:22:23 &#43;0200 &#43;0200" itemprop="datePublished">2017 May 31</time>
             
         </div>
         
@@ -311,37 +344,28 @@ Fortunately this can be fixed fast and easy.
 </header>
 
             <div class="article-entry" itemprop="articleBody">
-                <p>It&rsquo;s quite strange but Unity can&rsquo;t show your enum as bitmask / flags out of the box.<br />
-Fortunately this can be fixed fast and easy.<br />
+                <p>The most annoying thing of <code>Dictionary.TryGetValue</code> is that it returns a default value of <code>value</code> parameter if <code>key</code> is not found. E.g. if <code>value</code> is of <code>float</code> type it will be <code>0.0f</code>.<br />
+Because of that you have to check the returned <code>bool</code> and if it&rsquo;s <code>false</code> you have to assign the value you need. It looks as follows</p>
+
+<script src="//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=Dislike.cs"></script>
+
+<p>As you can see now we have to deal with redundant <code>if</code> statement which makes code not so clean and neat as it could be.<br />
+How about this one?</p>
+
+<script src="//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=Like.cs"></script>
+
+<p>Fortunately it&rsquo;s quite easy to make it real with an extension class like as follows</p>
+
+<p><script src="//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=DictionaryUtility.cs"></script><br />
 </p>
-
-<h5 id="step1-attribute">Step1. Attribute</h5>
-
-<p>First of all we need an attribute which should inform Unity that we want it to show our enum as flags and not as usual one-option list of enums. That&rsquo;s pretty simple and straightforward.</p>
-
-<script src="//gist.github.com/dotsquid/9289e275e1a4f5b973416bef00419123.js?file=EnumFlagAttribute.cs"></script>
-
-<h5 id="step2-propertydrawer">Step2. PropertyDrawer</h5>
-
-<p>Next part is a custom <code>PropertyDrawer</code>. Its purpose is to draw a property with which <code>EnumFlagAttribute</code> was associated.</p>
-
-<script src="//gist.github.com/dotsquid/9289e275e1a4f5b973416bef00419123.js?file=EnumFlagDrawer.cs"></script>
-
-<p>Nothing special as well. Maybe except the 11-th line where we receive the value of enum from <code>SerializedProperty</code>. Unity&rsquo;s documentation lacks detailed information about <code>PropertyDrawer.fieldInfo</code> but that&rsquo;s one of the ways how to use it.</p>
-
-<h5 id="step3-usage">Step3. Usage</h5>
-
-<p>Usage is easy peasy. Just associate <code>EnumFlag</code> attribute with an enum field and enjoy your bitmask in the Inspector.</p>
-
-<script src="//gist.github.com/dotsquid/9289e275e1a4f5b973416bef00419123.js?file=Usage.cs"></script>
             </div>
             <footer class="article-footer">
-    <a data-url="http://dotsquid.com/2017/04/05/enum-flags-in-unity3d-inspector" data-id="53ec1c968ef64d35d0b54c0879604d3d" class="article-share-link">
+    <a data-url="http://dotsquid.com/2017/05/31/dictionary-trygetvalue" data-id="040899de8780a497b92d9570b9f45a69" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
-    <a href="http://dotsquid.com/2017/04/05/enum-flags-in-unity3d-inspector#disqus_thread" class="article-comment-link">
+    <a href="http://dotsquid.com/2017/05/31/dictionary-trygetvalue#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -417,21 +441,14 @@ Fortunately this can be fixed fast and easy.<br />
         
 <nav id="article-nav">
     
-    <a href="http://dotsquid.com/2017/03/25/git-init" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="http://dotsquid.com/2017/04/17/stable-enum" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           Older
       </strong>
-      <div class="article-nav-title">git init</div>
+      <div class="article-nav-title">StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d</div>
     </a>
     
 
-    
-    <a href="http://dotsquid.com/2017/04/08/nested-canvas-bug" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">
-          Newer
-      </strong>
-      <div class="article-nav-title">Nested canvas bug</div>
-    </a>
     
 </nav>
 
@@ -444,9 +461,9 @@ Fortunately this can be fixed fast and easy.<br />
             <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'dotsquid-com';
-    var disqus_identifier = 'http:\/\/dotsquid.com\/2017\/04\/05\/enum-flags-in-unity3d-inspector';
-    var disqus_title = 'Enum flags in Unity3d Inspector';
-    var disqus_url = 'http:\/\/dotsquid.com\/2017\/04\/05\/enum-flags-in-unity3d-inspector';
+    var disqus_identifier = 'http:\/\/dotsquid.com\/2017\/05\/31\/dictionary-trygetvalue';
+    var disqus_title = 'Why I don\x27t like Dictionary.TryGetValue and how I made it better (I hope)';
+    var disqus_url = 'http:\/\/dotsquid.com\/2017\/05\/31\/dictionary-trygetvalue';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
