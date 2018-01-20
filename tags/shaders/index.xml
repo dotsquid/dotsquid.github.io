@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shaders on dotsquid</title>
+    <link>http://dotsquid.com/tags/shaders/</link>
+    <description>Recent content in Shaders on dotsquid</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Proudly made in [Ukraine](https://en.wikipedia.org/wiki/Ukraine). Powered by [Hugo](//gohugo.io).</copyright>
+    <lastBuildDate>Sat, 20 Jan 2018 22:42:17 +0200</lastBuildDate>
+    
+	<atom:link href="http://dotsquid.com/tags/shaders/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GrabPass &#43; Dynamic Batching == 💕Friendship💕</title>
+      <link>http://dotsquid.com/2018/01/20/grabpass-batching-trick/</link>
+      <pubDate>Sat, 20 Jan 2018 22:42:17 +0200</pubDate>
+      
+      <guid>http://dotsquid.com/2018/01/20/grabpass-batching-trick/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://docs.unity3d.com/Manual/SL-GrabPass.html&#34;&gt;GrabPass&lt;/a&gt; is probably the easiest way to get the content of the screen and pass it to the shader automagically. Later you can use this texture to make some nifty effects like distortion and reflection.&lt;br /&gt;
+&lt;div style=&#39;position:relative; padding-bottom:56.25%; max-width:640px; max-height:360px; margin: 0 auto&#39;&gt;&lt;iframe src=&#39;https://gfycat.com/ifr/WatchfulComfortableBass&#39; frameborder=&#39;0&#39; scrolling=&#39;no&#39; width=&#39;100%&#39; height=&#39;100%&#39; style=&#39;position:absolute;top:0;left:0;&#39; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;But GrabPass has a huge fault: it breaks the &lt;a href=&#34;https://docs.unity3d.com/Manual/DrawCallBatching.html&#34;&gt;dynamic batching&lt;/a&gt; 💔
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

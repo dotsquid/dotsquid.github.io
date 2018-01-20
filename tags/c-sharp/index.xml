@@ -2,19 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C Sharp on dotsquid</title>
-    <link>http://dotsquid.com/tags/c-sharp/index.xml</link>
+    <link>http://dotsquid.com/tags/c-sharp/</link>
     <description>Recent content in C Sharp on dotsquid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Proudly made in [Ukraine](https://en.wikipedia.org/wiki/Ukraine). Powered by [Hugo](//gohugo.io).</copyright>
-    <atom:link href="http://dotsquid.com/tags/c-sharp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 May 2017 21:22:23 +0200</lastBuildDate>
+    
+	<atom:link href="http://dotsquid.com/tags/c-sharp/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Why I don&#39;t like Dictionary.TryGetValue and how I made it better (I hope)</title>
-      <link>http://dotsquid.com/2017/05/31/dictionary-trygetvalue</link>
+      <link>http://dotsquid.com/2017/05/31/dictionary-trygetvalue/</link>
       <pubDate>Wed, 31 May 2017 21:22:23 +0200</pubDate>
       
-      <guid>http://dotsquid.com/2017/05/31/dictionary-trygetvalue</guid>
+      <guid>http://dotsquid.com/2017/05/31/dictionary-trygetvalue/</guid>
       <description>&lt;p&gt;The most annoying thing of &lt;code&gt;Dictionary.TryGetValue&lt;/code&gt; is that it returns a default value of &lt;code&gt;value&lt;/code&gt; parameter if &lt;code&gt;key&lt;/code&gt; is not found. E.g. if &lt;code&gt;value&lt;/code&gt; is of &lt;code&gt;float&lt;/code&gt; type it will be &lt;code&gt;0.0f&lt;/code&gt;.&lt;br /&gt;
 Because of that you have to check the returned &lt;code&gt;bool&lt;/code&gt; and if it&amp;rsquo;s &lt;code&gt;false&lt;/code&gt; you have to assign the value you need. It looks as follows&lt;/p&gt;
 
@@ -33,10 +36,10 @@ How about this one?&lt;/p&gt;
     
     <item>
       <title>StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d</title>
-      <link>http://dotsquid.com/2017/04/17/stable-enum</link>
+      <link>http://dotsquid.com/2017/04/17/stable-enum/</link>
       <pubDate>Mon, 17 Apr 2017 23:44:46 +0200</pubDate>
       
-      <guid>http://dotsquid.com/2017/04/17/stable-enum</guid>
+      <guid>http://dotsquid.com/2017/04/17/stable-enum/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s a well-known problem with serialization of enums in Unity3d:&lt;/p&gt;
 
 &lt;ol&gt;
@@ -53,33 +56,13 @@ Solution is easy: serialize enums as strings. And &lt;a href=&#34;https://github
     
     <item>
       <title>Enum flags in Unity3d Inspector</title>
-      <link>http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer</link>
+      <link>http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/</link>
       <pubDate>Wed, 05 Apr 2017 21:12:16 +0200</pubDate>
       
-      <guid>http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer</guid>
+      <guid>http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s quite strange but Unity can&amp;rsquo;t show your enum as bitmask / flags out of the box.&lt;br /&gt;
 Fortunately this can be fixed fast and easy.&lt;br /&gt;
-&lt;/p&gt;
-
-&lt;h5 id=&#34;step1-attribute&#34;&gt;Step1. Attribute&lt;/h5&gt;
-
-&lt;p&gt;First of all we need an attribute which should inform Unity that we want it to show our enum as flags and not as usual one-option list of enums. That&amp;rsquo;s pretty simple and straightforward.&lt;/p&gt;
-
-&lt;script src=&#34;//gist.github.com/dotsquid/9289e275e1a4f5b973416bef00419123.js?file=EnumFlagAttribute.cs&#34;&gt;&lt;/script&gt;
-
-&lt;h5 id=&#34;step2-propertydrawer&#34;&gt;Step2. PropertyDrawer&lt;/h5&gt;
-
-&lt;p&gt;Next part is a custom &lt;code&gt;PropertyDrawer&lt;/code&gt;. Its purpose is to draw a property with which &lt;code&gt;EnumFlagAttribute&lt;/code&gt; was associated.&lt;/p&gt;
-
-&lt;script src=&#34;//gist.github.com/dotsquid/9289e275e1a4f5b973416bef00419123.js?file=EnumFlagDrawer.cs&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;Nothing special as well. Maybe except the 11-th line where we receive the value of enum from &lt;code&gt;SerializedProperty&lt;/code&gt;. Unity&amp;rsquo;s documentation lacks detailed information about &lt;code&gt;PropertyDrawer.fieldInfo&lt;/code&gt; but that&amp;rsquo;s one of the ways how to use it.&lt;/p&gt;
-
-&lt;h5 id=&#34;step3-usage&#34;&gt;Step3. Usage&lt;/h5&gt;
-
-&lt;p&gt;Usage is easy peasy. Just associate &lt;code&gt;EnumFlag&lt;/code&gt; attribute with an enum field and enjoy your bitmask in the Inspector.&lt;/p&gt;
-
-&lt;script src=&#34;//gist.github.com/dotsquid/9289e275e1a4f5b973416bef00419123.js?file=Usage.cs&#34;&gt;&lt;/script&gt;</description>
+&lt;/p&gt;</description>
     </item>
     
   </channel>

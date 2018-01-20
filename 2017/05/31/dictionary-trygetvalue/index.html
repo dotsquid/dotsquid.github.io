@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
     <title>Why I don&#39;t like Dictionary.TryGetValue and how I made it better (I hope) &middot; dotsquid</title>
-    <meta name="generator" content="Hugo 0.18.1" />
+    <meta name="generator" content="Hugo 0.24" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="dotsquid">
@@ -10,7 +10,7 @@
       <meta name="description" content="">
     
     
-    <link rel="canonical" href="http://dotsquid.com/2017/05/31/dictionary-trygetvalue"/>
+    <link rel="canonical" href="http://dotsquid.com/2017/05/31/dictionary-trygetvalue/"/>
 
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://dotsquid.com/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://dotsquid.com/apple-touch-icon-114x114.png" />
@@ -51,10 +51,13 @@ Fortunately it&rsquo;s quite easy to make it real with an extension class like a
 
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dotsquid.com/2017/05/31/dictionary-trygetvalue" />
+<meta property="og:url" content="http://dotsquid.com/2017/05/31/dictionary-trygetvalue/" />
 
 
-<meta property="og:updated_time" content="2017-05-31T21:22:23&#43;02:00"/>
+
+<meta property="article:published_time" content="2017-05-31T21:22:23&#43;02:00"/>
+<meta property="article:modified_time" content="2017-05-31T21:22:23&#43;02:00"/>
+
 
 
 
@@ -89,7 +92,7 @@ Fortunately it&rsquo;s quite easy to make it real with an extension class like a
 
 
 
-<meta itemprop="keywords" content="general,unity3d,c-sharp,ui,unity3d," />
+<meta itemprop="keywords" content="general,unity3d,c-sharp,shaders,tricks,ui,unity3d," />
 
     
 
@@ -97,6 +100,7 @@ Fortunately it&rsquo;s quite easy to make it real with an extension class like a
 
 
 
+<meta name="twitter:text:title" content="Why I don&#39;t like Dictionary.TryGetValue and how I made it better (I hope)"/>
 <meta name="twitter:title" content="Why I don&#39;t like Dictionary.TryGetValue and how I made it better (I hope)"/>
 <meta name="twitter:description" content="The most annoying thing of Dictionary.TryGetValue is that it returns a default value of value parameter if key is not found. E.g. if value is of float type it will be 0.0f.
 Because of that you have to check the returned bool and if it&rsquo;s false you have to assign the value you need. It looks as follows
@@ -113,7 +117,6 @@ Fortunately it&rsquo;s quite easy to make it real with an extension class like a
 
 "/>
 <meta name="twitter:site" content="@dotsquid"/>
-
 
     
 
@@ -278,14 +281,14 @@ Fortunately it&rsquo;s quite easy to make it real with an extension class like a
         <div class="article-inner">
             
     <div class="article-banner">
-        <a href="http://dotsquid.com/2017/05/31/dictionary-trygetvalue" itemprop="url">
+        <a href="http://dotsquid.com/2017/05/31/dictionary-trygetvalue/" itemprop="url">
             <img src="http://dotsquid.com/titles/dictionary-trygetvalue.png">
         </a>
     </div>
 
 
 <header class="article-header">
-    <a href="http://dotsquid.com/2017/05/31/dictionary-trygetvalue">
+    <a href="http://dotsquid.com/2017/05/31/dictionary-trygetvalue/">
         <h1 class="article-title" itemprop="name">
             Why I don&#39;t like Dictionary.TryGetValue and how I made it better (I hope)
         </h1>
@@ -360,12 +363,12 @@ How about this one?</p>
 </p>
             </div>
             <footer class="article-footer">
-    <a data-url="http://dotsquid.com/2017/05/31/dictionary-trygetvalue" data-id="040899de8780a497b92d9570b9f45a69" class="article-share-link">
+    <a data-url="http://dotsquid.com/2017/05/31/dictionary-trygetvalue/" data-id="b8d375f61080be85fe1a209db7965f44" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
-    <a href="http://dotsquid.com/2017/05/31/dictionary-trygetvalue#disqus_thread" class="article-comment-link">
+    <a href="http://dotsquid.com/2017/05/31/dictionary-trygetvalue/#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -441,7 +444,7 @@ How about this one?</p>
         
 <nav id="article-nav">
     
-    <a href="http://dotsquid.com/2017/04/17/stable-enum" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="http://dotsquid.com/2017/04/17/stable-enum/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           Older
       </strong>
@@ -449,6 +452,13 @@ How about this one?</p>
     </a>
     
 
+    
+    <a href="http://dotsquid.com/2018/01/20/grabpass-batching-trick/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">GrabPass &#43; Dynamic Batching == 💕Friendship💕</div>
+    </a>
     
 </nav>
 
@@ -461,9 +471,9 @@ How about this one?</p>
             <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'dotsquid-com';
-    var disqus_identifier = 'http:\/\/dotsquid.com\/2017\/05\/31\/dictionary-trygetvalue';
+    var disqus_identifier = 'http:\/\/dotsquid.com\/2017\/05\/31\/dictionary-trygetvalue\/';
     var disqus_title = 'Why I don\x27t like Dictionary.TryGetValue and how I made it better (I hope)';
-    var disqus_url = 'http:\/\/dotsquid.com\/2017\/05\/31\/dictionary-trygetvalue';
+    var disqus_url = 'http:\/\/dotsquid.com\/2017\/05\/31\/dictionary-trygetvalue\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -497,7 +507,7 @@ How about this one?</p>
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017
+      &copy; 2018
       Proudly made in <a href="https://en.wikipedia.org/wiki/Ukraine">Ukraine</a>. Powered by <a href="//gohugo.io">Hugo</a>.
     </div>
   </div>
@@ -508,7 +518,7 @@ How about this one?</p>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-97233469-1', 'auto');
 ga('send', 'pageview');

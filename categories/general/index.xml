@@ -2,21 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>General on dotsquid</title>
-    <link>http://dotsquid.com/categories/general/index.xml</link>
+    <link>http://dotsquid.com/categories/general/</link>
     <description>Recent content in General on dotsquid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Proudly made in [Ukraine](https://en.wikipedia.org/wiki/Ukraine). Powered by [Hugo](//gohugo.io).</copyright>
-    <atom:link href="http://dotsquid.com/categories/general/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Mar 2017 17:24:46 +0200</lastBuildDate>
+    
+	<atom:link href="http://dotsquid.com/categories/general/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>git init</title>
-      <link>http://dotsquid.com/2017/03/25/git-init</link>
+      <link>http://dotsquid.com/2017/03/25/git-init/</link>
       <pubDate>Sat, 25 Mar 2017 17:24:46 +0200</pubDate>
       
-      <guid>http://dotsquid.com/2017/03/25/git-init</guid>
-      <description>&lt;p&gt;This is it. I joined the dark side and now I have a blog.&lt;/p&gt;
-</description>
+      <guid>http://dotsquid.com/2017/03/25/git-init/</guid>
+      <description>This is it. I joined the dark side and now I have a blog.</description>
     </item>
     
   </channel>
