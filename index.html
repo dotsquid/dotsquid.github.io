@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
     <title>dotsquid</title>
-    <meta name="generator" content="Hugo 0.24" />
+    <meta name="generator" content="Hugo 0.33" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="dotsquid">
@@ -62,7 +62,10 @@
 <meta itemprop="description" content="">
 
 
-    
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="dotsquid"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@dotsquid"/>
+
     
 
     
@@ -219,9 +222,9 @@
 
 
     <div class="outer">
-    
-    
-    <section id="main">
+    	
+    	
+    	<section id="main">
     
     
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
@@ -295,10 +298,11 @@
 
             <div class="article-entry" itemprop="articleBody">
                 <p>
-                    <a href="https://docs.unity3d.com/Manual/SL-GrabPass.html">GrabPass</a> is probably the easiest way to get the content of the screen and pass it to the shader automagically. Later you can use this texture to make some nifty effects like distortion and reflection.<br />
+                    <p><a href="https://docs.unity3d.com/Manual/SL-GrabPass.html">GrabPass</a> is probably the easiest way to get the content of the screen and pass it to the shader automagically. Later you can use this texture to make some nifty effects like distortion and reflection.<br />
 <div style='position:relative; padding-bottom:56.25%; max-width:640px; max-height:360px; margin: 0 auto'><iframe src='https://gfycat.com/ifr/WatchfulComfortableBass' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div></p>
 
 <p>But GrabPass has a huge fault: it breaks the <a href="https://docs.unity3d.com/Manual/DrawCallBatching.html">dynamic batching</a> 💔
+</p>
 
                 </p>
                 
@@ -310,7 +314,7 @@
                 
             </div>
             <footer class="article-footer">
-    <a data-url="http://dotsquid.com/2018/01/20/grabpass-batching-trick/" data-id="8b64aed4df4998a5b5313fcbe85964b2" class="article-share-link">
+    <a data-url="http://dotsquid.com/2018/01/20/grabpass-batching-trick/" data-id="b511db60581bc7258f6be3a744511b36" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -460,7 +464,7 @@
 
             <div class="article-entry" itemprop="articleBody">
                 <p>
-                    The most annoying thing of <code>Dictionary.TryGetValue</code> is that it returns a default value of <code>value</code> parameter if <code>key</code> is not found. E.g. if <code>value</code> is of <code>float</code> type it will be <code>0.0f</code>.<br />
+                    <p>The most annoying thing of <code>Dictionary.TryGetValue</code> is that it returns a default value of <code>value</code> parameter if <code>key</code> is not found. E.g. if <code>value</code> is of <code>float</code> type it will be <code>0.0f</code>.<br />
 Because of that you have to check the returned <code>bool</code> and if it&rsquo;s <code>false</code> you have to assign the value you need. It looks as follows</p>
 
 <script src="//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=Dislike.cs"></script>
@@ -473,12 +477,13 @@ How about this one?</p>
 <p>Fortunately it&rsquo;s quite easy to make it real with an extension class like as follows</p>
 
 <p><script src="//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=DictionaryUtility.cs"></script><br />
+</p>
 
                 </p>
                 
             </div>
             <footer class="article-footer">
-    <a data-url="http://dotsquid.com/2017/05/31/dictionary-trygetvalue/" data-id="b8d375f61080be85fe1a209db7965f44" class="article-share-link">
+    <a data-url="http://dotsquid.com/2017/05/31/dictionary-trygetvalue/" data-id="52599a48293474fe3df2e9b1451babeb" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -628,7 +633,7 @@ How about this one?</p>
 
             <div class="article-entry" itemprop="articleBody">
                 <p>
-                    It&rsquo;s a well-known problem with serialization of enums in Unity3d:</p>
+                    <p>It&rsquo;s a well-known problem with serialization of enums in Unity3d:</p>
 
 <ol>
 <li>Use enum as a serialized field in your <code>MonoBehaviour</code> or <code>ScriptableObject</code> (or anything serializable).</li>
@@ -639,12 +644,13 @@ How about this one?</p>
 
 <p>What happened? Nothing fancy: new enumerators of your enum just shifted down the old ones occupying their values, because Unity serializes enums as ints.<br />
 Solution is easy: serialize enums as strings. And <a href="https://github.com/dotsquid/StableEnum"><strong>StableEnum</strong></a> will help you with this.<br />
+</p>
 
                 </p>
                 
             </div>
             <footer class="article-footer">
-    <a data-url="http://dotsquid.com/2017/04/17/stable-enum/" data-id="942f5e0488c0bbd257d129474c9cf057" class="article-share-link">
+    <a data-url="http://dotsquid.com/2017/04/17/stable-enum/" data-id="d614e3ac0f463811e790b1e5791b9170" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -801,7 +807,7 @@ The bug is as follows.<br />
                 
             </div>
             <footer class="article-footer">
-    <a data-url="http://dotsquid.com/2017/04/08/nested-canvas-bug/" data-id="2b4d0fae56dbafedff60b6511cd3c0bb" class="article-share-link">
+    <a data-url="http://dotsquid.com/2017/04/08/nested-canvas-bug/" data-id="f4adc4c87130cc9f37b72a8f16684899" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -964,7 +970,7 @@ Fortunately this can be fixed fast and easy.<br />
                 
             </div>
             <footer class="article-footer">
-    <a data-url="http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/" data-id="cb5d6559f6e9312ac9f77a167cf9b41c" class="article-share-link">
+    <a data-url="http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/" data-id="923d0fc134cc4babb382573d0f97ca52" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -1096,123 +1102,12 @@ Fortunately this can be fixed fast and easy.<br />
                 
             </div>
             <footer class="article-footer">
-    <a data-url="http://dotsquid.com/2017/03/25/git-init/" data-id="acc92ea56d1362e6e18bd2f3dc6a21e7" class="article-share-link">
+    <a data-url="http://dotsquid.com/2017/03/25/git-init/" data-id="42e6cd0561a698532a02cc20710ab20f" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
     <a href="http://dotsquid.com/2017/03/25/git-init/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-        </div>
-    </article>
-    
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-
-<header class="article-header">
-    <a href="http://dotsquid.com/post/">
-        <h1 class="article-title" itemprop="name">
-            Posts
-        </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2018-01-20 22:42:17 &#43;0200 EET" itemprop="datePublished">2018 Jan 20</time>
-            
-        </div>
-        
-        
-
-        
-    </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    
-                </p>
-                
-            </div>
-            <footer class="article-footer">
-    <a data-url="http://dotsquid.com/post/" data-id="" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="http://dotsquid.com/post/#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -1294,17 +1189,7 @@ Fortunately this can be fixed fast and easy.<br />
 </section>
 
 
-    <aside id="sidebar">
-    
-
-    
-
-    
-
-    
-
-</aside>
-
+    	
     </div>
 </div>
 
