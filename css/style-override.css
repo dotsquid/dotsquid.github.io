@@ -959,18 +959,6 @@ input.search-form-input:-webkit-autofill {
   z-index: 1;
   transform-style: preserve-3d;
 }
-#about-avatar-wrapper .back {
-  background: url("images/about/avatar/layer1_0.png");
-  background-size: contain;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-}
 #about-avatar-wrapper .layer {
   background-size: contain;
   width: 97%;
@@ -982,23 +970,70 @@ input.search-form-input:-webkit-autofill {
   right: 0;
   z-index: 3;
 }
-#about-avatar-wrapper .seagull_0 {
-  background-image: url("images/about/avatar/seagull_0.png");
-  transform: translateZ(12px);
+
+/* ODESA */
+/* #about-avatar-wrapper .back {
+  background: url("images/about/avatar/Odesa/layer_back.png");
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
 }
-#about-avatar-wrapper .seagull_1 {
-  background-image: url("images/about/avatar/seagull_1.png");
+#about-avatar-wrapper .seagull_0 {
+  background-image: url("images/about/avatar/Buda/seagull_0.png");
   transform: translateZ(20px);
 }
-#about-avatar-wrapper .seagull_2 {
-  background-image: url("images/about/avatar/seagull_2.png");
+#about-avatar-wrapper .seagull_1 {
+  background-image: url("images/about/avatar/Buda/seagull_1.png");
   transform: translateZ(28px);
 }
+#about-avatar-wrapper .seagull_2 {
+  background-image: url("images/about/avatar/Buda/seagull_2.png");
+  transform: translateZ(36px);
+}
 #about-avatar-wrapper .avatar {
-  background-image: url("images/about/avatar/layer1_2.png");
+  background-image: url("images/about/avatar/Odesa/layer_front.png");
   z-index: 4;
   transform: translateY(2%) translateZ(42px);
+} */
+
+/* BUDAPEST */
+#about-avatar-wrapper .back {
+  background: url("images/about/avatar/Buda/layer_back.png");
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
 }
+#about-avatar-wrapper .seagull_0 {
+  background-image: url("images/about/avatar/Buda/seagull_0.png");
+  transform: translateZ(20px);
+}
+#about-avatar-wrapper .seagull_1 {
+  background-image: url("images/about/avatar/Buda/seagull_1.png");
+  transform: translateZ(28px);
+}
+#about-avatar-wrapper .seagull_2 {
+  background-image: url("images/about/avatar/Buda/seagull_2.png");
+  transform: translateZ(36px);
+}
+#about-avatar-wrapper .avatar {
+  background-image: url("images/about/avatar/Buda/layer_front.png");
+  z-index: 4;
+  transform: translateX(5px) translateY(12px) translateZ(42px);
+}
+
+
 @keyframes about-avatar-rays-anim {
     0% {
       transform: rotate(0deg);
