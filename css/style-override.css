@@ -1,5 +1,9 @@
 /* Oh, God, I'm so bad at css :C */
 
+body {
+  background-image: url(images/back.png);
+}
+
 /* Central pane */
 @media screen and (min-width: 1200px) {
   #main {
@@ -1014,23 +1018,24 @@ input.search-form-input:-webkit-autofill {
   left: 0;
   right: 0;
   z-index: 2;
+  transform: translateZ(16px);
 }
 #about-avatar-wrapper .seagull_0 {
   background-image: url("images/about/avatar/Buda/seagull_0.png");
-  transform: translateZ(20px);
+  transform: translateZ(30px);
 }
 #about-avatar-wrapper .seagull_1 {
   background-image: url("images/about/avatar/Buda/seagull_1.png");
-  transform: translateZ(28px);
+  transform: translateZ(38px);
 }
 #about-avatar-wrapper .seagull_2 {
   background-image: url("images/about/avatar/Buda/seagull_2.png");
-  transform: translateZ(36px);
+  transform: translateZ(46px);
 }
 #about-avatar-wrapper .avatar {
   background-image: url("images/about/avatar/Buda/layer_front.png");
   z-index: 4;
-  transform: translateX(5px) translateY(12px) translateZ(42px);
+  transform: translateX(5px) translateY(12px) translateZ(52px);
 }
 
 
