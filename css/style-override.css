@@ -799,6 +799,13 @@ input.search-form-input:-webkit-autofill {
   color: #565a5f;
 }
 
+#contact-form > h1::selection,
+#contact-form input::selection,
+#contact-form textarea::selection {
+  color: #333538;
+  background-color: rgba(54, 232, 223, 0.92);
+}
+
 @media screen and (max-width: 800px) {
   #contact-form {
     width: 400px;
@@ -1197,6 +1204,321 @@ input.search-form-input:-webkit-autofill {
   }
 }
 
+/* ================ WORKS ================ */
+#works-outer {
+  float: left;
+  width: 62%;
+  margin: 0 0.75% 0 15%;
+}
+
+#works-inner {
+  background: #fff;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  margin-top: 30px;
+  border-radius: 4px;
+}
+
+.work-item::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  border-bottom: 1px solid rgba(0,0,0,0.16);
+}
+
+.work-item:first-child::before {
+  content: none;
+}
+
+.work-item-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.work-item-logo {
+  float: left;
+  padding: 20px 4% 20px 48px;
+  width: calc(36% - 48px);
+}
+
+.work-item-logo > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+}
+
+.work-item-desc {
+  float: left;
+  width: calc(60% - 56px);
+  padding: 20px 48px 20px 8px;
+}
+
+.work-item-desc > h1 {
+  font-size: 2em;
+  text-align: center;
+}
+
+.work-item-desc sup.work-item-status {
+  vertical-align: super;
+  font-size: 50%;
+  position: relative;
+  top: -8px;
+  opacity: 0.5;
+  padding: 1px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.work-item-desc p {
+  /* text-indent: 32px; */
+  text-indent: 0;
+}
+
+.work-item-desc .article-entry {
+  padding: 0;
+}
+
+.work-item-desc a,
+.work-item-desc a:hover {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.work-item-desc a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  border-bottom: 1px solid #38b7ea;
+  -webkit-transition: 0.25s ease;
+     -moz-transition: 0.25s ease;
+      -ms-transition: 0.25s ease;
+          transition: 0.25s ease;
+}
+
+.work-item-desc a:hover::after {
+  left: 0;
+  right: 0;
+}
+
+.work-item-desc .article-entry:after,
+.work-item-desc .article-entry:before {
+  display: inline;
+  content: none;
+}
+
+.work-item-gallery {
+  width: 80%;
+  margin: 0 auto 16px;
+}
+
+.work-item-gallery img {
+  border-radius: 4px;
+}
+
+.work-item-gallery a::after {
+  content: none;
+}
+
+.work-item-gallery a {
+  filter: saturate(75%) contrast(50%) opacity(75%) brightness(125%);
+  -webkit-transition: 0.5s ease;
+     -moz-transition: 0.5s ease;
+      -ms-transition: 0.5s ease;
+          transition: 0.5s ease;
+}
+
+.work-item-gallery a:hover {
+  filter: saturate(100%) contrast(100%) opacity(100%) brightness(100%);
+}
+
+.work-item-gallery > .grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 0px 4px;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.work-item-gallery > .grid .grid-item img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.work-item-gallery > .grid .grid-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.work-item-gallery-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0.72;
+  color: red;
+}
+
+.work-item-gallery-overlay > *::before {
+  position: absolute;
+  white-space: pre;
+  display: inline;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ul.work-item-links {
+  display: table;
+  margin: 0 auto;
+  list-style: none;
+}
+
+ul.work-item-links > li {
+  float: left;
+
+  padding: 1px 2px;
+  margin: 0px 4px;
+  border-radius: 4px;
+  border: 1px solid rgb(0, 192, 255);
+}
+
+ul.work-item-links > li,
+ul.work-item-links > li a{
+  -webkit-transition: 0.25s ease;
+     -moz-transition: 0.25s ease;
+      -ms-transition: 0.25s ease;
+          transition: 0.25s ease;
+}
+
+ul.work-item-links > li:hover {
+  background-color: rgb(0, 192, 255);
+}
+
+ul.work-item-links > li:hover a{
+  color: white;
+}
+
+ul.work-item-links > li a::after,
+ul.work-item-links > li a:hover::after{
+  content: none;
+}
+
+ul.work-item-links > li.red {
+  border: 1px solid rgb(255, 32, 0);
+}
+
+ul.work-item-links > li.red a {
+  color: rgb(255, 32, 0);
+}
+
+ul.work-item-links > li.red:hover {
+  background-color: rgb(255, 32, 0);
+}
+
+ul.work-item-links > li.green {
+  border: 1px solid rgb(92, 255, 0);
+}
+
+ul.work-item-links > li.green a {
+  color: rgb(92, 255, 0);
+}
+
+ul.work-item-links > li.green:hover {
+  background-color: rgb(92, 255, 0);
+}
+
+ul.work-item-links > li.purple {
+  border: 1px solid rgb(192, 32, 255);
+}
+
+ul.work-item-links > li.purple a {
+  color: rgb(192, 32, 255);
+}
+
+ul.work-item-links > li.purple:hover {
+  background-color: rgb(192, 32, 255);
+}
+
+ul.work-item-links > li.red:hover a,
+ul.work-item-links > li.green:hover a,
+ul.work-item-links > li.purple:hover a{
+  color: white;
+}
+
+/* ul.work-item-links > li:before {
+  content: "//";
+  float: left;
+  opacity: 0.32;
+}
+
+ul.work-item-links > li:first-child:before {
+  content: none;
+} */
+
+/* ================ DOCUMENT ================ */
+.document-space {
+  height: 2.0em;
+}
+
+/* ----------------- PRODUCT ----------------- */
+#product-inner {
+  background: #fff;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  margin-top: 30px;
+  border-radius: 4px;
+}
+
+#product-inner .product-title {
+  max-width: 100%;
+  margin: 10px auto;
+}
+
+.product-usual {
+  max-width: 72%;
+  margin: 0 auto;
+}
+
+.product-usual h1,
+.product-usual h2,
+.product-usual h3 {
+  display: table;
+  padding: 0.28em 0.36em;
+  border-radius: 4px;
+  margin: 0.5em 0;
+}
+
+.product-usual h1,
+.product-usual h2 {
+  background-color: rgba(86, 90, 95, 0.72);
+  color: white;
+}
+
+.product-usual h3 {
+  border: 2px solid rgba(86, 90, 95, 0.72);
+}
+
+.product-usual p {
+  margin: 0.5em 0;
+}
+
+ul.product-item-links {
+  margin: 2em auto;
+}
+
+/* ================ OTHER ================ */
 #recent-post li .item-inner a,
 #recent-post li .item-inner .item-category {
   font-size: 13px;

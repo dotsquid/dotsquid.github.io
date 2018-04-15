@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Chrono Helper &middot; dotsquid</title>
+    <meta name="generator" content="Hugo 0.33" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="dotsquid">
+    
+      <meta name="description" content="">
+    
+    
+    <link rel="canonical" href="http://dotsquid.com/works/chrono-helper/"/>
+
+    <link rel="apple-touch-icon" sizes="180x180"    href="http://dotsquid.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://dotsquid.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://dotsquid.com/favicon-16x16.png">
+    <link rel="manifest"                            href="http://dotsquid.com/manifest.json">
+    <link rel="mask-icon"                           href="http://dotsquid.com/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon"                       href="http://dotsquid.com/favicon.ico">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="http://dotsquid.com/css/style.css">
+    <link rel="stylesheet" href="http://dotsquid.com/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="http://dotsquid.com/css/monokai.css">
+    <link rel="stylesheet" href="http://dotsquid.com/fancybox/jquery.fancybox.min.css">
+    
+    <link rel="stylesheet" href="http://dotsquid.com/css/style-override.css">
+    
+    <link rel="stylesheet" href="http://dotsquid.com/css/gist/monokai.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="Chrono Helper" />
+<meta property="og:description" content="GithubAssetStoreForumChronoHelper is a free open-source tool for Unity Editor for controlling TimeScale in PlayMode with ease.
+It becomes very handy when it&rsquo;s required to examine a suspicious moment of gameplay in slow-motion or conversely when it&rsquo;s preferable to skip uninteresting part in fast-forward.  
+Installation Github Clone repository or download it as archive from https://github.com/dotsquid/ChronoHelper and just drop &lsquo;ChronoHelper&rsquo; folder to your project&rsquo;s &lsquo;Asset&rsquo; folder." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dotsquid.com/works/chrono-helper/" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="Chrono Helper">
+<meta itemprop="description" content="GithubAssetStoreForumChronoHelper is a free open-source tool for Unity Editor for controlling TimeScale in PlayMode with ease.
+It becomes very handy when it&rsquo;s required to examine a suspicious moment of gameplay in slow-motion or conversely when it&rsquo;s preferable to skip uninteresting part in fast-forward.  
+Installation Github Clone repository or download it as archive from https://github.com/dotsquid/ChronoHelper and just drop &lsquo;ChronoHelper&rsquo; folder to your project&rsquo;s &lsquo;Asset&rsquo; folder.">
+
+
+
+<meta itemprop="wordCount" content="265">
+
+
+
+<meta itemprop="keywords" content="" />
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Chrono Helper"/>
+<meta name="twitter:description" content="GithubAssetStoreForumChronoHelper is a free open-source tool for Unity Editor for controlling TimeScale in PlayMode with ease.
+It becomes very handy when it&rsquo;s required to examine a suspicious moment of gameplay in slow-motion or conversely when it&rsquo;s preferable to skip uninteresting part in fast-forward.  
+Installation Github Clone repository or download it as archive from https://github.com/dotsquid/ChronoHelper and just drop &lsquo;ChronoHelper&rsquo; folder to your project&rsquo;s &lsquo;Asset&rsquo; folder."/>
+<meta name="twitter:site" content="@dotsquid"/>
+
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="http://dotsquid.com/">Home</a>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="http://dotsquid.com/about/">About</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://dotsquid.com/works/">Works</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://dotsquid.com/contact/">Contact</a>
+          
+          
+      </nav>
+      
+      <div class="social-links">
+        <table>
+          <tr>
+            
+<td><a href="//github.com/dotsquid" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//stackoverflow.com/users/2221247" target="_blank" title="Stack Overflow"><i class="fab fa-stack-overflow"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//twitter.com/dotsquid" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></td>
+
+
+            <td><a href="http://dotsquid.com/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+          </tr>
+        </table>
+      </div>
+      <div id="search-form-wrap">
+        <form action="//duckduckgo.com" method="get" accept-charset="UTF-8" class="search-form">
+            <input type="search" name="q" class="search-form-input" placeholder="Search">
+            <button type="submit" class="search-form-submit"></button>
+            <input type="hidden" name="sites" value="http://dotsquid.com/" />
+            <div class="search-form-highlight"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="http://dotsquid.com/">Home</a></td>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="http://dotsquid.com/about/">About</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://dotsquid.com/works/">Works</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://dotsquid.com/contact/">Contact</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="http://dotsquid.com/" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+	    <div class="outer">
+    <div id="product-inner">
+        <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+            <div class="article-inner">
+                <div class="article-entry  product-usual " itemprop="articleBody">
+                    
+
+<p>
+<figure class="product-title">
+    
+        <img src="/images/products/ChronoHelper/ChronoHelper_Title-1536.png" />
+    
+    
+</figure>
+
+
+<ul class="work-item-links product-item-links">
+    
+        <li >
+            <a class="main-nav-link"  target="blank"  href="https://github.com/dotsquid/ChronoHelper">Github</a>
+        </li>
+    
+        <li >
+            <a class="main-nav-link"  href="">AssetStore</a>
+        </li>
+    
+        <li >
+            <a class="main-nav-link"  href="">Forum</a>
+        </li>
+    
+</ul>
+
+<strong>ChronoHelper</strong> is a free open-source tool for Unity Editor for controlling TimeScale in PlayMode with ease.<br />
+It becomes very handy when it&rsquo;s required to examine a suspicious moment of gameplay in slow-motion or conversely when it&rsquo;s preferable to skip uninteresting part in fast-forward.<div class="document-space"  style="height: 1.0em" ></div>
+<video autoplay loop><source src = "/videos/ChronoHelper/ChronoHelper_Basics.mp4"></video>
+<div class="document-space" ></div></p>
+
+<h2 id="installation">Installation</h2>
+
+<h3 id="github">Github</h3>
+
+<p>Clone repository or download it as archive from <a href="https://github.com/dotsquid/ChronoHelper">https://github.com/dotsquid/ChronoHelper</a> and just drop <em>&lsquo;ChronoHelper&rsquo;</em> folder to your project&rsquo;s <em>&lsquo;Asset&rsquo;</em> folder.<br />
+However it&rsquo;s better to keep everything in order. That&rsquo;s why <em>&lsquo;YourProject/Assets/3rdParty/ChronoHelper&rsquo;</em> is more recommended.
+<div class="document-space" ></div></p>
+
+<h3 id="asset-store">Asset Store</h3>
+
+<p><em>Coming soon</em>
+<div class="document-space" ></div></p>
+
+<h2 id="usage">Usage</h2>
+
+<p>Use <em>&lsquo;Tools/Chrono Helper&rsquo;</em> menu to open ChronoHelper.<br />
+To change current timeScale use the slider or shortcut buttons.<br />
+While being in EditorMode, ChronoHelper is inactive. That is done to protect the user from accidental changing of Time.timeScale project setting.
+<div class="document-space"  style="height: 1.0em" ></div>
+<img src="/images/products/ChronoHelper/ChronoHelper_ControlMapping.png" alt="" />
+<div class="document-space"  style="height: 1.0em" ></div>
+Right after switching to PlayMode ChronoHelper captures the default value of Time.timeScale in order to restore this value on switching back to EditorMode (if <em>&lsquo;Auto-reset&rsquo;</em> is on).
+<div class="document-space"  style="height: 1.0em" ></div>
+<video autoplay loop><source src = "/videos/ChronoHelper/ChronoHelper_AutoReset.mp4"></video>
+<div class="document-space"  style="height: 1.0em" ></div>
+Use <em>&lsquo;Lock&rsquo;</em> if you want to suppress any changes of Time.timeScale from without (like other scripts or TimeManager Inspector). Be aware that this mode can break the normal flow of your game (e.g. the game won&rsquo;t actually pause in main menu).
+<div class="document-space"  style="height: 1.0em" ></div>
+<video autoplay loop><source src = "/videos/ChronoHelper/ChronoHelper_Lock.mp4"></video>
+<div class="document-space" ></div></p>
+
+<h3 id="tip">Tip</h3>
+
+<p>ChronoHelper&rsquo;s window was designed to occupy as less screen space as possible. The suggested way to place the window is to dock it above or below the GameView window. In this case the slider and shortcut buttons are arranged in horizontal layout.<div class="document-space"  style="height: 1.0em" ></div>
+<img src="/images/products/ChronoHelper/ChronoHelper_HorizontalLayout.gif" alt="Horizontal layout" /></p>
+
+<p>Another way to place ChronoHelper&rsquo;s window is to dock it above or below either Inspector window or Hierarchy window. If the window is not wide enough vertical layout is used.<div class="document-space"  style="height: 1.0em" ></div>
+<img src="/images/products/ChronoHelper/ChronoHelper_VerticalLayout.gif" alt="Vertical layout" /></p>
+
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 - 2018
+      &nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Proudly made in <a href="https://en.wikipedia.org/wiki/Ukraine">Ukraine</a>&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Powered by <a href="//gohugo.io">Hugo</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-97233469-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+<script src="http://dotsquid.com/fancybox/jquery.fancybox.js"></script>
+<script src="http://dotsquid.com/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script src="http://dotsquid.com/js/typed.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+</body>
+</html>

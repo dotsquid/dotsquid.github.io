@@ -6,7 +6,7 @@
     <description>Recent content on dotsquid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Proudly made in [Ukraine](https://en.wikipedia.org/wiki/Ukraine). Powered by [Hugo](//gohugo.io).</copyright>
+    <copyright>&amp;nbsp;&amp;nbsp;&amp;nbsp;//&amp;nbsp;&amp;nbsp;&amp;nbsp;Proudly made in [Ukraine](https://en.wikipedia.org/wiki/Ukraine)&amp;nbsp;&amp;nbsp;&amp;nbsp;//&amp;nbsp;&amp;nbsp;&amp;nbsp;Powered by [Hugo](//gohugo.io).</copyright>
     <lastBuildDate>Sat, 20 Jan 2018 22:42:17 +0200</lastBuildDate>
     
 	<atom:link href="http://dotsquid.com/index.xml" rel="self" type="application/rss+xml" />
@@ -100,6 +100,58 @@ Fortunately this can be fixed fast and easy.&lt;br /&gt;
     </item>
     
     <item>
+      <title>AnimTracer</title>
+      <link>http://dotsquid.com/work/anim-tracer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dotsquid.com/work/anim-tracer/</guid>
+      <description>AnimTracer is an upcoming tool for Unity Editor intended to automagically fix animations when hierarchy of animated GameObject is changed.
+Coming soon.</description>
+    </item>
+    
+    <item>
+      <title>Chrono Helper</title>
+      <link>http://dotsquid.com/works/chrono-helper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dotsquid.com/works/chrono-helper/</guid>
+      <description>GithubAssetStoreForumChronoHelper is a free open-source tool for Unity Editor for controlling TimeScale in PlayMode with ease.
+It becomes very handy when it&amp;rsquo;s required to examine a suspicious moment of gameplay in slow-motion or conversely when it&amp;rsquo;s preferable to skip uninteresting part in fast-forward.  
+Installation Github Clone repository or download it as archive from https://github.com/dotsquid/ChronoHelper and just drop &amp;lsquo;ChronoHelper&amp;rsquo; folder to your project&amp;rsquo;s &amp;lsquo;Asset&amp;rsquo; folder.</description>
+    </item>
+    
+    <item>
+      <title>Chrono Helper</title>
+      <link>http://dotsquid.com/work/chrono-helper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dotsquid.com/work/chrono-helper/</guid>
+      <description>ChronoHelper is a free open-source tool for Unity Editor for controlling TimeScale in PlayMode with ease.
+It becomes very handy when it&amp;rsquo;s required to examine a suspicious moment of gameplay in slow-motion or conversely when it&amp;rsquo;s preferable to skip uninteresting part in fast-forward.</description>
+    </item>
+    
+    <item>
+      <title>ChronoHelper Plus</title>
+      <link>http://dotsquid.com/work/chrono-helper-plus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dotsquid.com/work/chrono-helper-plus/</guid>
+      <description>ChronoHelper Plus is an extended version of ChronoHelper with some extra features.
+Coming soon.</description>
+    </item>
+    
+    <item>
+      <title>Summer Catchers</title>
+      <link>http://dotsquid.com/work/summer-catchers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dotsquid.com/work/summer-catchers/</guid>
+      <description>Summer Catchers takes you in the journey with a little northern girl to the faraway South and summer warm. Prepare for mysterious adventures, weird characters and non-stop riding! Target platforms: Windows, Mac, Linux (Steam, GOG)
+Release date: TBD
+Status: Working hard as a part of four-man team to deliver awesomeness and fun to players.</description>
+    </item>
+    
+    <item>
       <title>about</title>
       <link>http://dotsquid.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -114,6 +166,15 @@ Fortunately this can be fixed fast and easy.&lt;br /&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://dotsquid.com/contact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>works</title>
+      <link>http://dotsquid.com/works/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dotsquid.com/works/</guid>
       <description></description>
     </item>
     
