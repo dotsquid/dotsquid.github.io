@@ -406,6 +406,11 @@ input.search-form-input:-webkit-autofill {
   right: 0;
 }
 
+.article-entry blockquote {
+  font-family: "open sans", "Helvetica Neue", "Microsoft Yahei", Helvetica, Arial, sans-serif;
+  border-left: 4px solid #38b7ea;
+}
+
 /* Read more */
 .article-more-link a {
   position: relative;
