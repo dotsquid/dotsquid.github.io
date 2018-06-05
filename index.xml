@@ -105,6 +105,17 @@ Fortunately this can be fixed fast and easy.&lt;br /&gt;
     
     <item>
       <title>AnimTracer</title>
+      <link>http://dotsquid.com/works/anim-tracer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dotsquid.com/works/anim-tracer/</guid>
+      <description>AssetStoreForum AnimTracer is a simple and handy tool for Unity Editor intended to automagically fix animations when the hierarchy of animated GameObject is changed. Reparent, add, delete or rename GameObjects - all changes will be traced.
+   
+Problem Unity stores paths to animated properties instead of references or GUIDs. That&amp;rsquo;s why when you change the hierarchy of an animated GameObject you can get something like this:   AnimTracer was developed to minimize the efforts required to solve this problem.</description>
+    </item>
+    
+    <item>
+      <title>AnimTracer</title>
       <link>http://dotsquid.com/work/anim-tracer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -119,7 +130,7 @@ Coming soon.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://dotsquid.com/works/chrono-helper/</guid>
-      <description>GithubAssetStoreForumChronoHelper is a free open-source tool for Unity Editor for controlling TimeScale in PlayMode with ease.
+      <description>GithubChangelogAssetStoreForumChronoHelper is a free open-source tool for Unity Editor for controlling TimeScale in PlayMode with ease.
 It becomes very handy when it&amp;rsquo;s required to examine a suspicious moment of gameplay in slow-motion or conversely when it&amp;rsquo;s preferable to skip uninteresting part in fast-forward.  
 Installation Github Clone repository or download it as archive from https://github.com/dotsquid/ChronoHelper and just drop &amp;lsquo;ChronoHelper&amp;rsquo; folder to your project&amp;rsquo;s &amp;lsquo;Asset&amp;rsquo; folder.</description>
     </item>
