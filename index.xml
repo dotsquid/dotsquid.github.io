@@ -109,7 +109,7 @@ Fortunately this can be fixed fast and easy.&lt;br /&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://dotsquid.com/works/anim-tracer/</guid>
-      <description>AssetStoreForum AnimTracer is a simple and handy tool for Unity Editor intended to automagically fix animations when the hierarchy of animated GameObject is changed. Reparent, add, delete or rename GameObjects - all changes will be traced.
+      <description>AssetStore AnimTracer is a simple and handy tool for Unity Editor intended to automagically fix animations when the hierarchy of animated GameObject is changed. Reparent, add, delete or rename GameObjects - all changes will be traced.
    
 Problem Unity stores paths to animated properties instead of references or GUIDs. That&amp;rsquo;s why when you change the hierarchy of an animated GameObject you can get something like this:   AnimTracer was developed to minimize the efforts required to solve this problem.</description>
     </item>
@@ -120,8 +120,7 @@ Problem Unity stores paths to animated properties instead of references or GUIDs
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://dotsquid.com/work/anim-tracer/</guid>
-      <description>AnimTracer is an upcoming tool for Unity Editor intended to automagically fix animations when hierarchy of animated GameObject is changed.
-Coming soon.</description>
+      <description>AnimTracer is a simple and handy tool for Unity Editor intended to automagically fix animations when the hierarchy of animated GameObject is changed. Reparent, add, delete or rename GameObjects - all changes will be traced.</description>
     </item>
     
     <item>
