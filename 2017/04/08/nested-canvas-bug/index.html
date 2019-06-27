@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
     <title>Nested canvas bug &middot; dotsquid</title>
-    <meta name="generator" content="Hugo 0.33" />
+    <meta name="generator" content="Hugo 0.55.6" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="dotsquid">
@@ -34,34 +34,18 @@
     <meta property="og:title" content="Nested canvas bug" />
 <meta property="og:description" content="Weird bug related to UI.Canvas was accidentally found by me while I was developing new menu for our upcoming game SummerCatchers. Btw, follow us ;)
 As far as you may know Canvas can have other Canvases as children objects. This is very useful in optimization purpose because sub-canvas isolates its UI elements from other canvases (parent and siblings) thus modifying one of its children won&rsquo;t cause rebuilding of batched mesh for other canvases.
-The bug is as follows.
-" />
+The bug is as follows." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://dotsquid.com/2017/04/08/nested-canvas-bug/" />
-
-
-
 <meta property="article:published_time" content="2017-04-08T00:30:38&#43;03:00"/>
-
 <meta property="article:modified_time" content="2017-04-08T00:30:38&#43;03:00"/>
-
-
-
-
-
-
-
-
-
-
 
     
     
 <meta itemprop="name" content="Nested canvas bug">
 <meta itemprop="description" content="Weird bug related to UI.Canvas was accidentally found by me while I was developing new menu for our upcoming game SummerCatchers. Btw, follow us ;)
 As far as you may know Canvas can have other Canvases as children objects. This is very useful in optimization purpose because sub-canvas isolates its UI elements from other canvases (parent and siblings) thus modifying one of its children won&rsquo;t cause rebuilding of batched mesh for other canvases.
-The bug is as follows.
-">
+The bug is as follows.">
 
 
 <meta itemprop="datePublished" content="2017-04-08T00:30:38&#43;03:00" />
@@ -72,11 +56,11 @@ The bug is as follows.
 
 <meta itemprop="keywords" content="unity3d,ui," />
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Nested canvas bug"/>
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Nested canvas bug"/>
 <meta name="twitter:description" content="Weird bug related to UI.Canvas was accidentally found by me while I was developing new menu for our upcoming game SummerCatchers. Btw, follow us ;)
 As far as you may know Canvas can have other Canvases as children objects. This is very useful in optimization purpose because sub-canvas isolates its UI elements from other canvases (parent and siblings) thus modifying one of its children won&rsquo;t cause rebuilding of batched mesh for other canvases.
-The bug is as follows.
-"/>
+The bug is as follows."/>
 <meta name="twitter:site" content="@dotsquid"/>
 
     
@@ -313,28 +297,20 @@ The bug is as follows.
 </header>
 
             <div class="article-entry" itemprop="articleBody">
-                <p>Weird bug related to <code>UI.Canvas</code> was accidentally found by me while I was developing new menu for our upcoming game <a href="https://twitter.com/SummerCatchers">SummerCatchers</a>. Btw, follow us ;)<br />
+                <p>Weird bug related to <code>UI.Canvas</code> was accidentally found by me while I was developing new menu for our upcoming game <a href="https://twitter.com/SummerCatchers" target="_blank">SummerCatchers</a>. Btw, follow us ;)<br />
 As far as you may know <code>Canvas</code> can have other <code>Canvases</code> as children objects. This is very useful in optimization purpose because <code>sub-canvas</code> isolates its UI elements from other canvases (parent and siblings) thus modifying one of its children won&rsquo;t cause rebuilding of batched mesh for other canvases.<br />
-The bug is as follows.<br />
-</p>
+The bug is as follows.</p>
 
 <p>If <code>Canvas</code> has a nested <code>Canvas</code> disabling and subsequent enabling of an outer <code>Canvas</code> causes an inner one to weirdly modify and &ldquo;lock&rdquo; its <code>RectTransform</code>. By &ldquo;locking&rdquo; I mean that <code>RectTransform</code> becomes uneditable via Inspector since now its values are driven by <code>Canvas</code>.<br />
 This bug is already reported to Unity QA team and marked as reproducable and sent to developers for resolution.<br />
-As far as I understand there is no way to workaround this bug. <em>However</em>, and this may sound funny, this bug motivates <strong>not to disable/enable UI GameObjects</strong> because <a href="https://unity3d.com/learn/tutorials/topics/best-practices/other-ui-optimization-techniques-and-tips#disabling-canvas-renderers">that&rsquo;s not cool and Unity does not like it at all</a>.
-
-<figure >
-    
-        <img src="/images/nested-canvas-bug-demo.gif" />
-    
-    
-    <figcaption>
-        <h4>How to reproduce</h4>
-        
-    </figcaption>
-    
+As far as I understand there is no way to workaround this bug. <em>However</em>, and this may sound funny, this bug motivates <strong>not to disable/enable UI GameObjects</strong> because <a href="https://unity3d.com/learn/tutorials/topics/best-practices/other-ui-optimization-techniques-and-tips#disabling-canvas-renderers" target="_blank">that&rsquo;s not cool and Unity does not like it at all</a>.
+<figure>
+    <img src="/images/nested-canvas-bug-demo.gif"/> <figcaption>
+            <h4>How to reproduce</h4>
+        </figcaption>
 </figure>
 
-What causes this bug is wrapped in obscurity because <code>Canvas</code> is part of core codebase not <a href="https://bitbucket.org/faceitunity3d/ui/src/f8714333fa84ed681036b02a8a59f93cb3192d08/?at=5.5">an open source part of UI</a>. But I guess when we disable an outer <code>Canvas</code> an inner one realizes its not a <code>sub-canvas</code> anymore so it must take care of its <code>RectTransform</code>. But it doesn&rsquo;t want to admit its a <code>sub-canvas</code> again after outer <code>Canvas</code> is enabled again. What a tense relationship!</p>
+What causes this bug is wrapped in obscurity because <code>Canvas</code> is part of core codebase not <a href="https://bitbucket.org/faceitunity3d/ui/src/f8714333fa84ed681036b02a8a59f93cb3192d08/?at=5.5" target="_blank">an open source part of UI</a>. But I guess when we disable an outer <code>Canvas</code> an inner one realizes its not a <code>sub-canvas</code> anymore so it must take care of its <code>RectTransform</code>. But it doesn&rsquo;t want to admit its a <code>sub-canvas</code> again after outer <code>Canvas</code> is enabled again. What a tense relationship!</p>
             </div>
             <footer class="article-footer">
     <a data-url="http://dotsquid.com/2017/04/08/nested-canvas-bug/" data-id="f4adc4c87130cc9f37b72a8f16684899" class="article-share-link">
@@ -423,7 +399,7 @@ What causes this bug is wrapped in obscurity because <code>Canvas</code> is part
     <section id="comments">
         <div id="disqus_thread">
             <div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     
@@ -466,21 +442,24 @@ What causes this bug is wrapped in obscurity because <code>Canvas</code> is part
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 - 2018
-      &nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Proudly made in <a href="https://en.wikipedia.org/wiki/Ukraine">Ukraine</a>&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Powered by <a href="//gohugo.io">Hugo</a>.
+      &copy; 2017 - 2019
+      &nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Proudly made in <a href="https://en.wikipedia.org/wiki/Ukraine" target="_blank">Ukraine</a>&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Powered by <a href="//gohugo.io" target="_blank">Hugo</a>.
     </div>
   </div>
 </footer>
 
 
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-97233469-1', 'auto');
-ga('send', 'pageview');
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-97233469-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
 
 <script src="http://dotsquid.com/fancybox/jquery.fancybox.js"></script>

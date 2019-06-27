@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
     <title>dotsquid</title>
-    <meta name="generator" content="Hugo 0.33" />
+    <meta name="generator" content="Hugo 0.55.6" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="dotsquid">
@@ -39,18 +39,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://dotsquid.com/" />
 
-
-
-<meta property="og:updated_time" content="2018-01-20T22:42:17&#43;02:00"/>
-
-
-
-
-
-
-
-
-
+<meta property="og:updated_time" content="2019-06-26T22:14:11&#43;02:00"/>
 
     
     
@@ -58,7 +47,8 @@
 <meta itemprop="description" content="">
 
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="dotsquid"/>
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="dotsquid"/>
 <meta name="twitter:description" content=""/>
 <meta name="twitter:site" content="@dotsquid"/>
 
@@ -239,6 +229,168 @@
         <div class="article-inner">
             
     <div class="article-banner">
+        <a href="http://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/" itemprop="url">
+            <img src="http://dotsquid.com/titles/simple-gpu_occlusion-for-lens-flares.png">
+        </a>
+    </div>
+
+
+<header class="article-header">
+    <a href="http://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/">
+        <h1 class="article-title" itemprop="name">
+            Simple GPU Occlusion for Lens Flares
+        </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2019-06-26 22:14:11 &#43;0200 &#43;0200" itemprop="datePublished">2019 Jun 26</time>
+            
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                    <a class="article-category-link" href="http://dotsquid.com/categories/unity3d">Unity3d</a>
+                    
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/unity3d">unity3d</a>
+                    
+                        
+                        /
+                    
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/shaders">shaders</a>
+                    
+                        
+                        /
+                    
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/tricks">tricks</a>
+                    
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    One of the interesting problems I had to solve during development of <a href="https://twitter.com/SummerCatchers" target="_blank">Summer Catchers</a> was implementation of <a href="https://en.wikipedia.org/wiki/Lens_flare" target="_blank">Lens Flares</a> effect. In this post I&rsquo;d like to share what I came up with (<strong>including an open-source demo</strong>). Buckle up.<br />
+<div style='position:relative; padding-bottom:56.25%; max-width:640px; max-height:360px; margin: 0 auto'><iframe src='https://gfycat.com/ifr/uncommonwastefulherring?hd=1' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div>
+                </p>
+                
+                <p class="article-more-link">
+                    <a href="http://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/">
+                        Read more
+                    </a>
+                </p>
+                
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/" data-id="202d4168a1f122f5a27743f3188b3d01" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+    <div class="article-banner">
         <a href="http://dotsquid.com/2018/01/20/grabpass-batching-trick/" itemprop="url">
             <img src="http://dotsquid.com/titles/grabpass-batching-trick.png">
         </a>
@@ -306,15 +458,15 @@
 
             <div class="article-entry" itemprop="articleBody">
                 <p>
-                    <p><strong>Important note:</strong> it appeared that this trick is not working in Unity 2017.2 and higher. Since currently my primary version is 2017.1.3 I have no time to experiment and find solution for the mentioned versions 😕</p>
+                    <p><strong>Update:</strong> the original trick was not working with Unity prior to 2017.2<br />
+But it appeared that the fix is quite simple and now it works fine with the latest versions (tested with 2019.2). Source code is inside.</p>
 
 <hr />
 
-<p><a href="https://docs.unity3d.com/Manual/SL-GrabPass.html">GrabPass</a> is probably the easiest way to get the content of the screen and pass it to the shader automagically. Later you can use this texture to make some nifty effects like distortion and reflection.<br />
+<p><a href="https://docs.unity3d.com/Manual/SL-GrabPass.html" target="_blank">GrabPass</a> is probably the easiest way to get the content of the screen and pass it to the shader automagically. Later you can use this texture to make some nifty effects like distortion and reflection.<br />
 <div style='position:relative; padding-bottom:56.25%; max-width:640px; max-height:360px; margin: 0 auto'><iframe src='https://gfycat.com/ifr/WatchfulComfortableBass' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div></p>
 
-<p>But GrabPass has a huge fault: it breaks the <a href="https://docs.unity3d.com/Manual/DrawCallBatching.html">dynamic batching</a> 💔
-</p>
+<p>But GrabPass has a huge fault: it breaks the <a href="https://docs.unity3d.com/Manual/DrawCallBatching.html" target="_blank">dynamic batching</a> 💔</p>
 
                 </p>
                 
@@ -479,17 +631,16 @@
                     <p>The most annoying thing of <code>Dictionary.TryGetValue</code> is that it returns a default value of <code>value</code> parameter if <code>key</code> is not found. E.g. if <code>value</code> is of <code>float</code> type it will be <code>0.0f</code>.<br />
 Because of that you have to check the returned <code>bool</code> and if it&rsquo;s <code>false</code> you have to assign the value you need. It looks as follows</p>
 
-<script src="//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=Dislike.cs"></script>
+<script type="application/javascript" src="//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=Dislike.cs"></script>
 
 <p>As you can see now we have to deal with redundant <code>if</code> statement which makes code not so clean and neat as it could be.<br />
 How about this one?</p>
 
-<script src="//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=Like.cs"></script>
+<script type="application/javascript" src="//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=Like.cs"></script>
 
 <p>Fortunately it&rsquo;s quite easy to make it real with an extension class like as follows</p>
 
-<p><script src="//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=DictionaryUtility.cs"></script><br />
-</p>
+<script type="application/javascript" src="//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=DictionaryUtility.cs"></script>
 
                 </p>
                 
@@ -655,8 +806,7 @@ How about this one?</p>
 </ol>
 
 <p>What happened? Nothing fancy: new enumerators of your enum just shifted down the old ones occupying their values, because Unity serializes enums as ints.<br />
-Solution is easy: serialize enums as strings. And <a href="https://github.com/dotsquid/StableEnum"><strong>StableEnum</strong></a> will help you with this.<br />
-</p>
+Solution is easy: serialize enums as strings. And <a href="https://github.com/dotsquid/StableEnum" target="_blank"><strong>StableEnum</strong></a> will help you with this.</p>
 
                 </p>
                 
@@ -805,10 +955,9 @@ Solution is easy: serialize enums as strings. And <a href="https://github.com/do
 
             <div class="article-entry" itemprop="articleBody">
                 <p>
-                    Weird bug related to <code>UI.Canvas</code> was accidentally found by me while I was developing new menu for our upcoming game <a href="https://twitter.com/SummerCatchers">SummerCatchers</a>. Btw, follow us ;)<br />
+                    Weird bug related to <code>UI.Canvas</code> was accidentally found by me while I was developing new menu for our upcoming game <a href="https://twitter.com/SummerCatchers" target="_blank">SummerCatchers</a>. Btw, follow us ;)<br />
 As far as you may know <code>Canvas</code> can have other <code>Canvases</code> as children objects. This is very useful in optimization purpose because <code>sub-canvas</code> isolates its UI elements from other canvases (parent and siblings) thus modifying one of its children won&rsquo;t cause rebuilding of batched mesh for other canvases.<br />
-The bug is as follows.<br />
-
+The bug is as follows.
                 </p>
                 
                 <p class="article-more-link">
@@ -970,8 +1119,7 @@ The bug is as follows.<br />
             <div class="article-entry" itemprop="articleBody">
                 <p>
                     It&rsquo;s quite strange but Unity can&rsquo;t show your enum as bitmask / flags out of the box.<br />
-Fortunately this can be fixed fast and easy.<br />
-
+Fortunately this can be fixed fast and easy.
                 </p>
                 
                 <p class="article-more-link">
@@ -1208,21 +1356,24 @@ Fortunately this can be fixed fast and easy.<br />
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 - 2018
-      &nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Proudly made in <a href="https://en.wikipedia.org/wiki/Ukraine">Ukraine</a>&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Powered by <a href="//gohugo.io">Hugo</a>.
+      &copy; 2017 - 2019
+      &nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Proudly made in <a href="https://en.wikipedia.org/wiki/Ukraine" target="_blank">Ukraine</a>&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Powered by <a href="//gohugo.io" target="_blank">Hugo</a>.
     </div>
   </div>
 </footer>
 
 
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-97233469-1', 'auto');
-ga('send', 'pageview');
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-97233469-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
 
 <script src="http://dotsquid.com/fancybox/jquery.fancybox.js"></script>

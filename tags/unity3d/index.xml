@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Unity3d on dotsquid</title>
+    <title>unity3d on dotsquid</title>
     <link>http://dotsquid.com/tags/unity3d/</link>
-    <description>Recent content in Unity3d on dotsquid</description>
+    <description>Recent content in unity3d on dotsquid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;nbsp;&amp;nbsp;&amp;nbsp;//&amp;nbsp;&amp;nbsp;&amp;nbsp;Proudly made in [Ukraine](https://en.wikipedia.org/wiki/Ukraine)&amp;nbsp;&amp;nbsp;&amp;nbsp;//&amp;nbsp;&amp;nbsp;&amp;nbsp;Powered by [Hugo](//gohugo.io).</copyright>
-    <lastBuildDate>Sat, 20 Jan 2018 22:42:17 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 26 Jun 2019 22:14:11 +0200</lastBuildDate>
     
 	<atom:link href="http://dotsquid.com/tags/unity3d/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Simple GPU Occlusion for Lens Flares</title>
+      <link>http://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/</link>
+      <pubDate>Wed, 26 Jun 2019 22:14:11 +0200</pubDate>
+      
+      <guid>http://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/</guid>
+      <description>&lt;p&gt;One of the interesting problems I had to solve during development of &lt;a href=&#34;https://twitter.com/SummerCatchers&#34; target=&#34;_blank&#34;&gt;Summer Catchers&lt;/a&gt; was implementation of &lt;a href=&#34;https://en.wikipedia.org/wiki/Lens_flare&#34; target=&#34;_blank&#34;&gt;Lens Flares&lt;/a&gt; effect. In this post I&amp;rsquo;d like to share what I came up with (&lt;strong&gt;including an open-source demo&lt;/strong&gt;). Buckle up.&lt;br /&gt;
+&lt;div style=&#39;position:relative; padding-bottom:56.25%; max-width:640px; max-height:360px; margin: 0 auto&#39;&gt;&lt;iframe src=&#39;https://gfycat.com/ifr/uncommonwastefulherring?hd=1&#39; frameborder=&#39;0&#39; scrolling=&#39;no&#39; width=&#39;100%&#39; height=&#39;100%&#39; style=&#39;position:absolute;top:0;left:0;&#39; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>GrabPass &#43; Dynamic Batching == Friendship 🤜🤛</title>
@@ -18,15 +27,15 @@
       <pubDate>Sat, 20 Jan 2018 22:42:17 +0200</pubDate>
       
       <guid>http://dotsquid.com/2018/01/20/grabpass-batching-trick/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Important note:&lt;/strong&gt; it appeared that this trick is not working in Unity 2017.2 and higher. Since currently my primary version is 2017.1.3 I have no time to experiment and find solution for the mentioned versions 😕&lt;/p&gt;
+      <description>&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; the original trick was not working with Unity prior to 2017.2&lt;br /&gt;
+But it appeared that the fix is quite simple and now it works fine with the latest versions (tested with 2019.2). Source code is inside.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://docs.unity3d.com/Manual/SL-GrabPass.html&#34;&gt;GrabPass&lt;/a&gt; is probably the easiest way to get the content of the screen and pass it to the shader automagically. Later you can use this texture to make some nifty effects like distortion and reflection.&lt;br /&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.unity3d.com/Manual/SL-GrabPass.html&#34; target=&#34;_blank&#34;&gt;GrabPass&lt;/a&gt; is probably the easiest way to get the content of the screen and pass it to the shader automagically. Later you can use this texture to make some nifty effects like distortion and reflection.&lt;br /&gt;
 &lt;div style=&#39;position:relative; padding-bottom:56.25%; max-width:640px; max-height:360px; margin: 0 auto&#39;&gt;&lt;iframe src=&#39;https://gfycat.com/ifr/WatchfulComfortableBass&#39; frameborder=&#39;0&#39; scrolling=&#39;no&#39; width=&#39;100%&#39; height=&#39;100%&#39; style=&#39;position:absolute;top:0;left:0;&#39; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/p&gt;
 
-&lt;p&gt;But GrabPass has a huge fault: it breaks the &lt;a href=&#34;https://docs.unity3d.com/Manual/DrawCallBatching.html&#34;&gt;dynamic batching&lt;/a&gt; 💔
-&lt;/p&gt;</description>
+&lt;p&gt;But GrabPass has a huge fault: it breaks the &lt;a href=&#34;https://docs.unity3d.com/Manual/DrawCallBatching.html&#34; target=&#34;_blank&#34;&gt;dynamic batching&lt;/a&gt; 💔&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -38,17 +47,16 @@
       <description>&lt;p&gt;The most annoying thing of &lt;code&gt;Dictionary.TryGetValue&lt;/code&gt; is that it returns a default value of &lt;code&gt;value&lt;/code&gt; parameter if &lt;code&gt;key&lt;/code&gt; is not found. E.g. if &lt;code&gt;value&lt;/code&gt; is of &lt;code&gt;float&lt;/code&gt; type it will be &lt;code&gt;0.0f&lt;/code&gt;.&lt;br /&gt;
 Because of that you have to check the returned &lt;code&gt;bool&lt;/code&gt; and if it&amp;rsquo;s &lt;code&gt;false&lt;/code&gt; you have to assign the value you need. It looks as follows&lt;/p&gt;
 
-&lt;script src=&#34;//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=Dislike.cs&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;application/javascript&#34; src=&#34;//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=Dislike.cs&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;As you can see now we have to deal with redundant &lt;code&gt;if&lt;/code&gt; statement which makes code not so clean and neat as it could be.&lt;br /&gt;
 How about this one?&lt;/p&gt;
 
-&lt;script src=&#34;//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=Like.cs&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;application/javascript&#34; src=&#34;//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=Like.cs&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Fortunately it&amp;rsquo;s quite easy to make it real with an extension class like as follows&lt;/p&gt;
 
-&lt;p&gt;&lt;script src=&#34;//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=DictionaryUtility.cs&#34;&gt;&lt;/script&gt;&lt;br /&gt;
-&lt;/p&gt;</description>
+&lt;script type=&#34;application/javascript&#34; src=&#34;//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=DictionaryUtility.cs&#34;&gt;&lt;/script&gt;</description>
     </item>
     
     <item>
@@ -67,8 +75,7 @@ How about this one?&lt;/p&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;What happened? Nothing fancy: new enumerators of your enum just shifted down the old ones occupying their values, because Unity serializes enums as ints.&lt;br /&gt;
-Solution is easy: serialize enums as strings. And &lt;a href=&#34;https://github.com/dotsquid/StableEnum&#34;&gt;&lt;strong&gt;StableEnum&lt;/strong&gt;&lt;/a&gt; will help you with this.&lt;br /&gt;
-&lt;/p&gt;</description>
+Solution is easy: serialize enums as strings. And &lt;a href=&#34;https://github.com/dotsquid/StableEnum&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;StableEnum&lt;/strong&gt;&lt;/a&gt; will help you with this.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -77,10 +84,9 @@ Solution is easy: serialize enums as strings. And &lt;a href=&#34;https://github
       <pubDate>Sat, 08 Apr 2017 00:30:38 +0300</pubDate>
       
       <guid>http://dotsquid.com/2017/04/08/nested-canvas-bug/</guid>
-      <description>&lt;p&gt;Weird bug related to &lt;code&gt;UI.Canvas&lt;/code&gt; was accidentally found by me while I was developing new menu for our upcoming game &lt;a href=&#34;https://twitter.com/SummerCatchers&#34;&gt;SummerCatchers&lt;/a&gt;. Btw, follow us ;)&lt;br /&gt;
+      <description>&lt;p&gt;Weird bug related to &lt;code&gt;UI.Canvas&lt;/code&gt; was accidentally found by me while I was developing new menu for our upcoming game &lt;a href=&#34;https://twitter.com/SummerCatchers&#34; target=&#34;_blank&#34;&gt;SummerCatchers&lt;/a&gt;. Btw, follow us ;)&lt;br /&gt;
 As far as you may know &lt;code&gt;Canvas&lt;/code&gt; can have other &lt;code&gt;Canvases&lt;/code&gt; as children objects. This is very useful in optimization purpose because &lt;code&gt;sub-canvas&lt;/code&gt; isolates its UI elements from other canvases (parent and siblings) thus modifying one of its children won&amp;rsquo;t cause rebuilding of batched mesh for other canvases.&lt;br /&gt;
-The bug is as follows.&lt;br /&gt;
-&lt;/p&gt;</description>
+The bug is as follows.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -90,8 +96,7 @@ The bug is as follows.&lt;br /&gt;
       
       <guid>http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s quite strange but Unity can&amp;rsquo;t show your enum as bitmask / flags out of the box.&lt;br /&gt;
-Fortunately this can be fixed fast and easy.&lt;br /&gt;
-&lt;/p&gt;</description>
+Fortunately this can be fixed fast and easy.&lt;/p&gt;</description>
     </item>
     
   </channel>

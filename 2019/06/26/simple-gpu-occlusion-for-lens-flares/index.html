@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>Enum flags in Unity3d Inspector &middot; dotsquid</title>
+    <title>Simple GPU Occlusion for Lens Flares &middot; dotsquid</title>
     <meta name="generator" content="Hugo 0.55.6" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +10,7 @@
       <meta name="description" content="">
     
     
-    <link rel="canonical" href="http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/"/>
+    <link rel="canonical" href="http://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/"/>
 
     <link rel="apple-touch-icon" sizes="180x180"    href="http://dotsquid.com/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="http://dotsquid.com/favicon-32x32.png">
@@ -31,33 +31,33 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Enum flags in Unity3d Inspector" />
-<meta property="og:description" content="It&rsquo;s quite strange but Unity can&rsquo;t show your enum as bitmask / flags out of the box.
-Fortunately this can be fixed fast and easy." />
+    <meta property="og:title" content="Simple GPU Occlusion for Lens Flares" />
+<meta property="og:description" content="One of the interesting problems I had to solve during development of Summer Catchers was implementation of Lens Flares effect. In this post I&rsquo;d like to share what I came up with (including an open-source demo). Buckle up.
+" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/" />
-<meta property="article:published_time" content="2017-04-05T21:12:16&#43;02:00"/>
-<meta property="article:modified_time" content="2017-04-05T21:12:16&#43;02:00"/>
+<meta property="og:url" content="http://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/" />
+<meta property="article:published_time" content="2019-06-26T22:14:11&#43;02:00"/>
+<meta property="article:modified_time" content="2019-06-26T22:14:11&#43;02:00"/>
 
     
     
-<meta itemprop="name" content="Enum flags in Unity3d Inspector">
-<meta itemprop="description" content="It&rsquo;s quite strange but Unity can&rsquo;t show your enum as bitmask / flags out of the box.
-Fortunately this can be fixed fast and easy.">
+<meta itemprop="name" content="Simple GPU Occlusion for Lens Flares">
+<meta itemprop="description" content="One of the interesting problems I had to solve during development of Summer Catchers was implementation of Lens Flares effect. In this post I&rsquo;d like to share what I came up with (including an open-source demo). Buckle up.
+">
 
 
-<meta itemprop="datePublished" content="2017-04-05T21:12:16&#43;02:00" />
-<meta itemprop="dateModified" content="2017-04-05T21:12:16&#43;02:00" />
-<meta itemprop="wordCount" content="137">
+<meta itemprop="datePublished" content="2019-06-26T22:14:11&#43;02:00" />
+<meta itemprop="dateModified" content="2019-06-26T22:14:11&#43;02:00" />
+<meta itemprop="wordCount" content="829">
 
 
 
-<meta itemprop="keywords" content="unity3d,ui,c-sharp," />
+<meta itemprop="keywords" content="unity3d,shaders,tricks," />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Enum flags in Unity3d Inspector"/>
-<meta name="twitter:description" content="It&rsquo;s quite strange but Unity can&rsquo;t show your enum as bitmask / flags out of the box.
-Fortunately this can be fixed fast and easy."/>
+<meta name="twitter:title" content="Simple GPU Occlusion for Lens Flares"/>
+<meta name="twitter:description" content="One of the interesting problems I had to solve during development of Summer Catchers was implementation of Lens Flares effect. In this post I&rsquo;d like to share what I came up with (including an open-source demo). Buckle up.
+"/>
 <meta name="twitter:site" content="@dotsquid"/>
 
     
@@ -235,16 +235,16 @@ Fortunately this can be fixed fast and easy."/>
         <div class="article-inner">
             
     <div class="article-banner">
-        <a href="http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/" itemprop="url">
-            <img src="http://dotsquid.com/titles/enum-flag-attribute.gif">
+        <a href="http://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/" itemprop="url">
+            <img src="http://dotsquid.com/titles/simple-gpu_occlusion-for-lens-flares.png">
         </a>
     </div>
 
 
 <header class="article-header">
-    <a href="http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/">
+    <a href="http://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/">
         <h1 class="article-title" itemprop="name">
-            Enum flags in Unity3d Inspector
+            Simple GPU Occlusion for Lens Flares
         </h1>
     </a>
     <div class="article-meta">
@@ -252,7 +252,7 @@ Fortunately this can be fixed fast and easy."/>
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2017-04-05 21:12:16 &#43;0200 &#43;0200" itemprop="datePublished">2017 Apr 05</time>
+            <time datetime="2019-06-26 22:14:11 &#43;0200 &#43;0200" itemprop="datePublished">2019 Jun 26</time>
             
         </div>
         
@@ -284,14 +284,14 @@ Fortunately this can be fixed fast and easy."/>
                     
                 
                     
-                    <a class="article-category-link" href="http://dotsquid.com/tags/ui">ui</a>
+                    <a class="article-category-link" href="http://dotsquid.com/tags/shaders">shaders</a>
                     
                         
                         /
                     
                 
                     
-                    <a class="article-category-link" href="http://dotsquid.com/tags/c-sharp">c-sharp</a>
+                    <a class="article-category-link" href="http://dotsquid.com/tags/tricks">tricks</a>
                     
                 
             </div>
@@ -301,36 +301,73 @@ Fortunately this can be fixed fast and easy."/>
 </header>
 
             <div class="article-entry" itemprop="articleBody">
-                <p>It&rsquo;s quite strange but Unity can&rsquo;t show your enum as bitmask / flags out of the box.<br />
-Fortunately this can be fixed fast and easy.</p>
+                <p>One of the interesting problems I had to solve during development of <a href="https://twitter.com/SummerCatchers" target="_blank">Summer Catchers</a> was implementation of <a href="https://en.wikipedia.org/wiki/Lens_flare" target="_blank">Lens Flares</a> effect. In this post I&rsquo;d like to share what I came up with (<strong>including an open-source demo</strong>). Buckle up.<br />
+<div style='position:relative; padding-bottom:56.25%; max-width:640px; max-height:360px; margin: 0 auto'><iframe src='https://gfycat.com/ifr/uncommonwastefulherring?hd=1' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div></p>
 
-<h5 id="step1-attribute">Step1. Attribute</h5>
+<p>SummerCatchers is a 2D game with a minimalist art style. That&rsquo;s why my primary task was not a photorealism. Instead I had to find out a fast to implement, easy to use and high-performance solution.<br />
+<a href="https://docs.unity3d.com/Manual/class-LensFlare.html" target="_blank">Unity3d has a built-in &lsquo;LensFlare&rsquo; effect for ages</a>. Unfortunately, since this effect is based on Colliders, this solution does not fit &ldquo;easy to use&rdquo; requirement. Just imagine that you&rsquo;ll have to manually set all the colliders for each object which may occlude the sun. Moreover, the majority of them would be Mesh Colliders, which in turn may violate &ldquo;high-performance&rdquo; requirement.<br />
+So I had to figure out the way to know if the object is occluded by other objects with minimal efforts:</p>
 
-<p>First of all we need an attribute which should inform Unity that we want it to show our enum as flags and not as usual one-option list of enums. That&rsquo;s pretty simple and straightforward.</p>
+<ul>
+<li>just a few scripts/components,</li>
+<li>utilize GPU as much as possible,</li>
+<li>O(1) complexity for the end-user (e.g. no matter how many occluders you have in a scene, you still have to do a constant number of actions to enable the effect).<br />
+<br /></li>
+</ul>
 
-<script type="application/javascript" src="//gist.github.com/dotsquid/9289e275e1a4f5b973416bef00419123.js?file=EnumFlagAttribute.cs"></script>
+<p>The idea is to have some sort of occlusion buffer (i.e. texture) which is used in flare&rsquo;s material to somehow modify its look when the light source is fully visible or partially or completely occluded. By &ldquo;light source&rdquo; here I mean some object which produces the lens flares. In our case it&rsquo;s just a sprite of the sun.</p>
 
-<h5 id="step2-propertydrawer">Step2. PropertyDrawer</h5>
+<figure>
+    <img src="/images/posts/simple-gpu-occlusion-for-lens-flares/occlusion-buffer.png"/> <figcaption>
+            <h4>Occlusion buffer</h4>
+        </figcaption>
+</figure>
 
-<p>Next part is a custom <code>PropertyDrawer</code>. Its purpose is to draw a property with which <code>EnumFlagAttribute</code> was associated.</p>
 
-<script type="application/javascript" src="//gist.github.com/dotsquid/9289e275e1a4f5b973416bef00419123.js?file=EnumFlagDrawer.cs"></script>
+<p>As you can see the light source (red circle) is partially hidden behind some objects (rendered in black). Let&rsquo;s see how this was achieved.<br />
+Unity has a very handy concept called <a href="https://docs.unity3d.com/Manual/SL-ShaderReplacement.html" target="_blank">Rendering with Replaced Shaders</a>. In short, the camera renders all the objects as usual except the shaders are replaced with the provided one. This is exactly what we need to distinguish the occluders and objects being occluded (in the demo project I call them &ldquo;occludies&rdquo; which may be totally wrong, but anyway).</p>
 
-<p>Nothing special as well. Maybe except the 11-th line where we receive the value of enum from <code>SerializedProperty</code>. Unity&rsquo;s documentation lacks detailed information about <code>PropertyDrawer.fieldInfo</code> but that&rsquo;s one of the ways how to use it.</p>
+<script type="application/javascript" src="//gist.github.com/dotsquid/cf921184e86cbc507c6242773aa9b1dd.js?file=OcclusionCamera.cs"></script>
 
-<h5 id="step3-usage">Step3. Usage</h5>
+<p>So what does this tiny script actually do? First of all it disables the &lsquo;occlusion camera&rsquo; just in case you forget to do it in the Inspector (we don&rsquo;t want Unity to use this camera as usual, because that&rsquo;s we who command it to render). Next, in <em>Update</em> method we fit the camera to the bounds of the target (the light source) in order to make the target fit the occlusion buffer as tight as possible. Then we just make the camera render the scene with the special shader.</p>
 
-<p>Usage is easy peasy. Just associate <code>EnumFlag</code> attribute with an enum field and enjoy your bitmask in the Inspector.</p>
+<p><script type="application/javascript" src="//gist.github.com/dotsquid/cf921184e86cbc507c6242773aa9b1dd.js?file=LensFlareOcclusion.shader"></script><br />
+<script type="application/javascript" src="//gist.github.com/dotsquid/cf921184e86cbc507c6242773aa9b1dd.js?file=LensFlaresCG.cginc"></script></p>
 
-<script type="application/javascript" src="//gist.github.com/dotsquid/9289e275e1a4f5b973416bef00419123.js?file=Usage.cs"></script>
+<p>What&rsquo;s so special with this shader? Remember that we need to distinguish the occluders and occludies? To achieve that we have two subshaders: the first one (for occluders) renders the object in black ( <em>fixed3(0.0, 0.0, 0.0)</em> ), the other one (for occludies) renders the object in white ( <em>fixed3(1.0, 1.0, 1.0)</em> ).<br />
+But how does Unity know which subshader to use? The subshader is selected depending on the tag passed to <em>Camera.RenderWithShader</em> method. In our case it&rsquo;s &lsquo;RenderType&rsquo;. For occluders I use &lsquo;Transparent&rsquo; because in Unity default material for sprites uses this render type. For occludies - it is &lsquo;Occludie&rsquo;.<br />
+Also we need a tiny shader for occludie the only purpose of which is to contain &lsquo;RenderType&rsquo; tag. That&rsquo;s why this shader does nothing but clipping all the fragments.</p>
+
+<script type="application/javascript" src="//gist.github.com/dotsquid/cf921184e86cbc507c6242773aa9b1dd.js?file=LensFlareOccludie.shader"></script>
+
+<p>Ok, now we have an occlusion buffer, what&rsquo;s next? How can we use it to make flares fade in and out depending on the &ldquo;occlusion ratio&rdquo;? How can we convert the data from the occlusion buffer to this &ldquo;occlusion ratio&rdquo;?<br />
+And here comes the beauty and the glory of <a href="https://en.wikipedia.org/wiki/Mipmap" target="_blank">Mipmapping</a>. We don&rsquo;t need to manually read the pixels from the buffer, because it would kill all the performance due to necessity to read the GPU-based data by CPU. We neither need to manually shrink the NxN texture into a 1x1 one. Everything is done automagically on the GPU side: we just render into the RenderTexture and get the sequence of progressively downscaled copies of that image right down to 1x1.</p>
+
+<figure>
+    <img src="/images/posts/simple-gpu-occlusion-for-lens-flares/enable-mipmaps.png"/> <figcaption>
+            <h4>Enabling mipmaps</h4>
+        </figcaption>
+</figure>
+
+
+<p>What does it actually mean in our case? It means that we can lookup the coarsest mipmap level of the occlusion buffer by any coordinates (becuase its size is 1x1) and use that value as an occlusion ratio.</p>
+
+<script type="application/javascript" src="//gist.github.com/dotsquid/cf921184e86cbc507c6242773aa9b1dd.js?file=LensFlares-Snippet.shader"></script>
+
+<p>In this snippet (check the full shader in the demo project) I calculate the &lsquo;intensity&rsquo; of the flare. First of all I get the coarsest mipmap level and then use it to lookup the occlusion buffer. Then I take into account that the round light source can&rsquo;t fill the whole area of the rectangular texture (i.e. the texel can&rsquo;t have the value greater than 0.7853).<br />
+And that&rsquo;s it! Now this &lsquo;intensity&rsquo; value can be used to smoothly fade in and out the lens flares by adjusting their opacity or scale (or whatever your imagination is capable of).</p>
+
+<div style='position:relative; padding-bottom:56.25%; max-width:640px; max-height:360px; margin: 0 auto'><iframe src='https://gfycat.com/ifr/longelectricislandwhistler?hd=1' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div>  
+
+<p>And now is the sweetest part: <a href="http://dotsquid.com/LensFlaresDemoBuild/" target="_blank">the WebGL demo itself</a> and <a href="https://github.com/dotsquid/LensFlares" target="_blank">its source code</a>. Have fun.</p>
             </div>
             <footer class="article-footer">
-    <a data-url="http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/" data-id="923d0fc134cc4babb382573d0f97ca52" class="article-share-link">
+    <a data-url="http://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/" data-id="202d4168a1f122f5a27743f3188b3d01" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
-    <a href="http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/#disqus_thread" class="article-comment-link">
+    <a href="http://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/#disqus_thread" class="article-comment-link">
         Comments
     </a>
     

@@ -6,10 +6,19 @@
     <description>Recent content in Categories on dotsquid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;nbsp;&amp;nbsp;&amp;nbsp;//&amp;nbsp;&amp;nbsp;&amp;nbsp;Proudly made in [Ukraine](https://en.wikipedia.org/wiki/Ukraine)&amp;nbsp;&amp;nbsp;&amp;nbsp;//&amp;nbsp;&amp;nbsp;&amp;nbsp;Powered by [Hugo](//gohugo.io).</copyright>
+    <lastBuildDate>Wed, 26 Jun 2019 22:14:11 +0200</lastBuildDate>
     
 	<atom:link href="http://dotsquid.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Unity3d</title>
+      <link>http://dotsquid.com/categories/unity3d/</link>
+      <pubDate>Wed, 26 Jun 2019 22:14:11 +0200</pubDate>
+      
+      <guid>http://dotsquid.com/categories/unity3d/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>General</title>
@@ -17,15 +26,6 @@
       <pubDate>Sat, 25 Mar 2017 17:24:46 +0200</pubDate>
       
       <guid>http://dotsquid.com/categories/general/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Unity3d</title>
-      <link>http://dotsquid.com/categories/unity3d/</link>
-      <pubDate>Sat, 20 Jan 2018 22:42:17 +0200</pubDate>
-      
-      <guid>http://dotsquid.com/categories/unity3d/</guid>
       <description></description>
     </item>
     

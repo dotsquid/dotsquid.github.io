@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
     <title>StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d &middot; dotsquid</title>
-    <meta name="generator" content="Hugo 0.33" />
+    <meta name="generator" content="Hugo 0.55.6" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="dotsquid">
@@ -42,26 +42,11 @@ BAM!! You are screwed.
 
 
 What happened? Nothing fancy: new enumerators of your enum just shifted down the old ones occupying their values, because Unity serializes enums as ints.
-Solution is easy: serialize enums as strings. And StableEnum will help you with this.
-" />
+Solution is easy: serialize enums as strings. And StableEnum will help you with this." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://dotsquid.com/2017/04/17/stable-enum/" />
-
-
-
 <meta property="article:published_time" content="2017-04-17T23:44:46&#43;02:00"/>
-
 <meta property="article:modified_time" content="2017-04-17T23:44:46&#43;02:00"/>
-
-
-
-
-
-
-
-
-
-
 
     
     
@@ -76,8 +61,7 @@ BAM!! You are screwed.
 
 
 What happened? Nothing fancy: new enumerators of your enum just shifted down the old ones occupying their values, because Unity serializes enums as ints.
-Solution is easy: serialize enums as strings. And StableEnum will help you with this.
-">
+Solution is easy: serialize enums as strings. And StableEnum will help you with this.">
 
 
 <meta itemprop="datePublished" content="2017-04-17T23:44:46&#43;02:00" />
@@ -88,7 +72,8 @@ Solution is easy: serialize enums as strings. And StableEnum will help you with 
 
 <meta itemprop="keywords" content="unity3d,ui,c-sharp," />
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d"/>
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d"/>
 <meta name="twitter:description" content="It&rsquo;s a well-known problem with serialization of enums in Unity3d:
 
 
@@ -99,8 +84,7 @@ BAM!! You are screwed.
 
 
 What happened? Nothing fancy: new enumerators of your enum just shifted down the old ones occupying their values, because Unity serializes enums as ints.
-Solution is easy: serialize enums as strings. And StableEnum will help you with this.
-"/>
+Solution is easy: serialize enums as strings. And StableEnum will help you with this."/>
 <meta name="twitter:site" content="@dotsquid"/>
 
     
@@ -354,8 +338,7 @@ Solution is easy: serialize enums as strings. And StableEnum will help you with 
 </ol>
 
 <p>What happened? Nothing fancy: new enumerators of your enum just shifted down the old ones occupying their values, because Unity serializes enums as ints.<br />
-Solution is easy: serialize enums as strings. And <a href="https://github.com/dotsquid/StableEnum"><strong>StableEnum</strong></a> will help you with this.<br />
-</p>
+Solution is easy: serialize enums as strings. And <a href="https://github.com/dotsquid/StableEnum" target="_blank"><strong>StableEnum</strong></a> will help you with this.</p>
             </div>
             <footer class="article-footer">
     <a data-url="http://dotsquid.com/2017/04/17/stable-enum/" data-id="d614e3ac0f463811e790b1e5791b9170" class="article-share-link">
@@ -444,7 +427,7 @@ Solution is easy: serialize enums as strings. And <a href="https://github.com/do
     <section id="comments">
         <div id="disqus_thread">
             <div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     
@@ -487,21 +470,24 @@ Solution is easy: serialize enums as strings. And <a href="https://github.com/do
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 - 2018
-      &nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Proudly made in <a href="https://en.wikipedia.org/wiki/Ukraine">Ukraine</a>&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Powered by <a href="//gohugo.io">Hugo</a>.
+      &copy; 2017 - 2019
+      &nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Proudly made in <a href="https://en.wikipedia.org/wiki/Ukraine" target="_blank">Ukraine</a>&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Powered by <a href="//gohugo.io" target="_blank">Hugo</a>.
     </div>
   </div>
 </footer>
 
 
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-97233469-1', 'auto');
-ga('send', 'pageview');
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-97233469-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
 
 <script src="http://dotsquid.com/fancybox/jquery.fancybox.js"></script>

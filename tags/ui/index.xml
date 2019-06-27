@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ui on dotsquid</title>
+    <title>ui on dotsquid</title>
     <link>http://dotsquid.com/tags/ui/</link>
-    <description>Recent content in Ui on dotsquid</description>
+    <description>Recent content in ui on dotsquid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;nbsp;&amp;nbsp;&amp;nbsp;//&amp;nbsp;&amp;nbsp;&amp;nbsp;Proudly made in [Ukraine](https://en.wikipedia.org/wiki/Ukraine)&amp;nbsp;&amp;nbsp;&amp;nbsp;//&amp;nbsp;&amp;nbsp;&amp;nbsp;Powered by [Hugo](//gohugo.io).</copyright>
     <lastBuildDate>Wed, 31 May 2017 21:22:23 +0200</lastBuildDate>
     
 	<atom:link href="http://dotsquid.com/tags/ui/index.xml" rel="self" type="application/rss+xml" />
@@ -21,17 +20,16 @@
       <description>&lt;p&gt;The most annoying thing of &lt;code&gt;Dictionary.TryGetValue&lt;/code&gt; is that it returns a default value of &lt;code&gt;value&lt;/code&gt; parameter if &lt;code&gt;key&lt;/code&gt; is not found. E.g. if &lt;code&gt;value&lt;/code&gt; is of &lt;code&gt;float&lt;/code&gt; type it will be &lt;code&gt;0.0f&lt;/code&gt;.&lt;br /&gt;
 Because of that you have to check the returned &lt;code&gt;bool&lt;/code&gt; and if it&amp;rsquo;s &lt;code&gt;false&lt;/code&gt; you have to assign the value you need. It looks as follows&lt;/p&gt;
 
-&lt;script src=&#34;//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=Dislike.cs&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;application/javascript&#34; src=&#34;//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=Dislike.cs&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;As you can see now we have to deal with redundant &lt;code&gt;if&lt;/code&gt; statement which makes code not so clean and neat as it could be.&lt;br /&gt;
 How about this one?&lt;/p&gt;
 
-&lt;script src=&#34;//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=Like.cs&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;application/javascript&#34; src=&#34;//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=Like.cs&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Fortunately it&amp;rsquo;s quite easy to make it real with an extension class like as follows&lt;/p&gt;
 
-&lt;p&gt;&lt;script src=&#34;//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=DictionaryUtility.cs&#34;&gt;&lt;/script&gt;&lt;br /&gt;
-&lt;/p&gt;</description>
+&lt;script type=&#34;application/javascript&#34; src=&#34;//gist.github.com/dotsquid/dff16aed638d582593e455621176cecd.js?file=DictionaryUtility.cs&#34;&gt;&lt;/script&gt;</description>
     </item>
     
     <item>
@@ -50,8 +48,7 @@ How about this one?&lt;/p&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;What happened? Nothing fancy: new enumerators of your enum just shifted down the old ones occupying their values, because Unity serializes enums as ints.&lt;br /&gt;
-Solution is easy: serialize enums as strings. And &lt;a href=&#34;https://github.com/dotsquid/StableEnum&#34;&gt;&lt;strong&gt;StableEnum&lt;/strong&gt;&lt;/a&gt; will help you with this.&lt;br /&gt;
-&lt;/p&gt;</description>
+Solution is easy: serialize enums as strings. And &lt;a href=&#34;https://github.com/dotsquid/StableEnum&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;StableEnum&lt;/strong&gt;&lt;/a&gt; will help you with this.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -60,10 +57,9 @@ Solution is easy: serialize enums as strings. And &lt;a href=&#34;https://github
       <pubDate>Sat, 08 Apr 2017 00:30:38 +0300</pubDate>
       
       <guid>http://dotsquid.com/2017/04/08/nested-canvas-bug/</guid>
-      <description>&lt;p&gt;Weird bug related to &lt;code&gt;UI.Canvas&lt;/code&gt; was accidentally found by me while I was developing new menu for our upcoming game &lt;a href=&#34;https://twitter.com/SummerCatchers&#34;&gt;SummerCatchers&lt;/a&gt;. Btw, follow us ;)&lt;br /&gt;
+      <description>&lt;p&gt;Weird bug related to &lt;code&gt;UI.Canvas&lt;/code&gt; was accidentally found by me while I was developing new menu for our upcoming game &lt;a href=&#34;https://twitter.com/SummerCatchers&#34; target=&#34;_blank&#34;&gt;SummerCatchers&lt;/a&gt;. Btw, follow us ;)&lt;br /&gt;
 As far as you may know &lt;code&gt;Canvas&lt;/code&gt; can have other &lt;code&gt;Canvases&lt;/code&gt; as children objects. This is very useful in optimization purpose because &lt;code&gt;sub-canvas&lt;/code&gt; isolates its UI elements from other canvases (parent and siblings) thus modifying one of its children won&amp;rsquo;t cause rebuilding of batched mesh for other canvases.&lt;br /&gt;
-The bug is as follows.&lt;br /&gt;
-&lt;/p&gt;</description>
+The bug is as follows.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -73,8 +69,7 @@ The bug is as follows.&lt;br /&gt;
       
       <guid>http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s quite strange but Unity can&amp;rsquo;t show your enum as bitmask / flags out of the box.&lt;br /&gt;
-Fortunately this can be fixed fast and easy.&lt;br /&gt;
-&lt;/p&gt;</description>
+Fortunately this can be fixed fast and easy.&lt;/p&gt;</description>
     </item>
     
   </channel>

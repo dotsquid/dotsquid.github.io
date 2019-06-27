@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
     <title>GrabPass &#43; Dynamic Batching == Friendship 🤜🤛 &middot; dotsquid</title>
-    <meta name="generator" content="Hugo 0.33" />
+    <meta name="generator" content="Hugo 0.55.6" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="dotsquid">
@@ -32,66 +32,53 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <meta property="og:title" content="GrabPass &#43; Dynamic Batching == Friendship 🤜🤛" />
-<meta property="og:description" content="Important note: it appeared that this trick is not working in Unity 2017.2 and higher. Since currently my primary version is 2017.1.3 I have no time to experiment and find solution for the mentioned versions 😕
+<meta property="og:description" content="Update: the original trick was not working with Unity prior to 2017.2
+But it appeared that the fix is quite simple and now it works fine with the latest versions (tested with 2019.2). Source code is inside.
 
 
 
 GrabPass is probably the easiest way to get the content of the screen and pass it to the shader automagically. Later you can use this texture to make some nifty effects like distortion and reflection.
 
 
-But GrabPass has a huge fault: it breaks the dynamic batching 💔
-" />
+But GrabPass has a huge fault: it breaks the dynamic batching 💔" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://dotsquid.com/2018/01/20/grabpass-batching-trick/" />
-
-
-
 <meta property="article:published_time" content="2018-01-20T22:42:17&#43;02:00"/>
-
 <meta property="article:modified_time" content="2018-01-20T22:42:17&#43;02:00"/>
-
-
-
-
-
-
-
-
-
-
 
     
     
 <meta itemprop="name" content="GrabPass &#43; Dynamic Batching == Friendship 🤜🤛">
-<meta itemprop="description" content="Important note: it appeared that this trick is not working in Unity 2017.2 and higher. Since currently my primary version is 2017.1.3 I have no time to experiment and find solution for the mentioned versions 😕
+<meta itemprop="description" content="Update: the original trick was not working with Unity prior to 2017.2
+But it appeared that the fix is quite simple and now it works fine with the latest versions (tested with 2019.2). Source code is inside.
 
 
 
 GrabPass is probably the easiest way to get the content of the screen and pass it to the shader automagically. Later you can use this texture to make some nifty effects like distortion and reflection.
 
 
-But GrabPass has a huge fault: it breaks the dynamic batching 💔
-">
+But GrabPass has a huge fault: it breaks the dynamic batching 💔">
 
 
 <meta itemprop="datePublished" content="2018-01-20T22:42:17&#43;02:00" />
 <meta itemprop="dateModified" content="2018-01-20T22:42:17&#43;02:00" />
-<meta itemprop="wordCount" content="531">
+<meta itemprop="wordCount" content="532">
 
 
 
 <meta itemprop="keywords" content="unity3d,shaders,tricks," />
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="GrabPass &#43; Dynamic Batching == Friendship 🤜🤛"/>
-<meta name="twitter:description" content="Important note: it appeared that this trick is not working in Unity 2017.2 and higher. Since currently my primary version is 2017.1.3 I have no time to experiment and find solution for the mentioned versions 😕
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="GrabPass &#43; Dynamic Batching == Friendship 🤜🤛"/>
+<meta name="twitter:description" content="Update: the original trick was not working with Unity prior to 2017.2
+But it appeared that the fix is quite simple and now it works fine with the latest versions (tested with 2019.2). Source code is inside.
 
 
 
 GrabPass is probably the easiest way to get the content of the screen and pass it to the shader automagically. Later you can use this texture to make some nifty effects like distortion and reflection.
 
 
-But GrabPass has a huge fault: it breaks the dynamic batching 💔
-"/>
+But GrabPass has a huge fault: it breaks the dynamic batching 💔"/>
 <meta name="twitter:site" content="@dotsquid"/>
 
     
@@ -335,28 +322,21 @@ But GrabPass has a huge fault: it breaks the dynamic batching 💔
 </header>
 
             <div class="article-entry" itemprop="articleBody">
-                <p><strong>Important note:</strong> it appeared that this trick is not working in Unity 2017.2 and higher. Since currently my primary version is 2017.1.3 I have no time to experiment and find solution for the mentioned versions 😕</p>
+                <p><strong>Update:</strong> the original trick was not working with Unity prior to 2017.2<br />
+But it appeared that the fix is quite simple and now it works fine with the latest versions (tested with 2019.2). Source code is inside.</p>
 
 <hr />
 
-<p><a href="https://docs.unity3d.com/Manual/SL-GrabPass.html">GrabPass</a> is probably the easiest way to get the content of the screen and pass it to the shader automagically. Later you can use this texture to make some nifty effects like distortion and reflection.<br />
+<p><a href="https://docs.unity3d.com/Manual/SL-GrabPass.html" target="_blank">GrabPass</a> is probably the easiest way to get the content of the screen and pass it to the shader automagically. Later you can use this texture to make some nifty effects like distortion and reflection.<br />
 <div style='position:relative; padding-bottom:56.25%; max-width:640px; max-height:360px; margin: 0 auto'><iframe src='https://gfycat.com/ifr/WatchfulComfortableBass' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div></p>
 
-<p>But GrabPass has a huge fault: it breaks the <a href="https://docs.unity3d.com/Manual/DrawCallBatching.html">dynamic batching</a> 💔
-</p>
+<p>But GrabPass has a huge fault: it breaks the <a href="https://docs.unity3d.com/Manual/DrawCallBatching.html" target="_blank">dynamic batching</a> 💔</p>
 
-<p>So why Unity3d stops batching meshes with GrabPass in their material? <a href="https://docs.unity3d.com/Manual/FrameDebugger.html">Frame Debugger</a> is the tool we need. Let&rsquo;s dig in.<br />
-
-<figure >
-    
-        <img src="/images/grabpass_batch_fail_0.gif" />
-    
-    
-    <figcaption>
-        <h4>FrameDebug to the rescue!</h4>
-        
-    </figcaption>
-    
+<p>So why Unity3d stops batching meshes with GrabPass in their material? <a href="https://docs.unity3d.com/Manual/FrameDebugger.html" target="_blank">Frame Debugger</a> is the tool we need. Let&rsquo;s dig in.<br />
+<figure>
+    <img src="/images/grabpass_batch_fail_0.gif"/> <figcaption>
+            <h4>FrameDebug to the rescue!</h4>
+        </figcaption>
 </figure>
 </p>
 
@@ -366,7 +346,7 @@ But GrabPass has a huge fault: it breaks the dynamic batching 💔
 Just remove GrabPass from our shader!</p>
 
 <p>&ldquo;Whaaaat? But where shall we get the snapshot of our screen?&rdquo; you could ask.<br />
-Easy! If you take a look at <a href="https://docs.unity3d.com/Manual/SL-GrabPass.html">documentation</a> one more time you may notice the following detail:</p>
+Easy! If you take a look at <a href="https://docs.unity3d.com/Manual/SL-GrabPass.html" target="_blank">documentation</a> one more time you may notice the following detail:</p>
 
 <blockquote>
 <p>GrabPass { &ldquo;TextureName&rdquo; } grabs the current screen contents into a texture, but will only do that once per frame for the first object that uses the given texture name. <strong>The texture can be accessed in further passes by the given texture name</strong>. This is a more performant method when you have multiple objects using GrabPass in the scene.</p>
@@ -374,20 +354,16 @@ Easy! If you take a look at <a href="https://docs.unity3d.com/Manual/SL-GrabPass
 
 <p>And this means that we can access this texture in <em>any</em> further pass of <em>any</em> shader used on <em>any</em> object!</p>
 
-<p>That&rsquo;s why we remove the GrabPass from our shader and move it to another dedicated shader, the only purpose of which is to capture and store the content of the screen. Then we need to use this shader with some dummy Renderer. Probably the easiest way is to put it right on the main camera, so it&rsquo;s always &ldquo;visible&rdquo; (surely it should not be visible by the eye, but it must be rendered to make the GrabPass work).<br />
+<p>That&rsquo;s why we remove the GrabPass from our shader and move it to another dedicated shader, the only purpose of which is to capture and store the content of the screen. Then we need to use this shader with some dummy Renderer. Probably the easiest way is to put it right on the main camera, so it&rsquo;s always &ldquo;visible&rdquo; (surely it should not be visible by the eye, but it must be rendered to make the GrabPass work).</p>
 
-<figure >
-    
-        <img src="/images/grabpass_batch_win_0.gif" />
-    
-    
-    <figcaption>
-        <h4>Single draw call!</h4>
-        
-    </figcaption>
-    
+<script type="application/javascript" src="//gist.github.com/dotsquid/7379facc97455249f68dbeb890b92ad3.js?file=GrabPassTrick.shader"></script>
+
+<figure>
+    <img src="/images/grabpass_batch_win_0.gif"/> <figcaption>
+            <h4>Single draw call!</h4>
+        </figcaption>
 </figure>
-</p>
+
 
 <p>Of course, this method has some drawbacks:</p>
 
@@ -399,7 +375,7 @@ Easy! If you take a look at <a href="https://docs.unity3d.com/Manual/SL-GrabPass
 
 <p>But I believe that all these downsides are really nothing comparing with capability to have dynamic batching and hence higher performance.</p>
 
-<p>This trick was discovered while working on our upcoming game <a href="http://summercatchers.com/">Summer Catchers</a>. Don&rsquo;t hesitate to subscribe to our newsletter and participate in futher beta-testing to see those crystals and enjoy the entire gameplay ;)<br />
+<p>This trick was discovered while working on our upcoming game <a href="http://summercatchers.com/" target="_blank">Summer Catchers</a>. Don&rsquo;t hesitate to subscribe to our newsletter and participate in futher beta-testing to see those crystals and enjoy the entire gameplay ;)<br />
 <div style='position:relative; padding-bottom:56.25%; max-width:640px; max-height:360px; margin: 0 auto'><iframe src='https://gfycat.com/ifr/BlackImmaculateAmphiuma' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div></p>
             </div>
             <footer class="article-footer">
@@ -489,7 +465,7 @@ Easy! If you take a look at <a href="https://docs.unity3d.com/Manual/SL-GrabPass
     <section id="comments">
         <div id="disqus_thread">
             <div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     
@@ -532,21 +508,24 @@ Easy! If you take a look at <a href="https://docs.unity3d.com/Manual/SL-GrabPass
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 - 2018
-      &nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Proudly made in <a href="https://en.wikipedia.org/wiki/Ukraine">Ukraine</a>&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Powered by <a href="//gohugo.io">Hugo</a>.
+      &copy; 2017 - 2019
+      &nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Proudly made in <a href="https://en.wikipedia.org/wiki/Ukraine" target="_blank">Ukraine</a>&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Powered by <a href="//gohugo.io" target="_blank">Hugo</a>.
     </div>
   </div>
 </footer>
 
 
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-97233469-1', 'auto');
-ga('send', 'pageview');
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-97233469-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
 
 <script src="http://dotsquid.com/fancybox/jquery.fancybox.js"></script>
