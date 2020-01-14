@@ -48,7 +48,7 @@
 
 <meta itemprop="datePublished" content="2019-06-26T22:14:11&#43;02:00" />
 <meta itemprop="dateModified" content="2019-06-26T22:14:11&#43;02:00" />
-<meta itemprop="wordCount" content="829">
+<meta itemprop="wordCount" content="958">
 
 
 
@@ -364,6 +364,13 @@ And now is the sweetest part: <a href="http://dotsquid.com/LensFlaresDemoBuild/"
 Have fun.
 </div>
 <div class="document-space" ></div></p>
+
+<h4 id="update-14-jan-2020">Update [14 Jan 2020]</h4>
+
+<p>Regarding the texture format of the occlusion culling. Initially I used RFloat (R32_SFLOAT), but it appeared that not all GPUs/drivers (mainly mobile ones) support mipmap generation for this format.<br />
+Then I decided to try RHalf (R16_SFLOAT), since according to <a href="https://www.khronos.org/registry/OpenGL/specs/es/3.0/es_spec_3.0.pdf" target="_blank">OpenGL ES3.0</a> (pages 130-132) and <a href="https://developer.apple.com/metal/Metal-Feature-Set-Tables.pdf" target="_blank">Metal</a> (pages 6-7) specifications this format supports filtering, thus should work with mipmap generation. Unfortunately, in some cases (e.g. on AppleTV 4g) it still did not work.<br />
+So I ended up with R8 which on one hand should be (I hope) supported by majority of GPUs and on another hand should be enough with its 256 possible values.<br />
+Also the more advanced solution probably would be to check whether the GPU supports a given texture format by using <a href="https://docs.unity3d.com/ScriptReference/SystemInfo.IsFormatSupported.html" target="_blank">SystemInfo.IsFormatSupported</a> with FormatUsage.Linear.</p>
             </div>
             <footer class="article-footer">
     <a data-url="http://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/" data-id="202d4168a1f122f5a27743f3188b3d01" class="article-share-link">
