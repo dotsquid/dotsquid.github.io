@@ -6,10 +6,24 @@
     <description>Recent content on dotsquid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Jun 2019 22:14:11 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jan 2020 21:17:03 +0200</lastBuildDate>
     
 	<atom:link href="http://dotsquid.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Login Buddy</title>
+      <link>http://dotsquid.com/2020/01/13/login-buddy/</link>
+      <pubDate>Mon, 13 Jan 2020 21:17:03 +0200</pubDate>
+      
+      <guid>http://dotsquid.com/2020/01/13/login-buddy/</guid>
+      <description>&lt;p&gt;So here is a small experiment in Unity3d inspired by amazing job &lt;a href=&#34;https://codepen.io/dsenneff/details/2c3e5bc86b372d5424b00edaf4990173&#34; target=&#34;_blank&#34;&gt;Animated SVG Avatar&lt;/a&gt; by &lt;a href=&#34;http://www.thedazzlingdman.com/&#34; target=&#34;_blank&#34;&gt;Darin Senneff&lt;/a&gt;.&lt;br /&gt;
+I wanted to make it as fast as possible, ideally spending 3-4 evenings (maximum a week). But unfortunately due to various reasons (damn real life) I spent almost.. ta-dam.. 3 months, with the longest pause for about 2 months. Anyway, it&amp;rsquo;s done and now you can use it as you wish (links and demo inside).&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div style=&#39;position:relative; padding-bottom:56.25%; max-width:640px; max-height:360px; margin: 0 auto&#39;&gt;&lt;iframe src=&#39;https://gfycat.com/ifr/allyawninglamb&#39; frameborder=&#39;0&#39; scrolling=&#39;no&#39; width=&#39;100%&#39; height=&#39;100%&#39; style=&#39;position:absolute;top:0;left:0;&#39; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Simple GPU Occlusion for Lens Flares</title>

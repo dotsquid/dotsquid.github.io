@@ -39,7 +39,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://dotsquid.com/" />
 
-<meta property="og:updated_time" content="2019-06-26T22:14:11&#43;02:00"/>
+<meta property="og:updated_time" content="2020-01-13T21:17:03&#43;02:00"/>
 
     
     
@@ -224,6 +224,172 @@
     	
     	<section id="main">
     
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+    <div class="article-banner">
+        <a href="http://dotsquid.com/2020/01/13/login-buddy/" itemprop="url">
+            <img src="http://dotsquid.com/titles/login-buddy.png">
+        </a>
+    </div>
+
+
+<header class="article-header">
+    <a href="http://dotsquid.com/2020/01/13/login-buddy/">
+        <h1 class="article-title" itemprop="name">
+            Login Buddy
+        </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-01-13 21:17:03 &#43;0200 EET" itemprop="datePublished">2020 Jan 13</time>
+            
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                    <a class="article-category-link" href="http://dotsquid.com/categories/unity3d">Unity3d</a>
+                    
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/unity3d">unity3d</a>
+                    
+                        
+                        /
+                    
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/ui">ui</a>
+                    
+                        
+                        /
+                    
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/animation">animation</a>
+                    
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    So here is a small experiment in Unity3d inspired by amazing job <a href="https://codepen.io/dsenneff/details/2c3e5bc86b372d5424b00edaf4990173" target="_blank">Animated SVG Avatar</a> by <a href="http://www.thedazzlingdman.com/" target="_blank">Darin Senneff</a>.<br />
+I wanted to make it as fast as possible, ideally spending 3-4 evenings (maximum a week). But unfortunately due to various reasons (damn real life) I spent almost.. ta-dam.. 3 months, with the longest pause for about 2 months. Anyway, it&rsquo;s done and now you can use it as you wish (links and demo inside).</p>
+
+<hr />
+
+<div style='position:relative; padding-bottom:56.25%; max-width:640px; max-height:360px; margin: 0 auto'><iframe src='https://gfycat.com/ifr/allyawninglamb' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div>
+                </p>
+                
+                <p class="article-more-link">
+                    <a href="http://dotsquid.com/2020/01/13/login-buddy/">
+                        Read more
+                    </a>
+                </p>
+                
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://dotsquid.com/2020/01/13/login-buddy/" data-id="7fae0e9d56bf04374638906533a08c9e" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://dotsquid.com/2020/01/13/login-buddy/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
     
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
