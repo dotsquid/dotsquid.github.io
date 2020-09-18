@@ -49,7 +49,9 @@ body {
   }
 }
 #header a.main-nav-link,
-#header a.main-nav-link:visited {
+#header a.main-title-link,
+#header a.main-nav-link:visited,
+#header a.main-title-link:visited {
   white-space: nowrap;
   -webkit-transition: 0.2s ease;
   -moz-transition: 0.2s ease;
@@ -59,10 +61,12 @@ body {
   position: relative;
   height: 100%;
 }
-#header a.main-nav-link:hover {
+#header a.main-nav-link:hover,
+#header a.main-title-link:hover {
   color: #fff;
 }
-#header a.main-nav-link::before {
+#header a.main-nav-link::before,
+#header a.main-title-link::before {
   content: '';
   z-index: -1;
   position: absolute;
@@ -1016,9 +1020,9 @@ input.search-form-input:-webkit-autofill {
   z-index: 1;
 }
 #about-avatar-wrapper {
-  margin: auto;
-  width: 410px;
-  height: 410px;
+  margin: 0 auto 50px;
+  width: 450px;
+  height: 450px;
   position: relative;
   border-radius: 512em;
   box-shadow: inset 0px 0px 0px 64px white;
@@ -1070,7 +1074,7 @@ input.search-form-input:-webkit-autofill {
 } */
 
 /* BUDAPEST */
-#about-avatar-wrapper .back {
+/*#about-avatar-wrapper .back {
   background: url("images/about/avatar/Buda/layer_back.png");
   background-size: contain;
   width: 100%;
@@ -1099,6 +1103,64 @@ input.search-form-input:-webkit-autofill {
   background-image: url("images/about/avatar/Buda/layer_front.png");
   z-index: 4;
   transform: translateX(5px) translateY(12px) translateZ(52px);
+}*/
+
+/* NORWAY */
+#about-avatar-wrapper .back {
+  background: url("images/about/avatar/Norway/layer_back.png");
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  transform: translateZ(8px);
+}
+#about-avatar-wrapper .middle {
+  background-image: url("images/about/avatar/Norway/layer_middle.png");
+  z-index: 3;
+  transform: scale(1.04, 1.04) translateX(7px) translateY(12px) translateZ(36px);
+}
+#about-avatar-wrapper .seagull_0 {
+  background-image: url("images/about/avatar/Norway/seagull_0.png");
+  transform: translateZ(52px);
+}
+#about-avatar-wrapper .seagull_1 {
+  background-image: url("images/about/avatar/Norway/seagull_1.png");
+  transform: translateZ(56px);
+}
+#about-avatar-wrapper .seagull_2 {
+  background-image: url("images/about/avatar/Norway/seagull_2.png");
+  transform: translateZ(60px);
+}
+#about-avatar-wrapper .avatar {
+  background-image: url("images/about/avatar/Norway/layer_front.png");
+  z-index: 4;
+  transform: translateX(5px) translateY(20px) translateZ(80px);
+}
+#about-avatar-wrapper .ring-outer {
+  margin: 0 auto;
+  /*max-width: 200px;*/
+  z-index: 5;
+}
+#about-avatar-wrapper .ring-inner {
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: white;
+  mask-image: radial-gradient(transparent 62%, black 62.5%, black 99.5%, transparent 100%);
+  -webkit-mask-image: radial-gradient(transparent 56%, black 56.5%, black 99.5%, transparent 100%);
+
+  z-index: 5;
+  transform: scale(1.22, 1.22) translateX(5px) translateY(20px) translateZ(85px);
+}
+#about-avatar-wrapper .ring-inner:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+  z-index: 5;
 }
 
 
@@ -1600,6 +1662,17 @@ ul.product-item-links {
 .article-entry ul {
   margin-top: 0.2em;
   margin-bottom: 0.2em;
+}
+
+.figure-inline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.figure-inline figure {
+  display: inline-block;
+  margin: 1em 8px;
 }
 
 code {

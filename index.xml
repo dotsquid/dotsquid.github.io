@@ -143,6 +143,26 @@ Problem Unity stores paths to animated properties instead of references or GUIDs
     </item>
     
     <item>
+      <title>Astronaut</title>
+      <link>http://dotsquid.com/works/astronaut/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dotsquid.com/works/astronaut/</guid>
+      <description>The game Astronaut is a 2d platformer with &amp;ldquo;grappling hook&amp;rdquo; mechanics and exploration / adventure elements. At first I was aiming mobile platforms (Android and iOS) only, but then some efforts to organize the gameplay and game control keeping other platforms in mind were done.
+You&amp;rsquo;re playing as a guy in a space suit which allows you to make interplanetary jumps and cling to the planets and other objects with an electromagnetic hook.</description>
+    </item>
+    
+    <item>
+      <title>Astronaut</title>
+      <link>http://dotsquid.com/work/astronaut/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dotsquid.com/work/astronaut/</guid>
+      <description>Astronaut is a 2d platformer with &amp;ldquo;grappling hook&amp;rdquo; mechanics and exploration / adventure elements.
+Written in C++ and Cocos2d-x for Android and iOS, but with other platforms kept in mind.</description>
+    </item>
+    
+    <item>
       <title>ChronoHelper</title>
       <link>http://dotsquid.com/works/chrono-helper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
