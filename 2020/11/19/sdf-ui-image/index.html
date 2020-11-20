@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>How I made logos crisper, while also minimizing a memory footprint and a build size &middot; dotsquid</title>
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="dotsquid">
+    
+      <meta name="description" content="">
+    
+    
+    <link rel="canonical" href="http://dotsquid.com/2020/11/19/sdf-ui-image/"/>
+
+    <link rel="apple-touch-icon" sizes="180x180"    href="http://dotsquid.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://dotsquid.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://dotsquid.com/favicon-16x16.png">
+    <link rel="manifest"                            href="http://dotsquid.com/manifest.json">
+    <link rel="mask-icon"                           href="http://dotsquid.com/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon"                       href="http://dotsquid.com/favicon.ico">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="http://dotsquid.com/css/style.css">
+    <link rel="stylesheet" href="http://dotsquid.com/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="http://dotsquid.com/css/monokai.css">
+    <link rel="stylesheet" href="http://dotsquid.com/fancybox/jquery.fancybox.min.css">
+    
+    <link rel="stylesheet" href="http://dotsquid.com/css/style-override.css">
+    
+    <link rel="stylesheet" href="http://dotsquid.com/css/gist/monokai.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="How I made logos crisper, while also minimizing a memory footprint and a build size" />
+<meta property="og:description" content="Minimizing the build size of your game is always a plus: it saves your disk space, it saves your time to upload and your players&rsquo; time to download, besides some app stores and shops impose size limits. So that&rsquo;s one of the things which I was doing while porting our game to Nintendo Switch (it&rsquo;s worth nothing that this optimization and improvement is applicable to other platforms as well)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dotsquid.com/2020/11/19/sdf-ui-image/" />
+<meta property="article:published_time" content="2020-11-19T20:07:12&#43;02:00"/>
+<meta property="article:modified_time" content="2020-11-19T20:07:12&#43;02:00"/>
+
+    
+    
+<meta itemprop="name" content="How I made logos crisper, while also minimizing a memory footprint and a build size">
+<meta itemprop="description" content="Minimizing the build size of your game is always a plus: it saves your disk space, it saves your time to upload and your players&rsquo; time to download, besides some app stores and shops impose size limits. So that&rsquo;s one of the things which I was doing while porting our game to Nintendo Switch (it&rsquo;s worth nothing that this optimization and improvement is applicable to other platforms as well).">
+
+
+<meta itemprop="datePublished" content="2020-11-19T20:07:12&#43;02:00" />
+<meta itemprop="dateModified" content="2020-11-19T20:07:12&#43;02:00" />
+<meta itemprop="wordCount" content="748">
+
+
+
+<meta itemprop="keywords" content="unity3d,shaders,ui," />
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How I made logos crisper, while also minimizing a memory footprint and a build size"/>
+<meta name="twitter:description" content="Minimizing the build size of your game is always a plus: it saves your disk space, it saves your time to upload and your players&rsquo; time to download, besides some app stores and shops impose size limits. So that&rsquo;s one of the things which I was doing while porting our game to Nintendo Switch (it&rsquo;s worth nothing that this optimization and improvement is applicable to other platforms as well)."/>
+<meta name="twitter:site" content="@dotsquid"/>
+
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="http://dotsquid.com/">Home</a>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="http://dotsquid.com/about/">About</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://dotsquid.com/works/">Works</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://dotsquid.com/contact/">Contact</a>
+          
+          
+      </nav>
+      
+      <div class="social-links">
+        <table>
+          <tr>
+            
+<td><a href="//github.com/dotsquid" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//stackoverflow.com/users/2221247" target="_blank" title="Stack Overflow"><i class="fab fa-stack-overflow"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//twitter.com/dotsquid" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></td>
+
+
+            <td><a href="http://dotsquid.com/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+          </tr>
+        </table>
+      </div>
+      <div id="search-form-wrap">
+        <form action="//duckduckgo.com" method="get" accept-charset="UTF-8" class="search-form">
+            <input type="search" name="q" class="search-form-input" placeholder="Search">
+            <button type="submit" class="search-form-submit"></button>
+            <input type="hidden" name="sites" value="http://dotsquid.com/" />
+            <div class="search-form-highlight"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="http://dotsquid.com/">Home</a></td>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="http://dotsquid.com/about/">About</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://dotsquid.com/works/">Works</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://dotsquid.com/contact/">Contact</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="http://dotsquid.com/" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+	    
+<section id="main">
+
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+    <div class="article-banner">
+        <a href="http://dotsquid.com/2020/11/19/sdf-ui-image/" itemprop="url">
+            <img src="http://dotsquid.com/titles/sdf-ui-image.png">
+        </a>
+    </div>
+
+
+<header class="article-header">
+    <a href="http://dotsquid.com/2020/11/19/sdf-ui-image/">
+        <h1 class="article-title" itemprop="name">
+            How I made logos crisper, while also minimizing a memory footprint and a build size
+        </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-11-19 20:07:12 &#43;0200 EET" itemprop="datePublished">2020 Nov 19</time>
+            
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                    <a class="article-category-link" href="http://dotsquid.com/categories/unity3d">Unity3d</a>
+                    
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/unity3d">unity3d</a>
+                    
+                        
+                        /
+                    
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/shaders">shaders</a>
+                    
+                        
+                        /
+                    
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/ui">ui</a>
+                    
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>Minimizing the build size of your game is always a plus: it saves your disk space, it saves your time to upload and your players&rsquo; time to download, besides some app stores and shops impose size limits. So that&rsquo;s one of the things which I was doing while porting <a href="http://summercatchers.com" target="_blank">our game</a> to Nintendo Switch (it&rsquo;s worth nothing that this optimization and improvement is applicable to other platforms as well).</p>
+
+<p>So one day I clapped my eyes on a thing I saw like a couple of thousand times: a splash screen with logos of our company and our publisher. I recalled that I had to use a 2048x2048 texture with enabled mipmaps to make it look nice on various screen resolutions.</p>
+
+<figure>
+    <img src="/images/posts/sdf-ui-image/atlas-original-rgb24&#43;dxt1.png"/> <figcaption>
+            <h4>Original atlas without and with compression</h4>
+        </figcaption>
+</figure>
+
+
+<p>As you can see in original RGB24 format (it has no alpha because I tried to optimize at that time already) it takes enormous 16MB of memory. And even using a compressed DXT1 format gives us 2.7MB (I guess using PVRTC for iOS and ETC for Android of the same quality has similar results).</p>
+
+<p>One of my favourite questions is &ldquo;Can I do better?&rdquo;. Spoiler alert: yes. Such monochromatic images is a great opportunity to use signed distance fields (SDF for short).</p>
+
+<p>The first mentioning of this technique I found in <a href="https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf" target="_blank">one of the Valve&rsquo;s publucations</a> in 2007. I have to admit I didn&rsquo;t clearly understand how it worked exactly by I definitely was impressed by result.</p>
+
+<p>In a few words SDF encodes an information about the distance from the texel to the contour in both directions: inwards and outwards. Typically the value of 0.5 means zero distance from the contour, the value of 0 represents the maximum possible negative distance (fully inside) and the value of 1 represents the maximum possible positive distance (fully outside).</p>
+
+<figure>
+    <img src="/images/posts/sdf-ui-image/example-original-sdf.png"/> <figcaption>
+            <h4>Example (original and SDF)</h4>
+        </figcaption>
+</figure>
+
+
+<p>So how to convert an image into a signed distance field? Well there are plenty of ways and tools to do this, just use google.<br />
+Since I have an NPM installed I used <a href="https://github.com/mattdesl/image-sdf" target="_blank">this console tool</a>. Additionally to generating distance field it can downsample the image.<br />
+Another way to create a SDF is to use Photoshop. You need to apply a &lsquo;Stroke&rsquo; style with the following settings. The size of the stroke depends on the size of the image. Practise shows that it needs to be about 10% of the image size to give a nice result. Don&rsquo;t forget to downsample the image. In my case the size of the image was reduced from 2048x2048 to 256x256, but in the publication Valve provides an example of the image downsampled from 4096x4096 to 64x64. Basically it depends on the details of the original image, which obviously could be vanished after downsampling.</p>
+
+<figure>
+    <img src="/images/posts/sdf-ui-image/photoshop-sdf.png"/> <figcaption>
+            <h4>Creating SDF in Photoshop</h4>
+        </figcaption>
+</figure>
+
+
+<p>Now the image is ready to be imported in Unity. Pay attention that this technique requires filtering to be enabled. Also since we need only one channel we can ask Unity to convert our RGBA32 image into A8 and save lots of memory.</p>
+
+<figure>
+    <img src="/images/posts/sdf-ui-image/unity-import-settings.png"/> <figcaption>
+            <h4>Unity import settings</h4>
+        </figcaption>
+</figure>
+
+
+<div class="notices info" >
+SDF texture looks inverted because what you see is an alpha channel where black represents fully transparent texels and white is fully opaque.
+</div>
+
+<p>The last but not least part of this technique is a shader. In my case I needed to use the image with UI, so I took a &lsquo;UI Default&rsquo; built-in shader for <a href="https://unity3d.com/get-unity/download/archive" target="_blank">Unity Archive</a> and used it as a starting point.<br />
+At first lets add required properties and corresponding variables:</p>
+
+<p><script type="application/javascript" src="//gist.github.com/dotsquid/2296f88b8f15acf54f33d1a8d1c08ad6.js?file=ui-image-sdf.0-properties.shader"></script><br />
+<script type="application/javascript" src="//gist.github.com/dotsquid/2296f88b8f15acf54f33d1a8d1c08ad6.js?file=ui-image-sdf.1-variables.shader"></script></p>
+
+<p>Next - use them in the fragment shader:</p>
+
+<script type="application/javascript" src="//gist.github.com/dotsquid/2296f88b8f15acf54f33d1a8d1c08ad6.js?file=ui-image-sdf.2-main.shader"></script>
+
+<p>&ldquo;Distance Contrast&rdquo; and &ldquo;Distance Threshold&rdquo; properties work in a pair and represent how thick the contour will be. To get a good result the &ldquo;contrast&rdquo; should be about twice as large as the &ldquo;threshold&rdquo;. &ldquo;Distance smoothness&rdquo; defines how smooth or blurred the contour of the shape will be. Unlike other similar shaders across the Internet, mine provides resolution-independent smoothness of the contour: the width of the antialiased line stays the same for every screen size.<br />
+Full shader code <a href="https://gist.github.com/dotsquid/15c91969a6cfa01b7563dd00fcde9e27" target="_blank">can be found here</a>.</p>
+
+<p><div class="document-space"  style="height: 0.25em" ></div>
+After manual tight packing of the sprites I ended up with the following SDF atlas.
+<figure>
+    <img src="/images/posts/sdf-ui-image/final-atlas-sdf.png"/> <figcaption>
+            <h4>Tight packing</h4>
+        </figcaption>
+</figure>
+</p>
+
+<p>Which gave me the following result (rendered at 3840x2560).
+<figure>
+    <img src="/images/posts/sdf-ui-image/comparison-original-sdf.png"/> <figcaption>
+            <h4>Comparison</h4>
+        </figcaption>
+</figure>
+</p>
+
+<div style='position:relative; padding-bottom:56.25%; max-width:640px; max-height:360px; margin: 0 auto'><iframe src='https://gfycat.com/ifr/likablethatbuckeyebutterfly?hd=1' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div>  
+
+<p>I consider this as an excellent result:</p>
+
+<ul>
+<li>the build reduced in size from 495MB to 491MB (minus 4MB out of a thin air!);</li>
+<li>the video memory footprint reduced as well (although it wasn&rsquo;t a bottleneck);</li>
+<li>the image stays crisp even on 4K resolution;</li>
+<li>I finally used SDF in a real battle :)</li>
+</ul>
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://dotsquid.com/2020/11/19/sdf-ui-image/" data-id="be17bd14385f42b5fa8d2fe1b0e9fbe2" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://dotsquid.com/2020/11/19/sdf-ui-image/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+
+        
+
+    </article>
+
+    
+    <section id="comments">
+        <div id="disqus_thread">
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "dotsquid-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </section>
+    
+</section>
+
+	    
+	    	<aside id="sidebar">
+    
+
+    
+
+    
+
+    
+
+</aside>
+
+	    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 - 2020
+      &nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Proudly made in <a href="https://en.wikipedia.org/wiki/Ukraine" target="_blank">Ukraine</a>&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Powered by <a href="//gohugo.io" target="_blank">Hugo</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-97233469-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+<script src="http://dotsquid.com/fancybox/jquery.fancybox.js"></script>
+<script src="http://dotsquid.com/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script src="http://dotsquid.com/js/typed.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+</body>
+</html>

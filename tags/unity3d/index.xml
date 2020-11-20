@@ -6,10 +6,19 @@
     <description>Recent content in unity3d on dotsquid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jan 2020 21:17:03 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2020 20:07:12 +0200</lastBuildDate>
     
 	<atom:link href="http://dotsquid.com/tags/unity3d/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How I made logos crisper, while also minimizing a memory footprint and a build size</title>
+      <link>http://dotsquid.com/2020/11/19/sdf-ui-image/</link>
+      <pubDate>Thu, 19 Nov 2020 20:07:12 +0200</pubDate>
+      
+      <guid>http://dotsquid.com/2020/11/19/sdf-ui-image/</guid>
+      <description>&lt;p&gt;Minimizing the build size of your game is always a plus: it saves your disk space, it saves your time to upload and your players&amp;rsquo; time to download, besides some app stores and shops impose size limits. So that&amp;rsquo;s one of the things which I was doing while porting &lt;a href=&#34;http://summercatchers.com&#34; target=&#34;_blank&#34;&gt;our game&lt;/a&gt; to Nintendo Switch (it&amp;rsquo;s worth nothing that this optimization and improvement is applicable to other platforms as well).&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Login Buddy</title>
