@@ -6,10 +6,19 @@
     <description>Recent content on dotsquid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Nov 2020 20:07:12 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 18 Dec 2020 20:47:39 +0200</lastBuildDate>
     
 	<atom:link href="http://dotsquid.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How I broke Incremental GC in Unity</title>
+      <link>http://dotsquid.com/2020/12/18/how-i-broke-incremental-gc-in-unity/</link>
+      <pubDate>Fri, 18 Dec 2020 20:47:39 +0200</pubDate>
+      
+      <guid>http://dotsquid.com/2020/12/18/how-i-broke-incremental-gc-in-unity/</guid>
+      <description>&lt;p&gt;Once upon a time, before releasing &lt;a href=&#34;http://summercatchers.com/&#34; target=&#34;_blank&#34;&gt;Summer Catchers&lt;/a&gt; on Steam, I was trying to make our game as smooth as possible. Since we are using object pooling our game almost does not have memory allocations after a new scene is loaded and thus it does not require to use GC.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>How I made logos crisper, while also minimizing a memory footprint and a build size</title>
