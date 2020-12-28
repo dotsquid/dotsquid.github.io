@@ -4,37 +4,48 @@
   
   <url>
     <loc>http://dotsquid.com/categories/</loc>
-    <lastmod>2020-12-18T20:47:39+02:00</lastmod>
+    <lastmod>2020-12-28T17:19:59+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.com/2020/12/28/paper-folding/</loc>
+    <lastmod>2020-12-28T17:19:59+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.com/tags/</loc>
+    <lastmod>2020-12-28T17:19:59+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.com/categories/unity3d/</loc>
+    <lastmod>2020-12-28T17:19:59+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.com/</loc>
+    <lastmod>2020-12-28T17:19:59+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.com/tags/effects/</loc>
+    <lastmod>2020-12-28T17:19:59+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.com/tags/unity3d/</loc>
+    <lastmod>2020-12-28T17:19:59+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://dotsquid.com/2020/12/18/how-i-broke-incremental-gc-in-unity/</loc>
     <lastmod>2020-12-18T20:47:39+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://dotsquid.com/tags/</loc>
-    <lastmod>2020-12-18T20:47:39+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dotsquid.com/categories/unity3d/</loc>
-    <lastmod>2020-12-18T20:47:39+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dotsquid.com/</loc>
-    <lastmod>2020-12-18T20:47:39+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dotsquid.com/tags/unity3d/</loc>
-    <lastmod>2020-12-18T20:47:39+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

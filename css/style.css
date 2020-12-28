@@ -1542,10 +1542,12 @@ ol.toc {
 #page-nav a {
   color: #999;
   text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0.16);
 }
 #page-nav a:hover {
   color: #fff;
   background: #38b7ea;
+  border-color: transparent;
 }
 #page-nav .page-number {
   display: inline-block;

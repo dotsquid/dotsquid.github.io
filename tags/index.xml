@@ -6,15 +6,24 @@
     <description>Recent content in Tags on dotsquid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Dec 2020 20:47:39 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 28 Dec 2020 17:19:59 +0200</lastBuildDate>
     
 	<atom:link href="http://dotsquid.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>effects</title>
+      <link>http://dotsquid.com/tags/effects/</link>
+      <pubDate>Mon, 28 Dec 2020 17:19:59 +0200</pubDate>
+      
+      <guid>http://dotsquid.com/tags/effects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>unity3d</title>
       <link>http://dotsquid.com/tags/unity3d/</link>
-      <pubDate>Fri, 18 Dec 2020 20:47:39 +0200</pubDate>
+      <pubDate>Mon, 28 Dec 2020 17:19:59 +0200</pubDate>
       
       <guid>http://dotsquid.com/tags/unity3d/</guid>
       <description></description>

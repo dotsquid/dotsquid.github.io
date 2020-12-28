@@ -6,10 +6,21 @@
     <description>Recent content on dotsquid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Dec 2020 20:47:39 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 28 Dec 2020 17:19:59 +0200</lastBuildDate>
     
 	<atom:link href="http://dotsquid.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Paper Folding</title>
+      <link>http://dotsquid.com/2020/12/28/paper-folding/</link>
+      <pubDate>Mon, 28 Dec 2020 17:19:59 +0200</pubDate>
+      
+      <guid>http://dotsquid.com/2020/12/28/paper-folding/</guid>
+      <description>&lt;p&gt;In april 2020 I created this demo / proof of concept of a game whose mechanics is based on folding of the sheet of paper. Each side of the paper represents completely different environments. By folding the paper those environments could be combined as a result letting the main character reach the goal (this part is not implemented in this demo).&lt;/p&gt;
+
+&lt;div style=&#39;position:relative; padding-bottom:56.25%; max-width:640px; max-height:360px; margin: 0 auto&#39;&gt;&lt;iframe src=&#39;https://gfycat.com/ifr/maturelegalgrunion?hd=1&#39; frameborder=&#39;0&#39; scrolling=&#39;no&#39; width=&#39;100%&#39; height=&#39;100%&#39; style=&#39;position:absolute;top:0;left:0;&#39; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>How I broke Incremental GC in Unity</title>
@@ -40,7 +51,7 @@ I wanted to make it as fast as possible, ideally spending 3-4 evenings (maximum 
 
 &lt;hr /&gt;
 
-&lt;div style=&#39;position:relative; padding-bottom:56.25%; max-width:640px; max-height:360px; margin: 0 auto&#39;&gt;&lt;iframe src=&#39;https://gfycat.com/ifr/allyawninglamb&#39; frameborder=&#39;0&#39; scrolling=&#39;no&#39; width=&#39;100%&#39; height=&#39;100%&#39; style=&#39;position:absolute;top:0;left:0;&#39; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;</description>
+&lt;div style=&#39;position:relative; padding-bottom:56.25%; max-width:640px; max-height:360px; margin: 0 auto&#39;&gt;&lt;iframe src=&#39;https://gfycat.com/ifr/allyawninglamb?hd=1&#39; frameborder=&#39;0&#39; scrolling=&#39;no&#39; width=&#39;100%&#39; height=&#39;100%&#39; style=&#39;position:absolute;top:0;left:0;&#39; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
