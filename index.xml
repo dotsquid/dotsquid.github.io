@@ -187,8 +187,9 @@ Written in C++ and Cocos2d-x for Android and iOS, but with other platforms kept 
       
       <guid>http://dotsquid.com/works/chrono-helper/</guid>
       <description>GithubChangelogAssetStoreForumChronoHelper is a free open-source tool for Unity Editor for controlling TimeScale in PlayMode with ease.
-It becomes very handy when it&amp;rsquo;s required to examine a suspicious moment of gameplay in slow-motion or conversely when it&amp;rsquo;s preferable to skip uninteresting part in fast-forward.  
-Installation Github Clone repository or download it as archive from https://github.</description>
+It becomes very handy when it&amp;rsquo;s required to examine a suspicious moment of gameplay in slow-motion or conversely when it&amp;rsquo;s preferable to skip uninteresting part in fast-forward.   
+Usage Use &amp;lsquo;Window/ChronoHelper&amp;rsquo; menu to open ChronoHelper.
+To change current timeScale use the slider or shortcut buttons.</description>
     </item>
     
     <item>
@@ -207,8 +208,8 @@ It becomes very handy when it&amp;rsquo;s required to examine a suspicious momen
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://dotsquid.com/work/chrono-helper-plus/</guid>
-      <description>ChronoHelper Plus is an extended version of ChronoHelper with some extra features.
-Coming soon.</description>
+      <description>ChronoHelper Plus was intended to be a commercial and extended version of the free and open-source ChronoHelper.
+But I changed my mind and released it as a ChronoHelper v2.0</description>
     </item>
     
     <item>
@@ -217,9 +218,9 @@ Coming soon.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://dotsquid.com/work/summer-catchers/</guid>
-      <description>Summer Catchers takes you in the journey with a little northern girl to the faraway South and summer warm. Prepare for mysterious adventures, weird characters and non-stop riding! Target platforms: Windows, Mac (Steam), Mac (AppStore), Android, iOS, tvOS
-Release date: July 16, 2019
-Status: Working hard as a part of four-man team to deliver awesomeness and fun to players.</description>
+      <description>Summer Catchers takes you in the journey with a little northern girl to the faraway South and summer warm. Prepare for mysterious adventures, weird characters and non-stop riding! Target platforms: Windows, Mac (Steam), Mac (AppStore), Android, iOS, tvOS, Nintendo Switch
+Release date: Steam - July 16, 2019; AppStore / GooglePlay - February 21, 2020; Nintendo Switch - TBA
+Status: Working hard as a part of ̷f̷o̷u̷r two-man team to deliver awesomeness and fun to players.</description>
     </item>
     
     <item>

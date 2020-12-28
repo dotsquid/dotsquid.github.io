@@ -1608,23 +1608,40 @@ ul.work-item-links > li:first-child:before {
   margin: 0 auto;
 }
 
-.product-usual h1,
-.product-usual h2,
-.product-usual h3 {
-  display: table;
-  padding: 0.28em 0.36em;
-  border-radius: 4px;
-  margin: 0.5em 0;
+.product-usual h1 {
+  margin: 0.65em 0;
+  text-transform: uppercase;
 }
 
-.product-usual h1,
 .product-usual h2 {
-  background-color: rgba(86, 90, 95, 0.72);
-  color: white;
+  margin: 0.55em 0;
+  text-transform: uppercase;
 }
 
 .product-usual h3 {
-  border: 2px solid rgba(86, 90, 95, 0.72);
+  margin: 0.45em 0 ;
+}
+
+.product-usual h1::before,
+.product-usual h2::before,
+.product-usual h3::before,
+.product-usual h1::after,
+.product-usual h2::after {
+  content: "/";
+  margin: 0 0.25em; 
+}
+
+.product-usual h1::before,
+.product-usual h2::before,
+.product-usual h1::after,
+.product-usual h2::after {
+  font-size: 125%;
+  vertical-align: -7.5%;
+}
+
+.product-usual h3::before {
+  font-size: 145%;
+  vertical-align: -11.5%;
 }
 
 .product-usual p {
