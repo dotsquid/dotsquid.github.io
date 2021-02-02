@@ -1560,6 +1560,22 @@ ul.work-item-links > li.purple {
   border: 1px solid rgb(192, 32, 255);
 }
 
+ul.work-item-links > li.orange {
+  border: 1px solid rgb(255, 160, 0);
+}
+
+ul.work-item-links > li.orange a {
+  color: rgb(255, 160, 0);
+}
+
+ul.work-item-links > li.orange:hover {
+  background-color: rgb(255, 160, 0);
+}
+
+ul.work-item-links > li.purple {
+  border: 1px solid rgb(192, 32, 255);
+}
+
 ul.work-item-links > li.purple a {
   color: rgb(192, 32, 255);
 }
@@ -1570,7 +1586,8 @@ ul.work-item-links > li.purple:hover {
 
 ul.work-item-links > li.red:hover a,
 ul.work-item-links > li.green:hover a,
-ul.work-item-links > li.purple:hover a{
+ul.work-item-links > li.purple:hover a,
+ul.work-item-links > li.orange:hover a {
   color: white;
 }
 
