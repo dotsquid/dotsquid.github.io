@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>animation on dotsquid</title>
-    <link>http://dotsquid.com/tags/animation/</link>
-    <description>Recent content in animation on dotsquid</description>
+    <title>optimization on dotsquid</title>
+    <link>http://dotsquid.com/tags/optimization/</link>
+    <description>Recent content in optimization on dotsquid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 17 Mar 2021 21:47:59 +0200</lastBuildDate>
     
-	<atom:link href="http://dotsquid.com/tags/animation/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://dotsquid.com/tags/optimization/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -26,17 +26,12 @@ After full day of work he presented a brand new version of tree crowns which wer
     </item>
     
     <item>
-      <title>Login Buddy</title>
-      <link>http://dotsquid.com/2020/01/13/login-buddy/</link>
-      <pubDate>Mon, 13 Jan 2020 21:17:03 +0200</pubDate>
+      <title>How I made logos crisper, while also minimizing a memory footprint and a build size</title>
+      <link>http://dotsquid.com/2020/11/19/sdf-ui-image/</link>
+      <pubDate>Thu, 19 Nov 2020 20:07:12 +0200</pubDate>
       
-      <guid>http://dotsquid.com/2020/01/13/login-buddy/</guid>
-      <description>&lt;p&gt;So here is a small experiment in Unity3d inspired by amazing job &lt;a href=&#34;https://codepen.io/dsenneff/details/2c3e5bc86b372d5424b00edaf4990173&#34; target=&#34;_blank&#34;&gt;Animated SVG Avatar&lt;/a&gt; by &lt;a href=&#34;http://www.thedazzlingdman.com/&#34; target=&#34;_blank&#34;&gt;Darin Senneff&lt;/a&gt;.&lt;br /&gt;
-I wanted to make it as fast as possible, ideally spending 3-4 evenings (maximum a week). But unfortunately due to various reasons (damn real life) I spent almost.. ta-dam.. 3 months, with the longest pause for about 2 months. Anyway, it&amp;rsquo;s done and now you can use it as you wish (links and demo inside).&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;div style=&#39;position:relative; padding-bottom:56.25%; max-width:640px; max-height:360px; margin: 0 auto&#39;&gt;&lt;iframe src=&#39;https://gfycat.com/ifr/allyawninglamb?hd=1&#39; frameborder=&#39;0&#39; scrolling=&#39;no&#39; width=&#39;100%&#39; height=&#39;100%&#39; style=&#39;position:absolute;top:0;left:0;&#39; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;</description>
+      <guid>http://dotsquid.com/2020/11/19/sdf-ui-image/</guid>
+      <description>&lt;p&gt;Minimizing the build size of your game is always a plus: it saves your disk space, it saves your time to upload and your players&amp;rsquo; time to download, besides some app stores and shops impose size limits. So that&amp;rsquo;s one of the things which I was doing while porting &lt;a href=&#34;http://summercatchers.com&#34; target=&#34;_blank&#34;&gt;our game&lt;/a&gt; to Nintendo Switch (it&amp;rsquo;s worth nothing that this optimization and improvement is applicable to other platforms as well).&lt;/p&gt;</description>
     </item>
     
   </channel>

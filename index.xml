@@ -6,10 +6,24 @@
     <description>Recent content on dotsquid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Dec 2020 17:19:59 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 17 Mar 2021 21:47:59 +0200</lastBuildDate>
     
 	<atom:link href="http://dotsquid.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How I replaced animation with shader and ̶s̶a̶v̶e̶d̶ optimized the world</title>
+      <link>http://dotsquid.com/2021/03/17/replacing-animation-with-shader/</link>
+      <pubDate>Wed, 17 Mar 2021 21:47:59 +0200</pubDate>
+      
+      <guid>http://dotsquid.com/2021/03/17/replacing-animation-with-shader/</guid>
+      <description>&lt;p&gt;So one fine day our designer decided that the trees in &lt;a href=&#34;http://summercatchers.com&#34; target=&#34;_blank&#34;&gt;Summer Catchers&lt;/a&gt; are boring. And he was actually right because they were totally static.&lt;br /&gt;
+After full day of work he presented a brand new version of tree crowns which were steadily swaying in the light wind. A real breath of fresh air in the visual aesthetics of the game.&lt;/p&gt;
+
+&lt;div style=&#39;position:relative; padding-bottom:56.25%; max-width:640px; max-height:480px; margin: 0 auto&#39;&gt;&lt;iframe src=&#39;https://gfycat.com/ifr/ajarordinaryjaguarundi?hd=1&#39; frameborder=&#39;0&#39; scrolling=&#39;no&#39; width=&#39;100%&#39; height=&#39;100%&#39; style=&#39;position:absolute;top:0;left:0;&#39; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;  
+
+&lt;p&gt;But then I checked how this was achieved. My breath was taken away.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Paper Folding</title>

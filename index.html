@@ -39,7 +39,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://dotsquid.com/" />
 
-<meta property="og:updated_time" content="2020-12-28T17:19:59&#43;02:00"/>
+<meta property="og:updated_time" content="2021-03-17T21:47:59&#43;02:00"/>
 
     
     
@@ -224,6 +224,187 @@
     	
     	<section id="main">
     
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+    <div class="article-banner">
+        <a href="http://dotsquid.com/2021/03/17/replacing-animation-with-shader/" itemprop="url">
+            <img src="http://dotsquid.com/titles/replacing-animation-with-shader.png">
+        </a>
+    </div>
+
+
+<header class="article-header">
+    <a href="http://dotsquid.com/2021/03/17/replacing-animation-with-shader/">
+        <h1 class="article-title" itemprop="name">
+            How I replaced animation with shader and ̶s̶a̶v̶e̶d̶ optimized the world
+        </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2021-03-17 21:47:59 &#43;0200 EET" itemprop="datePublished">2021 Mar 17</time>
+            
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                    <a class="article-category-link" href="http://dotsquid.com/categories/unity3d">Unity3d</a>
+                    
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/unity3d">unity3d</a>
+                    
+                        
+                        /
+                    
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/shaders">shaders</a>
+                    
+                        
+                        /
+                    
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/animation">animation</a>
+                    
+                        
+                        /
+                    
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/optimization">optimization</a>
+                    
+                        
+                        /
+                    
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/tricks">tricks</a>
+                    
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    <p>So one fine day our designer decided that the trees in <a href="http://summercatchers.com" target="_blank">Summer Catchers</a> are boring. And he was actually right because they were totally static.<br />
+After full day of work he presented a brand new version of tree crowns which were steadily swaying in the light wind. A real breath of fresh air in the visual aesthetics of the game.</p>
+
+<div style='position:relative; padding-bottom:56.25%; max-width:640px; max-height:480px; margin: 0 auto'><iframe src='https://gfycat.com/ifr/ajarordinaryjaguarundi?hd=1' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div>  
+
+<p>But then I checked how this was achieved. My breath was taken away.</p>
+
+                </p>
+                
+                <p class="article-more-link">
+                    <a href="http://dotsquid.com/2021/03/17/replacing-animation-with-shader/">
+                        Read more
+                    </a>
+                </p>
+                
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://dotsquid.com/2021/03/17/replacing-animation-with-shader/" data-id="ff770b273819d2beb67c71bd7b61962f" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://dotsquid.com/2021/03/17/replacing-animation-with-shader/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
     
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
@@ -583,6 +764,13 @@
                 
                     
                     <a class="article-category-link" href="http://dotsquid.com/tags/ui">ui</a>
+                    
+                        
+                        /
+                    
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/optimization">optimization</a>
                     
                 
             </div>
@@ -1612,168 +1800,6 @@ The bug is as follows.
     </a>
     
     <a href="http://dotsquid.com/2017/04/08/nested-canvas-bug/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-        </div>
-    </article>
-    
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-    <div class="article-banner">
-        <a href="http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/" itemprop="url">
-            <img src="http://dotsquid.com/titles/enum-flag-attribute.gif">
-        </a>
-    </div>
-
-
-<header class="article-header">
-    <a href="http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/">
-        <h1 class="article-title" itemprop="name">
-            Enum flags in Unity3d Inspector
-        </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2017-04-05 21:12:16 &#43;0200 &#43;0200" itemprop="datePublished">2017 Apr 05</time>
-            
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                    <a class="article-category-link" href="http://dotsquid.com/categories/unity3d">Unity3d</a>
-                    
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                    
-                    <a class="article-category-link" href="http://dotsquid.com/tags/unity3d">unity3d</a>
-                    
-                        
-                        /
-                    
-                
-                    
-                    <a class="article-category-link" href="http://dotsquid.com/tags/ui">ui</a>
-                    
-                        
-                        /
-                    
-                
-                    
-                    <a class="article-category-link" href="http://dotsquid.com/tags/c-sharp">c-sharp</a>
-                    
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    It&rsquo;s quite strange but Unity can&rsquo;t show your enum as bitmask / flags out of the box.<br />
-Fortunately this can be fixed fast and easy.
-                </p>
-                
-                <p class="article-more-link">
-                    <a href="http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/">
-                        Read more
-                    </a>
-                </p>
-                
-            </div>
-            <footer class="article-footer">
-    <a data-url="http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/" data-id="923d0fc134cc4babb382573d0f97ca52" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/#disqus_thread" class="article-comment-link">
         Comments
     </a>
     

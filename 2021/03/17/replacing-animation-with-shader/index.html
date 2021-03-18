@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>How I made logos crisper, while also minimizing a memory footprint and a build size &middot; dotsquid</title>
+    <title>How I replaced animation with shader and ̶s̶a̶v̶e̶d̶ optimized the world &middot; dotsquid</title>
     <meta name="generator" content="Hugo 0.55.6" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +10,7 @@
       <meta name="description" content="">
     
     
-    <link rel="canonical" href="http://dotsquid.com/2020/11/19/sdf-ui-image/"/>
+    <link rel="canonical" href="http://dotsquid.com/2021/03/17/replacing-animation-with-shader/"/>
 
     <link rel="apple-touch-icon" sizes="180x180"    href="http://dotsquid.com/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="http://dotsquid.com/favicon-32x32.png">
@@ -31,30 +31,45 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="How I made logos crisper, while also minimizing a memory footprint and a build size" />
-<meta property="og:description" content="Minimizing the build size of your game is always a plus: it saves your disk space, it saves your time to upload and your players&rsquo; time to download, besides some app stores and shops impose size limits. So that&rsquo;s one of the things which I was doing while porting our game to Nintendo Switch (it&rsquo;s worth nothing that this optimization and improvement is applicable to other platforms as well)." />
+    <meta property="og:title" content="How I replaced animation with shader and ̶s̶a̶v̶e̶d̶ optimized the world" />
+<meta property="og:description" content="So one fine day our designer decided that the trees in Summer Catchers are boring. And he was actually right because they were totally static.
+After full day of work he presented a brand new version of tree crowns which were steadily swaying in the light wind. A real breath of fresh air in the visual aesthetics of the game.
+
+  
+
+But then I checked how this was achieved. My breath was taken away." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dotsquid.com/2020/11/19/sdf-ui-image/" />
-<meta property="article:published_time" content="2020-11-19T20:07:12&#43;02:00"/>
-<meta property="article:modified_time" content="2020-11-19T20:07:12&#43;02:00"/>
+<meta property="og:url" content="http://dotsquid.com/2021/03/17/replacing-animation-with-shader/" />
+<meta property="article:published_time" content="2021-03-17T21:47:59&#43;02:00"/>
+<meta property="article:modified_time" content="2021-03-17T21:47:59&#43;02:00"/>
 
     
     
-<meta itemprop="name" content="How I made logos crisper, while also minimizing a memory footprint and a build size">
-<meta itemprop="description" content="Minimizing the build size of your game is always a plus: it saves your disk space, it saves your time to upload and your players&rsquo; time to download, besides some app stores and shops impose size limits. So that&rsquo;s one of the things which I was doing while porting our game to Nintendo Switch (it&rsquo;s worth nothing that this optimization and improvement is applicable to other platforms as well).">
+<meta itemprop="name" content="How I replaced animation with shader and ̶s̶a̶v̶e̶d̶ optimized the world">
+<meta itemprop="description" content="So one fine day our designer decided that the trees in Summer Catchers are boring. And he was actually right because they were totally static.
+After full day of work he presented a brand new version of tree crowns which were steadily swaying in the light wind. A real breath of fresh air in the visual aesthetics of the game.
+
+  
+
+But then I checked how this was achieved. My breath was taken away.">
 
 
-<meta itemprop="datePublished" content="2020-11-19T20:07:12&#43;02:00" />
-<meta itemprop="dateModified" content="2020-11-19T20:07:12&#43;02:00" />
-<meta itemprop="wordCount" content="748">
+<meta itemprop="datePublished" content="2021-03-17T21:47:59&#43;02:00" />
+<meta itemprop="dateModified" content="2021-03-17T21:47:59&#43;02:00" />
+<meta itemprop="wordCount" content="724">
 
 
 
-<meta itemprop="keywords" content="unity3d,shaders,ui,optimization," />
+<meta itemprop="keywords" content="unity3d,shaders,animation,optimization,tricks," />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="How I made logos crisper, while also minimizing a memory footprint and a build size"/>
-<meta name="twitter:description" content="Minimizing the build size of your game is always a plus: it saves your disk space, it saves your time to upload and your players&rsquo; time to download, besides some app stores and shops impose size limits. So that&rsquo;s one of the things which I was doing while porting our game to Nintendo Switch (it&rsquo;s worth nothing that this optimization and improvement is applicable to other platforms as well)."/>
+<meta name="twitter:title" content="How I replaced animation with shader and ̶s̶a̶v̶e̶d̶ optimized the world"/>
+<meta name="twitter:description" content="So one fine day our designer decided that the trees in Summer Catchers are boring. And he was actually right because they were totally static.
+After full day of work he presented a brand new version of tree crowns which were steadily swaying in the light wind. A real breath of fresh air in the visual aesthetics of the game.
+
+  
+
+But then I checked how this was achieved. My breath was taken away."/>
 <meta name="twitter:site" content="@dotsquid"/>
 
     
@@ -232,16 +247,16 @@
         <div class="article-inner">
             
     <div class="article-banner">
-        <a href="http://dotsquid.com/2020/11/19/sdf-ui-image/" itemprop="url">
-            <img src="http://dotsquid.com/titles/sdf-ui-image.png">
+        <a href="http://dotsquid.com/2021/03/17/replacing-animation-with-shader/" itemprop="url">
+            <img src="http://dotsquid.com/titles/replacing-animation-with-shader.png">
         </a>
     </div>
 
 
 <header class="article-header">
-    <a href="http://dotsquid.com/2020/11/19/sdf-ui-image/">
+    <a href="http://dotsquid.com/2021/03/17/replacing-animation-with-shader/">
         <h1 class="article-title" itemprop="name">
-            How I made logos crisper, while also minimizing a memory footprint and a build size
+            How I replaced animation with shader and ̶s̶a̶v̶e̶d̶ optimized the world
         </h1>
     </a>
     <div class="article-meta">
@@ -249,7 +264,7 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2020-11-19 20:07:12 &#43;0200 EET" itemprop="datePublished">2020 Nov 19</time>
+            <time datetime="2021-03-17 21:47:59 &#43;0200 EET" itemprop="datePublished">2021 Mar 17</time>
             
         </div>
         
@@ -288,7 +303,7 @@
                     
                 
                     
-                    <a class="article-category-link" href="http://dotsquid.com/tags/ui">ui</a>
+                    <a class="article-category-link" href="http://dotsquid.com/tags/animation">animation</a>
                     
                         
                         /
@@ -296,6 +311,13 @@
                 
                     
                     <a class="article-category-link" href="http://dotsquid.com/tags/optimization">optimization</a>
+                    
+                        
+                        /
+                    
+                
+                    
+                    <a class="article-category-link" href="http://dotsquid.com/tags/tricks">tricks</a>
                     
                 
             </div>
@@ -305,104 +327,89 @@
 </header>
 
             <div class="article-entry" itemprop="articleBody">
-                <p>Minimizing the build size of your game is always a plus: it saves your disk space, it saves your time to upload and your players&rsquo; time to download, besides some app stores and shops impose size limits. So that&rsquo;s one of the things which I was doing while porting <a href="http://summercatchers.com" target="_blank">our game</a> to Nintendo Switch (it&rsquo;s worth nothing that this optimization and improvement is applicable to other platforms as well).</p>
+                <p>So one fine day our designer decided that the trees in <a href="http://summercatchers.com" target="_blank">Summer Catchers</a> are boring. And he was actually right because they were totally static.<br />
+After full day of work he presented a brand new version of tree crowns which were steadily swaying in the light wind. A real breath of fresh air in the visual aesthetics of the game.</p>
 
-<p>So one day I clapped my eyes on a thing I saw like a couple of thousand times: a splash screen with logos of our company and our publisher. I recalled that I had to use a 2048x2048 texture with enabled mipmaps to make it look nice on various screen resolutions.</p>
+<div style='position:relative; padding-bottom:56.25%; max-width:640px; max-height:480px; margin: 0 auto'><iframe src='https://gfycat.com/ifr/ajarordinaryjaguarundi?hd=1' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div>  
+
+<p>But then I checked how this was achieved. My breath was taken away.</p>
+
+<p>Now the crown had a Mecanim animator with a huge animation. Literally huge. Every pixel petal in the animation above was animated with several properties: position (x, y, z floats), color (r, g, b, a floats). Here is a shorten abstract.</p>
 
 <figure>
-    <img src="/images/posts/sdf-ui-image/atlas-original-rgb24&#43;dxt1.png"/> <figcaption>
-            <h4>Original atlas without and with compression</h4>
+    <img src="/images/posts/replacing-animation-with-shader/old_animation_short.png"/> <figcaption>
+            <h4>Shorten version of animation</h4>
         </figcaption>
 </figure>
 
 
-<p>As you can see in original RGB24 format (it has no alpha because I tried to optimize at that time already) it takes enormous 16MB of memory. And even using a compressed DXT1 format gives us 2.7MB (I guess using PVRTC for iOS and ETC for Android of the same quality has similar results).</p>
+<p><a href="/images/posts/replacing-animation-with-shader/old_animation_full.png"><strong>Prepare yourself for a full version</strong></a>. Just imagine all the efforts required to make this manually!</p>
 
-<p>One of my favourite questions is &ldquo;Can I do better?&rdquo;. Spoiler alert: yes. Such monochromatic images is a great opportunity to use signed distance fields (SDF for short).</p>
+<p>Despite new crowns looked great they were barely usable: just 5-6 of them on a screen were giving a noticeable CPU load on PC. Some mobiles were just dying and asking for mercy. I had to do something with them since reverting back to static ones was not an option.</p>
 
-<p>The first mentioning of this technique I found in <a href="https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf" target="_blank">one of the Valve&rsquo;s publucations</a> in 2007. I have to admit I didn&rsquo;t clearly understand how it worked exactly by I definitely was impressed by result.</p>
+<p>Since CPU was overloaded I had to put the work on GPU which can handle lots of equal tasks much better.</p>
 
-<p>In a few words SDF encodes an information about the distance from the texel to the contour in both directions: inwards and outwards. Typically the value of 0.5 means zero distance from the contour, the value of 0 represents the maximum possible negative distance (fully inside) and the value of 1 represents the maximum possible positive distance (fully outside).</p>
+<p>The first thing I did is that I simplified the hierarchy. Each petal of each 4-petal flower was a separate object with a sprite so their transparency could be animated separately.<br />
+I merged them in a single sprite. This reduced the number of game objects and simplified the hierarchy.</p>
 
 <figure>
-    <img src="/images/posts/sdf-ui-image/example-original-sdf.png"/> <figcaption>
-            <h4>Example (original and SDF)</h4>
+    <img src="/images/posts/replacing-animation-with-shader/hierarchy_simplification.png"/> <figcaption>
+            <h4>Hierarchy simplification</h4>
         </figcaption>
 </figure>
 
 
-<p>So how to convert an image into a signed distance field? Well there are plenty of ways and tools to do this, just use google.<br />
-Since I have an NPM installed I used <a href="https://github.com/mattdesl/image-sdf" target="_blank">this console tool</a>. Additionally to generating distance field it can downsample the image.<br />
-Another way to create a SDF is to use Photoshop. You need to apply a &lsquo;Stroke&rsquo; style with the following settings. The size of the stroke depends on the size of the image. Practise shows that it needs to be about 10% of the image size to give a nice result. Don&rsquo;t forget to downsample the image. In my case the size of the image was reduced from 2048x2048 to 256x256, but in the publication Valve provides an example of the image downsampled from 4096x4096 to 64x64. Basically it depends on the details of the original image, which obviously could be vanished after downsampling.</p>
+<p>If you watch the animation above carefully you may notice that it&rsquo;s actually pretty simple. It basically consists of two parts. The first one is a horizontal movement, the second one is alpha fading. Essentially both parts are sine waves. Different phase shifts applied to different animated parts make the overall animation effect be smooth and harmonious.<br />
+Both movement and fading are not a problem to be implemented in the shader. However what we need to simulate the original effect is to pass phase shifts of each animated part to the shader somehow.<br />
+Using a shader parameter for this purpose is not an option since in this case we&rsquo;ll end up with a bunch of copies of the same material for each part. This is not workflow-friendly and will make Unity draw each part with a separate draw call.<br />
+So we have to bake the information about phase shift inside the vertices somehow. Unfortunately SpriteRenderer does not provide any functionallity to access the underlying mesh. We could use our own meshes and MeshRenderer but I thought that it&rsquo;s an overkill. Because we have this guy:</p>
 
 <figure>
-    <img src="/images/posts/sdf-ui-image/photoshop-sdf.png"/> <figcaption>
-            <h4>Creating SDF in Photoshop</h4>
+    <img src="/images/posts/replacing-animation-with-shader/spriterenderer_color.png"/> <figcaption>
+            <h4>SpriteRenderer Color parameter</h4>
         </figcaption>
 </figure>
 
 
-<p>Now the image is ready to be imported in Unity. Pay attention that this technique requires filtering to be enabled. Also since we need only one channel we can ask Unity to convert our RGBA32 image into A8 and save lots of memory.</p>
+<p>Four floats! Which are free since we don&rsquo;t use color for its designated purpose.<br />
+So I wrote a MonoBehaviour which sets random values to the components of the SpriteRenderer&rsquo;s color. Some components can be kept untouched (e.g. in case we need original alpha or something).</p>
 
-<figure>
-    <img src="/images/posts/sdf-ui-image/unity-import-settings.png"/> <figcaption>
-            <h4>Unity import settings</h4>
-        </figcaption>
-</figure>
+<script type="application/javascript" src="//gist.github.com/dotsquid/3cd21fe56a2c4f44b943fdc628ec68c3.js?file=SpriteRendererColorRandomizer.cs"></script>
 
+<p>As always in such situations I used a default shader from <a href="https://unity3d.com/get-unity/download/archive" target="_blank">Unity&rsquo;s archive</a> as a starting point for my own shader.<br />
+Required properties:</p>
 
-<div class="notices info" >
-SDF texture looks inverted because what you see is an alpha channel where black represents fully transparent texels and white is fully opaque.
-</div>
+<script type="application/javascript" src="//gist.github.com/dotsquid/02fc938ed1cdd7baf306c38dc59051fb.js?file=CrownAnimation.0-properties.shader"></script>
 
-<p>The last but not least part of this technique is a shader. In my case I needed to use the image with UI, so I took a &lsquo;UI Default&rsquo; built-in shader from <a href="https://unity3d.com/get-unity/download/archive" target="_blank">Unity Archive</a> and used it as a starting point.<br />
-At first lets add required properties and corresponding variables:</p>
+<p>Notice that since we use vertex color with another purpose we don&rsquo;t need to output it from vertex shader since otherwise it would need to contain (1, 1, 1, 1) value which has no effect on the final color.<br />
+Also pay attention to the B-component. Its purpose is to indicate whether the animation is required at all. We don&rsquo;t need neither position nor alpha animation for the large crown sprite but we want to use the same material to keep the number of draw calls as low as possible. So for that SpriteRender I set a 1.0 in color&rsquo;s B-component and forbid SpriteRendererColorRandomizer overwriting it.<br />
+Vertex shader:</p>
 
-<p><script type="application/javascript" src="//gist.github.com/dotsquid/2296f88b8f15acf54f33d1a8d1c08ad6.js?file=ui-image-sdf.0-properties.shader"></script><br />
-<script type="application/javascript" src="//gist.github.com/dotsquid/2296f88b8f15acf54f33d1a8d1c08ad6.js?file=ui-image-sdf.1-variables.shader"></script></p>
+<script type="application/javascript" src="//gist.github.com/dotsquid/02fc938ed1cdd7baf306c38dc59051fb.js?file=CrownAnimation.1-vertex.shader"></script>
 
-<p>Next - use them in the fragment shader:</p>
+<p>Nothing fancy in fragment shader. Except that I use uv-coordinates to modify the phase shift (offset). This is basically required for those 4-petal flowers I mentioned earlier. Without this nuance we&rsquo;d have a whole flower fading entirely at once.<br />
+Fragment shader:</p>
 
-<script type="application/javascript" src="//gist.github.com/dotsquid/2296f88b8f15acf54f33d1a8d1c08ad6.js?file=ui-image-sdf.2-main.shader"></script>
+<script type="application/javascript" src="//gist.github.com/dotsquid/02fc938ed1cdd7baf306c38dc59051fb.js?file=CrownAnimation.2-fragment.shader"></script>
 
-<p>&ldquo;Distance Contrast&rdquo; and &ldquo;Distance Threshold&rdquo; properties work in a pair and represent how thick the contour will be. To get a good result the &ldquo;contrast&rdquo; should be about twice as large as the &ldquo;threshold&rdquo;. &ldquo;Distance smoothness&rdquo; defines how smooth or blurred the contour of the shape will be. Unlike other similar shaders across the Internet, mine provides resolution-independent smoothness of the contour: the width of the antialiased line stays the same for every screen size.<br />
-Full shader code <a href="https://gist.github.com/dotsquid/15c91969a6cfa01b7563dd00fcde9e27" target="_blank">can be found here</a>.</p>
+<p><a href="https://gist.github.com/dotsquid/02fc938ed1cdd7baf306c38dc59051fb#file-crownanimation-4-full-shader" target="_blank">Full shader can be found here</a></p>
 
 <p><div class="document-space"  style="height: 0.25em" ></div>
-After manual tight packing of the sprites I ended up with the following SDF atlas.
-<figure>
-    <img src="/images/posts/sdf-ui-image/final-atlas-sdf.png"/> <figcaption>
-            <h4>Tight packing</h4>
-        </figcaption>
-</figure>
-</p>
+Final result:<br />
+<div style='position:relative; padding-bottom:56.25%; max-width:640px; max-height:480px; margin: 0 auto'><iframe src='https://gfycat.com/ifr/courageousidealisticegret?hd=1' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div></p>
 
-<p>Which gave me the following result (rendered at 3840x2560).
-<figure>
-    <img src="/images/posts/sdf-ui-image/comparison-original-sdf.png"/> <figcaption>
-            <h4>Comparison</h4>
-        </figcaption>
-</figure>
-</p>
+<p>And the original one for comparison:
+<div style='position:relative; padding-bottom:56.25%; max-width:640px; max-height:480px; margin: 0 auto'><iframe src='https://gfycat.com/ifr/ajarordinaryjaguarundi?hd=1' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div></p>
 
-<div style='position:relative; padding-bottom:56.25%; max-width:640px; max-height:360px; margin: 0 auto'><iframe src='https://gfycat.com/ifr/likablethatbuckeyebutterfly?hd=1' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div>  
-
-<p>I consider this as an excellent result:</p>
-
-<ul>
-<li>the build reduced in size from 495MB to 491MB (minus 4MB out of a thin air!);</li>
-<li>the video memory footprint reduced as well (although it wasn&rsquo;t a bottleneck);</li>
-<li>the image stays crisp even on 4K resolution;</li>
-<li>I finally used SDF in a real battle :)</li>
-</ul>
+<p>Since all sprites of the crown are batched and have the same material they are rendered in a single draw call. And since the shader is quite lightweight now we have an animated crown which is barely heavier than the static one and looks almost identical to the reference one.</p>
             </div>
             <footer class="article-footer">
-    <a data-url="http://dotsquid.com/2020/11/19/sdf-ui-image/" data-id="be17bd14385f42b5fa8d2fe1b0e9fbe2" class="article-share-link">
+    <a data-url="http://dotsquid.com/2021/03/17/replacing-animation-with-shader/" data-id="ff770b273819d2beb67c71bd7b61962f" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
-    <a href="http://dotsquid.com/2020/11/19/sdf-ui-image/#disqus_thread" class="article-comment-link">
+    <a href="http://dotsquid.com/2021/03/17/replacing-animation-with-shader/#disqus_thread" class="article-comment-link">
         Comments
     </a>
     

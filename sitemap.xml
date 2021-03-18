@@ -4,7 +4,60 @@
   
   <url>
     <loc>http://dotsquid.com/categories/</loc>
-    <lastmod>2020-12-28T17:19:59+02:00</lastmod>
+    <lastmod>2021-03-17T21:47:59+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.com/2021/03/17/replacing-animation-with-shader/</loc>
+    <lastmod>2021-03-17T21:47:59+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.com/tags/</loc>
+    <lastmod>2021-03-17T21:47:59+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.com/categories/unity3d/</loc>
+    <lastmod>2021-03-17T21:47:59+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.com/tags/animation/</loc>
+    <lastmod>2021-03-17T21:47:59+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.com/</loc>
+    <lastmod>2021-03-17T21:47:59+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.com/tags/optimization/</loc>
+    <lastmod>2021-03-17T21:47:59+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.com/tags/shaders/</loc>
+    <lastmod>2021-03-17T21:47:59+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.com/tags/tricks/</loc>
+    <lastmod>2021-03-17T21:47:59+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dotsquid.com/tags/unity3d/</loc>
+    <lastmod>2021-03-17T21:47:59+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -14,31 +67,7 @@
   </url>
   
   <url>
-    <loc>http://dotsquid.com/tags/</loc>
-    <lastmod>2020-12-28T17:19:59+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dotsquid.com/categories/unity3d/</loc>
-    <lastmod>2020-12-28T17:19:59+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dotsquid.com/</loc>
-    <lastmod>2020-12-28T17:19:59+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://dotsquid.com/tags/effects/</loc>
-    <lastmod>2020-12-28T17:19:59+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dotsquid.com/tags/unity3d/</loc>
     <lastmod>2020-12-28T17:19:59+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -54,12 +83,6 @@
   </url>
   
   <url>
-    <loc>http://dotsquid.com/tags/shaders/</loc>
-    <lastmod>2020-11-19T20:07:12+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://dotsquid.com/tags/ui/</loc>
     <lastmod>2020-11-19T20:07:12+02:00</lastmod>
     <priority>0</priority>
@@ -71,20 +94,8 @@
   </url>
   
   <url>
-    <loc>http://dotsquid.com/tags/animation/</loc>
-    <lastmod>2020-01-13T21:17:03+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/</loc>
     <lastmod>2019-06-26T22:14:11+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://dotsquid.com/tags/tricks/</loc>
-    <lastmod>2019-06-26T22:14:11+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
