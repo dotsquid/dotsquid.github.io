@@ -466,6 +466,28 @@ input.search-form-input:-webkit-autofill {
   color: #cfedcf;
 }
 
+.article-entry figure > a,
+.article-entry figure > a:hover {
+  display: block;
+  margin: 0 auto;
+}
+.article-entry figure > a::after,
+.article-entry figure > a:hover::after {
+  border: none;
+  text-decoration: none;
+}
+.article-entry figure > figcaption > h4 {
+  text-align: center;
+  font-size: 0.8em;
+  line-height: 1.0em;
+  margin: 0.8em auto 0;
+}
+
+.article-entry ul {
+  margin-top: -0.2em;
+  margin-bottom: 0.2em;
+}
+
 .collapsible-wrap input[type='checkbox'] {
   display: none;
 }
@@ -1729,28 +1751,6 @@ ul.product-item-links {
 #recent-post li .item-inner .item-category {
   font-size: 13px;
   text-transform: none;
-}
-
-.article-entry figure > a,
-.article-entry figure > a:hover {
-  display: block;
-  margin: 0 auto;
-}
-.article-entry figure > a::after,
-.article-entry figure > a:hover::after {
-  border: none;
-  text-decoration: none;
-}
-.article-entry figure > figcaption > h4 {
-  text-align: center;
-  font-size: 0.8em;
-  line-height: 1.0em;
-  margin: 0.8em auto 0;
-}
-
-.article-entry ul {
-  margin-top: -1.2em;
-  margin-bottom: 0.2em;
 }
 
 .figure-inline {
