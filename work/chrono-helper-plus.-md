@@ -1,0 +1,23 @@
++++
+order = 1012
+title = "ChronoHelper Plus"
+status = "merged into ChronoHelper"
+image = "works/ChronoHelperOld/ChronoHelperPlus_Logo.png"
+alt = "ChronoHelperPlus - Unity Editor plugin for controlling Time.timeScale in PlayMode"
+
+[[gallery]]
+    overlay = "video"
+    full = "videos/ChronoHelperOld/ChronoHelper_Basics.mp4"
+    thumb = "images/works/ChronoHelperOld/Thumbnails/ChronoHelper_Basics.png"
+[[gallery]]
+    overlay = "video"
+    full = "videos/ChronoHelperOld/ChronoHelper_AutoReset.mp4"
+    thumb = "images/works/ChronoHelperOld/Thumbnails/ChronoHelper_AutoReset.png"
+[[gallery]]
+    overlay = "video"
+    full = "videos/ChronoHelperOld/ChronoHelper_Lock.mp4"
+    thumb = "images/works/ChronoHelperOld/Thumbnails/ChronoHelper_Lock.png"
++++
+
+**ChronoHelper Plus** was intended to be a commercial and extended version of [the free and open-source **ChronoHelper**](https://github.com/dotsquid/ChronoHelper).  
+But I changed my mind and released it as a ChronoHelper v2.0
