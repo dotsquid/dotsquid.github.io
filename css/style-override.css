@@ -466,6 +466,65 @@ input.search-form-input:-webkit-autofill {
   color: #cfedcf;
 }
 
+.collapsible-wrap input[type='checkbox'] {
+  display: none;
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  margin: 0;
+
+  transition: max-height 0.5s ease-in-out;
+}
+
+.collapsible-toggle:checked + .collapsible-content {
+  max-height: 100vh;
+}
+
+.collapsible-label {
+  width: auto;
+  display: block;
+  text-align: center;
+  margin-bottom: 1.6em;
+  cursor: pointer;
+  color: #38b7ea;
+}
+
+.collapsible-label-left,
+.collapsible-label-right {
+  animation: 2.0s ease-in-out infinite collapsible-toggle-animation;
+}
+
+.collapsible-toggle + * + .collapsible-label:hover .collapsible-label-left,
+.collapsible-toggle + * + .collapsible-label:hover .collapsible-label-right {
+  animation: 0.5s ease-in-out infinite collapsible-toggle-animation;
+}
+
+.collapsible-toggle + * + .collapsible-label .collapsible-label-left:before,
+.collapsible-toggle + * + .collapsible-label .collapsible-label-right:before {
+  content:"▾";
+}
+
+.collapsible-toggle + * + .collapsible-label .collapsible-label-content:before {
+  content:"See more";
+}
+
+.collapsible-toggle:checked + * + .collapsible-label .collapsible-label-left:before,
+.collapsible-toggle:checked + * + .collapsible-label .collapsible-label-right:before {
+  content:"▴";
+}
+
+.collapsible-toggle:checked + * + .collapsible-label .collapsible-label-content:before {
+  content:"See less";
+}
+
+@keyframes collapsible-toggle-animation{
+      0% { margin: 0px 4px; }
+     50% { margin: 0px 9px; }
+    100% { margin: 0px 4px; }
+}
+
 /* Read more */
 .article-more-link a {
   position: relative;

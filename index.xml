@@ -186,6 +186,17 @@ Problem Unity stores paths to animated properties instead of references or GUIDs
     </item>
     
     <item>
+      <title>Asteroids PoC</title>
+      <link>http://dotsquid.com/work/asteroids_poc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dotsquid.com/work/asteroids_poc/</guid>
+      <description>The goal here was to develop a proof of concept of a multiplayer game with a twist: the key feature would be using a mobile device’s screen as a gamepad.
+I used a classic Asteroids game as a starting point and made a number of gameplay changes: additional powerups, another asteroid generation principle etc.
+To join the game, a player needs to scan a QR code (in this PoC version it’s displayed directly on the screen, but other placement options are possible in the final version) and open the encoded URL.</description>
+    </item>
+    
+    <item>
       <title>Astronaut</title>
       <link>http://dotsquid.com/works/astronaut/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -235,6 +246,18 @@ It becomes very handy when it&amp;rsquo;s required to examine a suspicious momen
       <guid>http://dotsquid.com/work/chrono-helper-plus/</guid>
       <description>ChronoHelper Plus was intended to be a commercial and extended version of the free and open-source ChronoHelper.
 But I changed my mind and released it as a ChronoHelper v2.0</description>
+    </item>
+    
+    <item>
+      <title>Filme</title>
+      <link>http://dotsquid.com/work/filme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dotsquid.com/work/filme/</guid>
+      <description>Filme is a photo editor for iOS.
+I was asked to fix a couple of issues and add some minor features, but it turned out that the previous developer did not bother with an architecture intending any further support. So it ended up with a total refactoring. The code was rewritten from scratch which allowed adding more features like undo-redo system.
+What was done:
+The full app refactoring with improving the code quality and granting the app a space for further scaling.</description>
     </item>
     
     <item>
