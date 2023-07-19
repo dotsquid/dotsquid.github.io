@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on dotsquid</title>
-    <link>http://dotsquid.com/categories/</link>
+    <link>https://dotsquid.com/categories/</link>
     <description>Recent content in Categories on dotsquid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 17 Mar 2021 21:47:59 +0200</lastBuildDate>
     
-	<atom:link href="http://dotsquid.com/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dotsquid.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Unity3d</title>
-      <link>http://dotsquid.com/categories/unity3d/</link>
+      <link>https://dotsquid.com/categories/unity3d/</link>
       <pubDate>Wed, 17 Mar 2021 21:47:59 +0200</pubDate>
       
-      <guid>http://dotsquid.com/categories/unity3d/</guid>
+      <guid>https://dotsquid.com/categories/unity3d/</guid>
       <description></description>
     </item>
     
     <item>
       <title>General</title>
-      <link>http://dotsquid.com/categories/general/</link>
+      <link>https://dotsquid.com/categories/general/</link>
       <pubDate>Sat, 25 Mar 2017 17:24:46 +0200</pubDate>
       
-      <guid>http://dotsquid.com/categories/general/</guid>
+      <guid>https://dotsquid.com/categories/general/</guid>
       <description></description>
     </item>
     

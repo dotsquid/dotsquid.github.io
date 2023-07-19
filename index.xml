@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>dotsquid</title>
-    <link>http://dotsquid.com/</link>
+    <link>https://dotsquid.com/</link>
     <description>Recent content on dotsquid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 17 Mar 2021 21:47:59 +0200</lastBuildDate>
     
-	<atom:link href="http://dotsquid.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dotsquid.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How I replaced animation with shader and ̶s̶a̶v̶e̶d̶ optimized the world</title>
-      <link>http://dotsquid.com/2021/03/17/replacing-animation-with-shader/</link>
+      <link>https://dotsquid.com/2021/03/17/replacing-animation-with-shader/</link>
       <pubDate>Wed, 17 Mar 2021 21:47:59 +0200</pubDate>
       
-      <guid>http://dotsquid.com/2021/03/17/replacing-animation-with-shader/</guid>
+      <guid>https://dotsquid.com/2021/03/17/replacing-animation-with-shader/</guid>
       <description>&lt;p&gt;So one fine day our designer decided that the trees in &lt;a href=&#34;http://summercatchers.com&#34; target=&#34;_blank&#34;&gt;Summer Catchers&lt;/a&gt; are boring. And he was actually right because they were totally static.&lt;br /&gt;
 After full day of work he presented a brand new version of tree crowns which were steadily swaying in the light wind. A real breath of fresh air in the visual aesthetics of the game.&lt;/p&gt;
 
@@ -27,10 +27,10 @@ After full day of work he presented a brand new version of tree crowns which wer
     
     <item>
       <title>Paper Folding</title>
-      <link>http://dotsquid.com/2020/12/28/paper-folding/</link>
+      <link>https://dotsquid.com/2020/12/28/paper-folding/</link>
       <pubDate>Mon, 28 Dec 2020 17:19:59 +0200</pubDate>
       
-      <guid>http://dotsquid.com/2020/12/28/paper-folding/</guid>
+      <guid>https://dotsquid.com/2020/12/28/paper-folding/</guid>
       <description>&lt;p&gt;In april 2020 I created this demo / proof of concept of a game whose mechanics is based on folding of the sheet of paper. Each side of the paper represents completely different environments. By folding the paper those environments could be combined as a result letting the main character reach the goal (this part is not implemented in this demo).&lt;/p&gt;
 
 &lt;div style=&#39;position:relative; padding-bottom:56.25%; max-width:640px; max-height:360px; margin: 0 auto&#39;&gt;&lt;iframe src=&#39;https://gfycat.com/ifr/maturelegalgrunion?hd=1&#39; frameborder=&#39;0&#39; scrolling=&#39;no&#39; width=&#39;100%&#39; height=&#39;100%&#39; style=&#39;position:absolute;top:0;left:0;&#39; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;</description>
@@ -38,28 +38,28 @@ After full day of work he presented a brand new version of tree crowns which wer
     
     <item>
       <title>How I broke Incremental GC in Unity</title>
-      <link>http://dotsquid.com/2020/12/18/how-i-broke-incremental-gc-in-unity/</link>
+      <link>https://dotsquid.com/2020/12/18/how-i-broke-incremental-gc-in-unity/</link>
       <pubDate>Fri, 18 Dec 2020 20:47:39 +0200</pubDate>
       
-      <guid>http://dotsquid.com/2020/12/18/how-i-broke-incremental-gc-in-unity/</guid>
+      <guid>https://dotsquid.com/2020/12/18/how-i-broke-incremental-gc-in-unity/</guid>
       <description>&lt;p&gt;Once upon a time, before releasing &lt;a href=&#34;http://summercatchers.com/&#34; target=&#34;_blank&#34;&gt;Summer Catchers&lt;/a&gt; on Steam, I was trying to make our game as smooth as possible. Since we are using object pooling our game almost does not have memory allocations after a new scene is loaded and thus it does not require to use GC.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>How I made logos crisper, while also minimizing a memory footprint and a build size</title>
-      <link>http://dotsquid.com/2020/11/19/sdf-ui-image/</link>
+      <link>https://dotsquid.com/2020/11/19/sdf-ui-image/</link>
       <pubDate>Thu, 19 Nov 2020 20:07:12 +0200</pubDate>
       
-      <guid>http://dotsquid.com/2020/11/19/sdf-ui-image/</guid>
+      <guid>https://dotsquid.com/2020/11/19/sdf-ui-image/</guid>
       <description>&lt;p&gt;Minimizing the build size of your game is always a plus: it saves your disk space, it saves your time to upload and your players&amp;rsquo; time to download, besides some app stores and shops impose size limits. So that&amp;rsquo;s one of the things which I was doing while porting &lt;a href=&#34;http://summercatchers.com&#34; target=&#34;_blank&#34;&gt;our game&lt;/a&gt; to Nintendo Switch (it&amp;rsquo;s worth nothing that this optimization and improvement is applicable to other platforms as well).&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Login Buddy</title>
-      <link>http://dotsquid.com/2020/01/13/login-buddy/</link>
+      <link>https://dotsquid.com/2020/01/13/login-buddy/</link>
       <pubDate>Mon, 13 Jan 2020 21:17:03 +0200</pubDate>
       
-      <guid>http://dotsquid.com/2020/01/13/login-buddy/</guid>
+      <guid>https://dotsquid.com/2020/01/13/login-buddy/</guid>
       <description>&lt;p&gt;So here is a small experiment in Unity3d inspired by amazing job &lt;a href=&#34;https://codepen.io/dsenneff/details/2c3e5bc86b372d5424b00edaf4990173&#34; target=&#34;_blank&#34;&gt;Animated SVG Avatar&lt;/a&gt; by &lt;a href=&#34;http://www.thedazzlingdman.com/&#34; target=&#34;_blank&#34;&gt;Darin Senneff&lt;/a&gt;.&lt;br /&gt;
 I wanted to make it as fast as possible, ideally spending 3-4 evenings (maximum a week). But unfortunately due to various reasons (damn real life) I spent almost.. ta-dam.. 3 months, with the longest pause for about 2 months. Anyway, it&amp;rsquo;s done and now you can use it as you wish (links and demo inside).&lt;/p&gt;
 
@@ -70,20 +70,20 @@ I wanted to make it as fast as possible, ideally spending 3-4 evenings (maximum 
     
     <item>
       <title>Simple GPU Occlusion for Lens Flares</title>
-      <link>http://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/</link>
+      <link>https://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/</link>
       <pubDate>Wed, 26 Jun 2019 22:14:11 +0200</pubDate>
       
-      <guid>http://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/</guid>
+      <guid>https://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/</guid>
       <description>&lt;p&gt;One of the interesting problems I had to solve during development of &lt;a href=&#34;https://twitter.com/SummerCatchers&#34; target=&#34;_blank&#34;&gt;Summer Catchers&lt;/a&gt; was implementation of &lt;a href=&#34;https://en.wikipedia.org/wiki/Lens_flare&#34; target=&#34;_blank&#34;&gt;Lens Flares&lt;/a&gt; effect. In this post I&amp;rsquo;d like to share what I came up with (&lt;strong&gt;including an open-source demo&lt;/strong&gt;). Buckle up.&lt;br /&gt;
 &lt;div style=&#39;position:relative; padding-bottom:56.25%; max-width:640px; max-height:360px; margin: 0 auto&#39;&gt;&lt;iframe src=&#39;https://gfycat.com/ifr/uncommonwastefulherring?hd=1&#39; frameborder=&#39;0&#39; scrolling=&#39;no&#39; width=&#39;100%&#39; height=&#39;100%&#39; style=&#39;position:absolute;top:0;left:0;&#39; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>GrabPass &#43; Dynamic Batching == Friendship 🤜🤛</title>
-      <link>http://dotsquid.com/2018/01/20/grabpass-batching-trick/</link>
+      <link>https://dotsquid.com/2018/01/20/grabpass-batching-trick/</link>
       <pubDate>Sat, 20 Jan 2018 22:42:17 +0200</pubDate>
       
-      <guid>http://dotsquid.com/2018/01/20/grabpass-batching-trick/</guid>
+      <guid>https://dotsquid.com/2018/01/20/grabpass-batching-trick/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; the original trick was not working with Unity prior to 2017.2&lt;br /&gt;
 But it appeared that the fix is quite simple and now it works fine with the latest versions (tested with 2019.2). Source code is inside.&lt;/p&gt;
 
@@ -97,10 +97,10 @@ But it appeared that the fix is quite simple and now it works fine with the late
     
     <item>
       <title>Why I don&#39;t like Dictionary.TryGetValue and how I made it better (I hope)</title>
-      <link>http://dotsquid.com/2017/05/31/dictionary-trygetvalue/</link>
+      <link>https://dotsquid.com/2017/05/31/dictionary-trygetvalue/</link>
       <pubDate>Wed, 31 May 2017 21:22:23 +0200</pubDate>
       
-      <guid>http://dotsquid.com/2017/05/31/dictionary-trygetvalue/</guid>
+      <guid>https://dotsquid.com/2017/05/31/dictionary-trygetvalue/</guid>
       <description>&lt;p&gt;The most annoying thing of &lt;code&gt;Dictionary.TryGetValue&lt;/code&gt; is that it returns a default value of &lt;code&gt;value&lt;/code&gt; parameter if &lt;code&gt;key&lt;/code&gt; is not found. E.g. if &lt;code&gt;value&lt;/code&gt; is of &lt;code&gt;float&lt;/code&gt; type it will be &lt;code&gt;0.0f&lt;/code&gt;.&lt;br /&gt;
 Because of that you have to check the returned &lt;code&gt;bool&lt;/code&gt; and if it&amp;rsquo;s &lt;code&gt;false&lt;/code&gt; you have to assign the value you need. It looks as follows&lt;/p&gt;
 
@@ -118,10 +118,10 @@ How about this one?&lt;/p&gt;
     
     <item>
       <title>StableEnum or: How I Learned to Stop Worrying and Love the Enums in Unity3d</title>
-      <link>http://dotsquid.com/2017/04/17/stable-enum/</link>
+      <link>https://dotsquid.com/2017/04/17/stable-enum/</link>
       <pubDate>Mon, 17 Apr 2017 23:44:46 +0200</pubDate>
       
-      <guid>http://dotsquid.com/2017/04/17/stable-enum/</guid>
+      <guid>https://dotsquid.com/2017/04/17/stable-enum/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s a well-known problem with serialization of enums in Unity3d:&lt;/p&gt;
 
 &lt;ol&gt;
@@ -137,10 +137,10 @@ Solution is easy: serialize enums as strings. And &lt;a href=&#34;https://github
     
     <item>
       <title>Nested canvas bug</title>
-      <link>http://dotsquid.com/2017/04/08/nested-canvas-bug/</link>
+      <link>https://dotsquid.com/2017/04/08/nested-canvas-bug/</link>
       <pubDate>Sat, 08 Apr 2017 00:30:38 +0300</pubDate>
       
-      <guid>http://dotsquid.com/2017/04/08/nested-canvas-bug/</guid>
+      <guid>https://dotsquid.com/2017/04/08/nested-canvas-bug/</guid>
       <description>&lt;p&gt;Weird bug related to &lt;code&gt;UI.Canvas&lt;/code&gt; was accidentally found by me while I was developing new menu for our upcoming game &lt;a href=&#34;https://twitter.com/SummerCatchers&#34; target=&#34;_blank&#34;&gt;SummerCatchers&lt;/a&gt;. Btw, follow us ;)&lt;br /&gt;
 As far as you may know &lt;code&gt;Canvas&lt;/code&gt; can have other &lt;code&gt;Canvases&lt;/code&gt; as children objects. This is very useful in optimization purpose because &lt;code&gt;sub-canvas&lt;/code&gt; isolates its UI elements from other canvases (parent and siblings) thus modifying one of its children won&amp;rsquo;t cause rebuilding of batched mesh for other canvases.&lt;br /&gt;
 The bug is as follows.&lt;/p&gt;</description>
@@ -148,29 +148,29 @@ The bug is as follows.&lt;/p&gt;</description>
     
     <item>
       <title>Enum flags in Unity3d Inspector</title>
-      <link>http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/</link>
+      <link>https://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/</link>
       <pubDate>Wed, 05 Apr 2017 21:12:16 +0200</pubDate>
       
-      <guid>http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/</guid>
+      <guid>https://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s quite strange but Unity can&amp;rsquo;t show your enum as bitmask / flags out of the box.&lt;br /&gt;
 Fortunately this can be fixed fast and easy.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>git init</title>
-      <link>http://dotsquid.com/2017/03/25/git-init/</link>
+      <link>https://dotsquid.com/2017/03/25/git-init/</link>
       <pubDate>Sat, 25 Mar 2017 17:24:46 +0200</pubDate>
       
-      <guid>http://dotsquid.com/2017/03/25/git-init/</guid>
+      <guid>https://dotsquid.com/2017/03/25/git-init/</guid>
       <description>This is it. I joined the dark side and now I have a blog.</description>
     </item>
     
     <item>
       <title>AnimTracer</title>
-      <link>http://dotsquid.com/works/anim-tracer/</link>
+      <link>https://dotsquid.com/works/anim-tracer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dotsquid.com/works/anim-tracer/</guid>
+      <guid>https://dotsquid.com/works/anim-tracer/</guid>
       <description>AssetStore AnimTracer is a simple and handy tool for Unity Editor intended to automagically fix animations when the hierarchy of animated GameObject is changed. Reparent, add, delete or rename GameObjects - all changes will be traced.
    
 Problem Unity stores paths to animated properties instead of references or GUIDs. That&amp;rsquo;s why when you change the hierarchy of an animated GameObject you can get something like this:   AnimTracer was developed to minimize the efforts required to solve this problem.</description>
@@ -178,19 +178,19 @@ Problem Unity stores paths to animated properties instead of references or GUIDs
     
     <item>
       <title>AnimTracer</title>
-      <link>http://dotsquid.com/work/anim-tracer/</link>
+      <link>https://dotsquid.com/work/anim-tracer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dotsquid.com/work/anim-tracer/</guid>
+      <guid>https://dotsquid.com/work/anim-tracer/</guid>
       <description>AnimTracer is a simple and handy tool for Unity Editor intended to automagically fix animations when the hierarchy of animated GameObject is changed. Reparent, add, delete or rename GameObjects - all changes will be traced.</description>
     </item>
     
     <item>
       <title>Asteroids PoC</title>
-      <link>http://dotsquid.com/work/asteroids_poc/</link>
+      <link>https://dotsquid.com/work/asteroids_poc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dotsquid.com/work/asteroids_poc/</guid>
+      <guid>https://dotsquid.com/work/asteroids_poc/</guid>
       <description>The goal here was to develop a proof of concept of a multiplayer game with a twist: the key feature would be using a mobile device’s screen as a gamepad.
 I used a classic Asteroids game as a starting point and made a number of gameplay changes: additional powerups, another asteroid generation principle etc.
 To join the game, a player needs to scan a QR code (in this PoC version it’s displayed directly on the screen, but other placement options are possible in the final version) and open the encoded URL.</description>
@@ -198,30 +198,30 @@ To join the game, a player needs to scan a QR code (in this PoC version it’s d
     
     <item>
       <title>Astronaut</title>
-      <link>http://dotsquid.com/works/astronaut/</link>
+      <link>https://dotsquid.com/works/astronaut/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dotsquid.com/works/astronaut/</guid>
+      <guid>https://dotsquid.com/works/astronaut/</guid>
       <description>The game Astronaut is a 2d platformer with &amp;ldquo;grappling hook&amp;rdquo; mechanics and exploration / adventure elements. At first I was aiming mobile platforms (Android and iOS) only, but then some efforts to organize the gameplay and game control keeping other platforms in mind were done.
 You&amp;rsquo;re playing as a guy in a space suit which allows you to make interplanetary jumps and cling to the planets and other objects with an electromagnetic hook.</description>
     </item>
     
     <item>
       <title>Astronaut</title>
-      <link>http://dotsquid.com/work/astronaut/</link>
+      <link>https://dotsquid.com/work/astronaut/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dotsquid.com/work/astronaut/</guid>
+      <guid>https://dotsquid.com/work/astronaut/</guid>
       <description>Astronaut is a 2d platformer with &amp;ldquo;grappling hook&amp;rdquo; mechanics and exploration / adventure elements.
 Written in C++ and Cocos2d-x for Android and iOS, but with other platforms kept in mind.</description>
     </item>
     
     <item>
       <title>ChronoHelper</title>
-      <link>http://dotsquid.com/works/chrono-helper/</link>
+      <link>https://dotsquid.com/works/chrono-helper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dotsquid.com/works/chrono-helper/</guid>
+      <guid>https://dotsquid.com/works/chrono-helper/</guid>
       <description>GithubChangelogAssetStoreForumChronoHelper is a free open-source tool for Unity Editor for controlling TimeScale in PlayMode with ease.
 It becomes very handy when it&amp;rsquo;s required to examine a suspicious moment of gameplay in slow-motion or conversely when it&amp;rsquo;s preferable to skip uninteresting part in fast-forward.   
 Usage Use &amp;lsquo;Window/ChronoHelper&amp;rsquo; menu to open ChronoHelper.
@@ -230,20 +230,20 @@ To change current timeScale use the slider or shortcut buttons.</description>
     
     <item>
       <title>ChronoHelper</title>
-      <link>http://dotsquid.com/work/chrono-helper/</link>
+      <link>https://dotsquid.com/work/chrono-helper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dotsquid.com/work/chrono-helper/</guid>
+      <guid>https://dotsquid.com/work/chrono-helper/</guid>
       <description>ChronoHelper is a free open-source tool for Unity Editor for controlling TimeScale in PlayMode with ease.
 It becomes very handy when it&amp;rsquo;s required to examine a suspicious moment of gameplay in slow-motion or conversely when it&amp;rsquo;s preferable to skip uninteresting part in fast-forward.</description>
     </item>
     
     <item>
       <title>Filme</title>
-      <link>http://dotsquid.com/work/filme/</link>
+      <link>https://dotsquid.com/work/filme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dotsquid.com/work/filme/</guid>
+      <guid>https://dotsquid.com/work/filme/</guid>
       <description>Filme is a photo editor for iOS.
 I was asked to fix a couple of issues and add some minor features, but it turned out that the previous developer did not bother with an architecture intending any further support. So it ended up with a total refactoring. The code was rewritten from scratch which allowed adding more features like undo-redo system.
 What was done:
@@ -252,38 +252,38 @@ The full app refactoring with improving the code quality and granting the app a 
     
     <item>
       <title>Summer Catchers</title>
-      <link>http://dotsquid.com/work/summer-catchers/</link>
+      <link>https://dotsquid.com/work/summer-catchers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dotsquid.com/work/summer-catchers/</guid>
+      <guid>https://dotsquid.com/work/summer-catchers/</guid>
       <description>Summer Catchers takes you in the journey with a little northern girl to the faraway South and summer warm. Prepare for mysterious adventures, weird characters and non-stop riding! Target platforms: Windows, Mac (Steam), Mac (AppStore), Android, iOS, tvOS, Nintendo Switch
 Release date: Steam - 16 Jul, 2019; AppStore / GooglePlay - 21 Feb, 2020; Nintendo Switch - 11 Feb, 2021</description>
     </item>
     
     <item>
       <title>about</title>
-      <link>http://dotsquid.com/about/</link>
+      <link>https://dotsquid.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dotsquid.com/about/</guid>
+      <guid>https://dotsquid.com/about/</guid>
       <description></description>
     </item>
     
     <item>
       <title>contact</title>
-      <link>http://dotsquid.com/contact/</link>
+      <link>https://dotsquid.com/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dotsquid.com/contact/</guid>
+      <guid>https://dotsquid.com/contact/</guid>
       <description></description>
     </item>
     
     <item>
       <title>works</title>
-      <link>http://dotsquid.com/works/</link>
+      <link>https://dotsquid.com/works/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dotsquid.com/works/</guid>
+      <guid>https://dotsquid.com/works/</guid>
       <description></description>
     </item>
     

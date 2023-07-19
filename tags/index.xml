@@ -2,84 +2,84 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on dotsquid</title>
-    <link>http://dotsquid.com/tags/</link>
+    <link>https://dotsquid.com/tags/</link>
     <description>Recent content in Tags on dotsquid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 17 Mar 2021 21:47:59 +0200</lastBuildDate>
     
-	<atom:link href="http://dotsquid.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dotsquid.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>animation</title>
-      <link>http://dotsquid.com/tags/animation/</link>
+      <link>https://dotsquid.com/tags/animation/</link>
       <pubDate>Wed, 17 Mar 2021 21:47:59 +0200</pubDate>
       
-      <guid>http://dotsquid.com/tags/animation/</guid>
+      <guid>https://dotsquid.com/tags/animation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>optimization</title>
-      <link>http://dotsquid.com/tags/optimization/</link>
+      <link>https://dotsquid.com/tags/optimization/</link>
       <pubDate>Wed, 17 Mar 2021 21:47:59 +0200</pubDate>
       
-      <guid>http://dotsquid.com/tags/optimization/</guid>
+      <guid>https://dotsquid.com/tags/optimization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>shaders</title>
-      <link>http://dotsquid.com/tags/shaders/</link>
+      <link>https://dotsquid.com/tags/shaders/</link>
       <pubDate>Wed, 17 Mar 2021 21:47:59 +0200</pubDate>
       
-      <guid>http://dotsquid.com/tags/shaders/</guid>
+      <guid>https://dotsquid.com/tags/shaders/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tricks</title>
-      <link>http://dotsquid.com/tags/tricks/</link>
+      <link>https://dotsquid.com/tags/tricks/</link>
       <pubDate>Wed, 17 Mar 2021 21:47:59 +0200</pubDate>
       
-      <guid>http://dotsquid.com/tags/tricks/</guid>
+      <guid>https://dotsquid.com/tags/tricks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>unity3d</title>
-      <link>http://dotsquid.com/tags/unity3d/</link>
+      <link>https://dotsquid.com/tags/unity3d/</link>
       <pubDate>Wed, 17 Mar 2021 21:47:59 +0200</pubDate>
       
-      <guid>http://dotsquid.com/tags/unity3d/</guid>
+      <guid>https://dotsquid.com/tags/unity3d/</guid>
       <description></description>
     </item>
     
     <item>
       <title>effects</title>
-      <link>http://dotsquid.com/tags/effects/</link>
+      <link>https://dotsquid.com/tags/effects/</link>
       <pubDate>Mon, 28 Dec 2020 17:19:59 +0200</pubDate>
       
-      <guid>http://dotsquid.com/tags/effects/</guid>
+      <guid>https://dotsquid.com/tags/effects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ui</title>
-      <link>http://dotsquid.com/tags/ui/</link>
+      <link>https://dotsquid.com/tags/ui/</link>
       <pubDate>Thu, 19 Nov 2020 20:07:12 +0200</pubDate>
       
-      <guid>http://dotsquid.com/tags/ui/</guid>
+      <guid>https://dotsquid.com/tags/ui/</guid>
       <description></description>
     </item>
     
     <item>
       <title>c-sharp</title>
-      <link>http://dotsquid.com/tags/c-sharp/</link>
+      <link>https://dotsquid.com/tags/c-sharp/</link>
       <pubDate>Wed, 31 May 2017 21:22:23 +0200</pubDate>
       
-      <guid>http://dotsquid.com/tags/c-sharp/</guid>
+      <guid>https://dotsquid.com/tags/c-sharp/</guid>
       <description></description>
     </item>
     

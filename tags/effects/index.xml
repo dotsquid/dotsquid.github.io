@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>effects on dotsquid</title>
-    <link>http://dotsquid.com/tags/effects/</link>
+    <link>https://dotsquid.com/tags/effects/</link>
     <description>Recent content in effects on dotsquid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 28 Dec 2020 17:19:59 +0200</lastBuildDate>
     
-	<atom:link href="http://dotsquid.com/tags/effects/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dotsquid.com/tags/effects/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Paper Folding</title>
-      <link>http://dotsquid.com/2020/12/28/paper-folding/</link>
+      <link>https://dotsquid.com/2020/12/28/paper-folding/</link>
       <pubDate>Mon, 28 Dec 2020 17:19:59 +0200</pubDate>
       
-      <guid>http://dotsquid.com/2020/12/28/paper-folding/</guid>
+      <guid>https://dotsquid.com/2020/12/28/paper-folding/</guid>
       <description>&lt;p&gt;In april 2020 I created this demo / proof of concept of a game whose mechanics is based on folding of the sheet of paper. Each side of the paper represents completely different environments. By folding the paper those environments could be combined as a result letting the main character reach the goal (this part is not implemented in this demo).&lt;/p&gt;
 
 &lt;div style=&#39;position:relative; padding-bottom:56.25%; max-width:640px; max-height:360px; margin: 0 auto&#39;&gt;&lt;iframe src=&#39;https://gfycat.com/ifr/maturelegalgrunion?hd=1&#39; frameborder=&#39;0&#39; scrolling=&#39;no&#39; width=&#39;100%&#39; height=&#39;100%&#39; style=&#39;position:absolute;top:0;left:0;&#39; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;</description>
@@ -24,20 +24,20 @@
     
     <item>
       <title>Simple GPU Occlusion for Lens Flares</title>
-      <link>http://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/</link>
+      <link>https://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/</link>
       <pubDate>Wed, 26 Jun 2019 22:14:11 +0200</pubDate>
       
-      <guid>http://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/</guid>
+      <guid>https://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/</guid>
       <description>&lt;p&gt;One of the interesting problems I had to solve during development of &lt;a href=&#34;https://twitter.com/SummerCatchers&#34; target=&#34;_blank&#34;&gt;Summer Catchers&lt;/a&gt; was implementation of &lt;a href=&#34;https://en.wikipedia.org/wiki/Lens_flare&#34; target=&#34;_blank&#34;&gt;Lens Flares&lt;/a&gt; effect. In this post I&amp;rsquo;d like to share what I came up with (&lt;strong&gt;including an open-source demo&lt;/strong&gt;). Buckle up.&lt;br /&gt;
 &lt;div style=&#39;position:relative; padding-bottom:56.25%; max-width:640px; max-height:360px; margin: 0 auto&#39;&gt;&lt;iframe src=&#39;https://gfycat.com/ifr/uncommonwastefulherring?hd=1&#39; frameborder=&#39;0&#39; scrolling=&#39;no&#39; width=&#39;100%&#39; height=&#39;100%&#39; style=&#39;position:absolute;top:0;left:0;&#39; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>GrabPass &#43; Dynamic Batching == Friendship 🤜🤛</title>
-      <link>http://dotsquid.com/2018/01/20/grabpass-batching-trick/</link>
+      <link>https://dotsquid.com/2018/01/20/grabpass-batching-trick/</link>
       <pubDate>Sat, 20 Jan 2018 22:42:17 +0200</pubDate>
       
-      <guid>http://dotsquid.com/2018/01/20/grabpass-batching-trick/</guid>
+      <guid>https://dotsquid.com/2018/01/20/grabpass-batching-trick/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; the original trick was not working with Unity prior to 2017.2&lt;br /&gt;
 But it appeared that the fix is quite simple and now it works fine with the latest versions (tested with 2019.2). Source code is inside.&lt;/p&gt;
 

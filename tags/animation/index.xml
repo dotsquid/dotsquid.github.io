@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>animation on dotsquid</title>
-    <link>http://dotsquid.com/tags/animation/</link>
+    <link>https://dotsquid.com/tags/animation/</link>
     <description>Recent content in animation on dotsquid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 17 Mar 2021 21:47:59 +0200</lastBuildDate>
     
-	<atom:link href="http://dotsquid.com/tags/animation/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dotsquid.com/tags/animation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How I replaced animation with shader and ̶s̶a̶v̶e̶d̶ optimized the world</title>
-      <link>http://dotsquid.com/2021/03/17/replacing-animation-with-shader/</link>
+      <link>https://dotsquid.com/2021/03/17/replacing-animation-with-shader/</link>
       <pubDate>Wed, 17 Mar 2021 21:47:59 +0200</pubDate>
       
-      <guid>http://dotsquid.com/2021/03/17/replacing-animation-with-shader/</guid>
+      <guid>https://dotsquid.com/2021/03/17/replacing-animation-with-shader/</guid>
       <description>&lt;p&gt;So one fine day our designer decided that the trees in &lt;a href=&#34;http://summercatchers.com&#34; target=&#34;_blank&#34;&gt;Summer Catchers&lt;/a&gt; are boring. And he was actually right because they were totally static.&lt;br /&gt;
 After full day of work he presented a brand new version of tree crowns which were steadily swaying in the light wind. A real breath of fresh air in the visual aesthetics of the game.&lt;/p&gt;
 
@@ -27,10 +27,10 @@ After full day of work he presented a brand new version of tree crowns which wer
     
     <item>
       <title>Login Buddy</title>
-      <link>http://dotsquid.com/2020/01/13/login-buddy/</link>
+      <link>https://dotsquid.com/2020/01/13/login-buddy/</link>
       <pubDate>Mon, 13 Jan 2020 21:17:03 +0200</pubDate>
       
-      <guid>http://dotsquid.com/2020/01/13/login-buddy/</guid>
+      <guid>https://dotsquid.com/2020/01/13/login-buddy/</guid>
       <description>&lt;p&gt;So here is a small experiment in Unity3d inspired by amazing job &lt;a href=&#34;https://codepen.io/dsenneff/details/2c3e5bc86b372d5424b00edaf4990173&#34; target=&#34;_blank&#34;&gt;Animated SVG Avatar&lt;/a&gt; by &lt;a href=&#34;http://www.thedazzlingdman.com/&#34; target=&#34;_blank&#34;&gt;Darin Senneff&lt;/a&gt;.&lt;br /&gt;
 I wanted to make it as fast as possible, ideally spending 3-4 evenings (maximum a week). But unfortunately due to various reasons (damn real life) I spent almost.. ta-dam.. 3 months, with the longest pause for about 2 months. Anyway, it&amp;rsquo;s done and now you can use it as you wish (links and demo inside).&lt;/p&gt;
 

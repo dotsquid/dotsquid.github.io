@@ -3,189 +3,189 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://dotsquid.com/categories/</loc>
+    <loc>https://dotsquid.com/categories/</loc>
     <lastmod>2021-03-17T21:47:59+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/2021/03/17/replacing-animation-with-shader/</loc>
+    <loc>https://dotsquid.com/2021/03/17/replacing-animation-with-shader/</loc>
     <lastmod>2021-03-17T21:47:59+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/tags/</loc>
-    <lastmod>2021-03-17T21:47:59+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dotsquid.com/categories/unity3d/</loc>
+    <loc>https://dotsquid.com/tags/</loc>
     <lastmod>2021-03-17T21:47:59+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/tags/animation/</loc>
+    <loc>https://dotsquid.com/categories/unity3d/</loc>
     <lastmod>2021-03-17T21:47:59+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/</loc>
+    <loc>https://dotsquid.com/tags/animation/</loc>
     <lastmod>2021-03-17T21:47:59+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/tags/optimization/</loc>
+    <loc>https://dotsquid.com/</loc>
     <lastmod>2021-03-17T21:47:59+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/tags/shaders/</loc>
+    <loc>https://dotsquid.com/tags/optimization/</loc>
     <lastmod>2021-03-17T21:47:59+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/tags/tricks/</loc>
+    <loc>https://dotsquid.com/tags/shaders/</loc>
     <lastmod>2021-03-17T21:47:59+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/tags/unity3d/</loc>
+    <loc>https://dotsquid.com/tags/tricks/</loc>
     <lastmod>2021-03-17T21:47:59+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/2020/12/28/paper-folding/</loc>
+    <loc>https://dotsquid.com/tags/unity3d/</loc>
+    <lastmod>2021-03-17T21:47:59+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dotsquid.com/2020/12/28/paper-folding/</loc>
     <lastmod>2020-12-28T17:19:59+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/tags/effects/</loc>
+    <loc>https://dotsquid.com/tags/effects/</loc>
     <lastmod>2020-12-28T17:19:59+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/2020/12/18/how-i-broke-incremental-gc-in-unity/</loc>
+    <loc>https://dotsquid.com/2020/12/18/how-i-broke-incremental-gc-in-unity/</loc>
     <lastmod>2020-12-18T20:47:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/2020/11/19/sdf-ui-image/</loc>
+    <loc>https://dotsquid.com/2020/11/19/sdf-ui-image/</loc>
     <lastmod>2020-11-19T20:07:12+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/tags/ui/</loc>
+    <loc>https://dotsquid.com/tags/ui/</loc>
     <lastmod>2020-11-19T20:07:12+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/2020/01/13/login-buddy/</loc>
+    <loc>https://dotsquid.com/2020/01/13/login-buddy/</loc>
     <lastmod>2020-01-13T21:17:03+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/</loc>
+    <loc>https://dotsquid.com/2019/06/26/simple-gpu-occlusion-for-lens-flares/</loc>
     <lastmod>2019-06-26T22:14:11+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/2018/01/20/grabpass-batching-trick/</loc>
+    <loc>https://dotsquid.com/2018/01/20/grabpass-batching-trick/</loc>
     <lastmod>2018-01-20T22:42:17+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/2017/05/31/dictionary-trygetvalue/</loc>
+    <loc>https://dotsquid.com/2017/05/31/dictionary-trygetvalue/</loc>
     <lastmod>2017-05-31T21:22:23+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/tags/c-sharp/</loc>
+    <loc>https://dotsquid.com/tags/c-sharp/</loc>
     <lastmod>2017-05-31T21:22:23+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/2017/04/17/stable-enum/</loc>
+    <loc>https://dotsquid.com/2017/04/17/stable-enum/</loc>
     <lastmod>2017-04-17T23:44:46+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/2017/04/08/nested-canvas-bug/</loc>
+    <loc>https://dotsquid.com/2017/04/08/nested-canvas-bug/</loc>
     <lastmod>2017-04-08T00:30:38+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/</loc>
+    <loc>https://dotsquid.com/2017/04/05/enum-flag-attribute-plus-property-drawer/</loc>
     <lastmod>2017-04-05T21:12:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/categories/general/</loc>
+    <loc>https://dotsquid.com/categories/general/</loc>
     <lastmod>2017-03-25T17:24:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/2017/03/25/git-init/</loc>
+    <loc>https://dotsquid.com/2017/03/25/git-init/</loc>
     <lastmod>2017-03-25T17:24:46+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/works/anim-tracer/</loc>
+    <loc>https://dotsquid.com/works/anim-tracer/</loc>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/work/anim-tracer/</loc>
+    <loc>https://dotsquid.com/work/anim-tracer/</loc>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/work/asteroids_poc/</loc>
+    <loc>https://dotsquid.com/work/asteroids_poc/</loc>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/works/astronaut/</loc>
+    <loc>https://dotsquid.com/works/astronaut/</loc>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/work/astronaut/</loc>
+    <loc>https://dotsquid.com/work/astronaut/</loc>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/works/chrono-helper/</loc>
+    <loc>https://dotsquid.com/works/chrono-helper/</loc>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/work/chrono-helper/</loc>
+    <loc>https://dotsquid.com/work/chrono-helper/</loc>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/work/filme/</loc>
+    <loc>https://dotsquid.com/work/filme/</loc>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/work/summer-catchers/</loc>
+    <loc>https://dotsquid.com/work/summer-catchers/</loc>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/about/</loc>
+    <loc>https://dotsquid.com/about/</loc>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/contact/</loc>
+    <loc>https://dotsquid.com/contact/</loc>
   </url>
   
   <url>
-    <loc>http://dotsquid.com/works/</loc>
+    <loc>https://dotsquid.com/works/</loc>
   </url>
   
 </urlset>
